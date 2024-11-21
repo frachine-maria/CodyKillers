@@ -1,111 +1,142 @@
-/* Reset */
-* {
+/* Estilos Globais */
+body, html {
+    height: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #283232; /* Cor base do fundo */
+    overflow: hidden;
 }
 
-/* Corpo e container principal */
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #283232;
-    color: #FFFFFF;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+/* Contêiner Principal */
 .login-container {
     display: flex;
-    width: 80%;
-    height: 70%;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Parte da imagem */
-.image-container {
-    width: 50%;
-    background-color: #394646;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.image {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 100vh;
+    position: relative;
 }
 
-/* Formulário */
+.login-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('View/Media/Noise\ &\ Texture.png'); /* Caminho da textura */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3; /* Ajuste da opacidade */
+    z-index: 1; /* Fica atrás do conteúdo */
+    pointer-events: none; /* Garante que a textura não interfira */
+}
+
+/* Estilos para o Formulário */
 .form-container {
     width: 50%;
-    background-color: #283232;
+    background-color: rgba(40, 50, 50, 0.9); /* Fundo escuro com transparência */
+    color: white;
     padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    position: relative;
+    z-index: 2; /* Conteúdo acima da textura */
 }
 
-h1 {
-    font-size: 2em;
-    margin-bottom: 15px;
-    font-weight: 700;
+.form-container .form-content {
+    width: 85%; /* Limita a largura do formulário */
+    display: flex;
+    flex-direction: column; /* Os inputs ficam empilhados */
+    align-items: center; /* Centraliza os elementos no formulário */
+    gap: 15px; /* Espaçamento entre os elementos */
 }
 
-.description {
-    font-size: 1.1em;
-    margin-bottom: 30px;
-    line-height: 1.5;
-    color: #BDBDBD;
+.form-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.form-container p {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgba(200, 200, 200, 0.9);
+}
+
+/* Labels */
+.form-container label {
+    width: 100%; /* Faz o label ocupar a largura do formulário */
+    text-align: left; /* Mantém alinhamento à esquerda */
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5px; /* Espaço entre o label e o input */
 }
 
 /* Inputs */
-label {
-    font-size: 0.9em;
-    margin-bottom: 5px;
-    color: #FFFFFF;
-}
-
-.required {
-    color: #FF0000;
-}
-
-input[type="email"],
-input[type="password"] {
-    width: 100%;
+.form-container input {
+    width: 100%; /* Inputs ocupam a largura completa do formulário */
+    max-width: 400px; /* Largura máxima */
     padding: 10px;
-    margin-bottom: 20px;
-    background-color: #394646;
-    border: 1px solid #4C5858;
+    border: 1px solid #555;
     border-radius: 5px;
-    font-size: 0.95em;
-    color: #FFFFFF;
-}
-
-input::placeholder {
-    color: #BDBDBD;
+    background-color: #444;
+    color: white;
+    font-size: 1rem;
 }
 
 /* Botão */
 .submit-btn {
-    width: 100%;
-    padding: 12px;
+    width: 100%; /* Centralizado com os inputs */
+    max-width: 400px; /* Largura proporcional ao input */
+    padding: 10px;
     background-color: #ADFF00;
+    color: black;
     border: none;
     border-radius: 5px;
-    color: #283232;
-    font-size: 1.1em;
     font-weight: bold;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .submit-btn:hover {
     background-color: #9EDD00;
+}
+
+/* Estilos para a Imagem */
+.image-container {
+    width: 50%;
+    background-color: rgba(40, 50, 50, 0.9); /* Fundo igual ao formulário */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('View/Media/Noise\ &\ Texture.png'); /* Caminho da textura */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3; /* Ajuste da opacidade */
+    z-index: 1; /* Textura acima do fundo */
+    pointer-events: none;
+}
+
+.image-container img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2; /* Imagem acima da textura */
 }
