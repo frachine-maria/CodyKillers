@@ -50,7 +50,7 @@ body, html {
     display: flex;
     flex-direction: column; /* Os inputs ficam empilhados */
     align-items: center; /* Centraliza os elementos no formulário */
-    gap: 15px; /* Espaçamento entre os elementos */
+    gap: 20px; /* Espaçamento entre os elementos */
 }
 
 .form-container h1 {
@@ -73,6 +73,10 @@ body, html {
     font-weight: bold;
     color: #fff;
     margin-bottom: 5px; /* Espaço entre o label e o input */
+}
+
+.form-container .required {
+    color: red; /* Asterisco vermelho */
 }
 
 /* Inputs */
@@ -139,4 +143,25 @@ body, html {
     border-radius: 20px;
     position: relative;
     z-index: 2; /* Imagem acima da textura */
+}
+
+/* Ícone de Exibir/Ocultar Senha */
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    cursor: pointer;
+}
+
+/* Botão de Exibir Senha (Ícone) */
+.toggle-password:hover {
+    color: #fff; /* Muda para branco quando o usuário passa o mouse */
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* Largura máxima para o campo de senha */
 }
