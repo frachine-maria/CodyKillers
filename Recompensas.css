@@ -1,0 +1,84 @@
+/* Navegação fixa no topo */
+.navbar {
+
+    width: 100%;          /* Faz a navbar ocupar toda a largura da tela */
+    background-color: #435922; /* Cor de fundo da navbar */
+    padding: 10px 0;      /* Ajuste de padding conforme necessário */
+}
+
+/* Logo */
+    .logo img {
+    width: 440px;
+    height: auto;
+    vertical-align: middle; 
+    margin-left: 50px; 
+    align-self: center;
+} 
+/* Outros estilos de navbar, como links, etc. */
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
+/* Ícone de Menu à Esquerda */
+.navbar .menu {
+    display: inline-flex;  /* Exibe o ícone como flex */
+    align-items: center;   /* Alinha o ícone verticalmente */
+    margin-top: 10px;       /* Move o ícone para baixo - ajuste o valor conforme necessário */
+}
+
+
+
+/* Ícone de Menu à Esquerda */
+.navbar .login-icon {
+    display: inline-flex;  
+    align-items: center;  
+    margin-top: 10px;      
+}
+
+
+.navbar .menu img {
+    width: 45px;    /* Ajuste o tamanho do ícone conforme necessário */
+    height: auto;   /* Mantém a proporção da imagem */
+}
+
+
+/* Grid */
+.grid {
+    display: grid; /* Define o layout como grid */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Ajusta automaticamente o número de colunas */
+    gap: 10px; /* Adiciona espaçamento entre os itens */
+}
+
+.grid-item {
+    background-color: #eaeaea; /* Define a cor de fundo dos itens */
+    padding: 60px; /* Adiciona espaçamento interno */
+    margin: 40px;
+    text-align: center; /* Centraliza o texto */
+    border-radius: 5px; /* Arredonda os cantos */
+    width: 250px; /* largura fixa */
+    height: 50px; /* altura igual à largura */
+  }
+
+
+.image-card img {
+    display: grid; /* Define o layout como grid */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Ajusta automaticamente o número de colunas */
+    gap: 10px; /* Adiciona espaçamento entre os itens */
+    margin: 40px;
+    padding: 30px; /* Adiciona espaçamento interno */
+
+}
+
