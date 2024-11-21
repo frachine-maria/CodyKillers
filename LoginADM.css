@@ -1,0 +1,111 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e container principal */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #283232;
+    color: #FFFFFF;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    display: flex;
+    width: 80%;
+    height: 70%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Parte da imagem */
+.image-container {
+    width: 50%;
+    background-color: #394646;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Formulário */
+.form-container {
+    width: 50%;
+    background-color: #283232;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.description {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    color: #BDBDBD;
+}
+
+/* Inputs */
+label {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    color: #FFFFFF;
+}
+
+.required {
+    color: #FF0000;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #394646;
+    border: 1px solid #4C5858;
+    border-radius: 5px;
+    font-size: 0.95em;
+    color: #FFFFFF;
+}
+
+input::placeholder {
+    color: #BDBDBD;
+}
+
+/* Botão */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #ADFF00;
+    border: none;
+    border-radius: 5px;
+    color: #283232;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #9EDD00;
+}
