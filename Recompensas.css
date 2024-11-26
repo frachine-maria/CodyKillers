@@ -64,21 +64,28 @@
 
 .grid-item {
     background-color: #eaeaea; /* Define a cor de fundo dos itens */
-    padding: 60px; /* Adiciona espaçamento interno */
+    padding: 70px; /* Adiciona espaçamento interno */
     margin: 40px;
     text-align: center; /* Centraliza o texto */
     border-radius: 5px; /* Arredonda os cantos */
     width: 250px; /* largura fixa */
-    height: 50px; /* altura igual à largura */
+    height: 100px; /* altura igual à largura */
   }
 
 
 .image-card img {
     display: grid; /* Define o layout como grid */
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Ajusta automaticamente o número de colunas */
-    gap: 10px; /* Adiciona espaçamento entre os itens */
     margin: 40px;
-    padding: 30px; /* Adiciona espaçamento interno */
+    padding: 10px; /* Adiciona espaçamento interno */
+}
 
+.grid-item {
+    font-family: 'Lalezar', 'sans-serif';
+    font-size: 30px;
+}
+
+.button{
+    
 }
 
