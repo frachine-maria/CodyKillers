@@ -1,6 +1,4 @@
 # CodeKillers
- 
- # Nome do Projeto
 
 Uma breve descrição do seu projeto e o que ele faz.
 
