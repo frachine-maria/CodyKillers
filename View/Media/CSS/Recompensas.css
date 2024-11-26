@@ -60,6 +60,8 @@
     display: grid; /* Define o layout como grid */
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Ajusta automaticamente o número de colunas */
     gap: 10px; /* Adiciona espaçamento entre os itens */
+    margin: 0 0 5px 0;
+
 }
 
 .grid-item {
@@ -117,7 +119,7 @@ h1 {
     font-size: 45px;
   }
 
-  .social-icons {
+.social-icons {
     margin-top: 15px;
 }
 
