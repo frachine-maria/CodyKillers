@@ -1,0 +1,54 @@
+.navbar {
+
+    width: 100%;          /* Faz a navbar ocupar toda a largura da tela */
+    background-color: #435922; /* Cor de fundo da navbar */
+    padding: 10px 0;      /* Ajuste de padding conforme necessário */
+}
+
+/* Logo */
+.logo img {
+    width: 440px;
+    height: auto;
+    vertical-align: middle; 
+    margin-left: 50px; 
+    align-self: center;
+} 
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
+/* Ícone de Menu à Esquerda */
+.navbar .menu {
+    display: inline-flex;  /* Exibe o ícone como flex */
+    align-items: center;   /* Alinha o ícone verticalmente */
+    margin-top: 10px;       /* Move o ícone para baixo - ajuste o valor conforme necessário */
+}
+
+
+
+/* Ícone de Menu à Esquerda */
+.navbar .login-icon {
+    display: inline-flex;  
+    align-items: center;  
+    margin-top: 10px;      
+}
+
+
+.navbar .menu img {
+    width: 45px;    /* Ajuste o tamanho do ícone conforme necessário */
+    height: auto;   /* Mantém a proporção da imagem */
+}
