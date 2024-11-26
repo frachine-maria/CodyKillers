@@ -15,6 +15,10 @@
         </div>
 
         <div class="form-container">
+            <div class="form-lights">
+                <img src="View/Media/Luz Ambiente.png" alt="Luz superior" class="light top-light">
+                <img src="View/Media/Luz Ambiente.png" alt="Luz inferior" class="light bottom-light">
+            </div>  
             <div class="form-content">
                 <h1>ENTRE COMO ADMIN</h1>
                 <p class="description">
@@ -38,16 +42,12 @@
     </div>
 
     <script>
-        // Função para alternar a visibilidade da senha
         const togglePassword = document.querySelector("#toggle-password");
         const senhaInput = document.querySelector("#senha");
-
         togglePassword.addEventListener("click", function () {
-            // Alterna o tipo do input entre "password" e "text"
             const type = senhaInput.type === "password" ? "text" : "password";
             senhaInput.type = type;
 
-            // Alterna o ícone (exibir/ocultar)
             this.classList.toggle("fa-eye-slash");
         });
     </script>
