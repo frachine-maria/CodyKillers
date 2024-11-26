@@ -16,7 +16,7 @@ Uma breve descrição do seu projeto e o que ele faz.
 
 ## Sobre
 
-Descreva o objetivo do projeto, o problema que ele resolve e qualquer contexto relevante.
+Nosso trabalho tem como proposta incentivar as pessoas a serem mais aliadas ao meio ambiente
 
 ## Tecnologias Utilizadas
 
