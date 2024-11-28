@@ -68,4 +68,50 @@
 .navbar .menu img {
   width: 45px;    
   height: auto;   
-} 
+}  
+
+.content {
+  max-width: 800px; 
+  margin: 0 auto; 
+  text-align: left; 
+}
+
+.image {
+  display: block; 
+  max-width: 100%; 
+  height: auto; 
+  margin: 0 auto; 
+  margin-bottom: 20px; 
+}
+
+.text {
+  font-size: 20px; 
+  line-height: 2.0; 
+  text-align: justify; 
+  font-family: 'Lalezar','sans-serif';
+}
+
+.footer {
+  background-color: #435922;
+  color: white;
+  text-align: center;
+  padding:20px;
+  margin-top: 10px;
+}
+
+
+.footer-links {
+  margin: 0px 0;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 15px;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
