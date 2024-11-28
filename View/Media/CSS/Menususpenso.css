@@ -3,7 +3,7 @@ body {
   margin: 0;
   font-family: 'Eras Bold ITC', Arial, sans-serif;
   overflow-x: hidden;
-  background-color: #f4f4f4;
+  background-color: #FFFFFF;
 }
 
 /* Ícone do Menu */
@@ -20,12 +20,15 @@ body {
   border-radius: 5px;
 }
 
-/* Menu suspenso */
+.menu-overlay.active + .menu-icon {
+  display: none;
+}
+
 .menu-overlay {
   position: fixed;
   top: 0;
   left: -100%;
-  width: 100%;
+  width: 350px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -38,7 +41,7 @@ body {
 }
 
 .menu-content {
-  width: 300px;
+  width: 100%;
   background-color: #223322;
   color: #fff;
   display: flex;
@@ -52,7 +55,6 @@ body {
   padding: 20px;
 }
 
-/* Botão do menu com quadrado verde */
 .menu-button {
   background-color: #435922;
   border-radius: 10px;
@@ -80,7 +82,7 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: none;
+  display: flex;  /* Mudança para exibir os submenus ao abrir o menu */
   flex-direction: column;
   background-color: #2d3b2d;
   border-radius: 10px;
@@ -104,7 +106,7 @@ body {
 
 /* Submenu visível */
 .submenu.active {
-  display: flex;
+  display: flex; /* Aumentando a visibilidade do submenu */
   animation: dropdown 0.3s ease-in-out;
 }
 
@@ -133,23 +135,25 @@ body {
 
 /* Logo no rodapé */
 .logo-footer {
-  text-align: center;
+  text-align: left; /* Alterado para alinhamento à esquerda */
   padding: 10px;
   background-color: #435922;
   margin-top: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.logo-footer .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #fff;
+.logo-img {
+  height: 40px; /* Defina o tamanho adequado para a sua logo */
+  margin-right: 10px; /* Espaçamento entre a logo e o texto */
 }
 
-.logo-footer .logo span {
-  color: #a5d6a7;
+.menu-top {
+  text-align: center; /* Centraliza a logo na parte superior do menu */
+  padding: 20px;
 }
 
-/* Rodapé do menu */
 .menu-bottom {
   padding: 20px;
   border-top: 1px solid #445544;
@@ -157,13 +161,14 @@ body {
 }
 
 .menu-bottom a {
-  color: #a5d6a7;
+  color: #FFFFFF;
   text-decoration: none;
   font-size: 14px;
   display: block;
-  margin: 5px 0;
+  margin: 15px 0;
 }
 
 .menu-bottom a:hover {
   color: #fff;
+  text-decoration: underline;
 }
