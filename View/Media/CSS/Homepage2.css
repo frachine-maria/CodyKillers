@@ -158,6 +158,51 @@ body {
 
 
 
+/* Container principal que organiza a galeria */
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas de tamanhos iguais */
+    grid-gap: 20px; /* Espaçamento entre as imagens */
+    width: 100%;
+    margin-top: 20px; /* Distância do topo */
+}
+
+/* Contêiner da imagem de cada produto */
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f5f5f5; /* Cor de fundo para os itens */
+    padding: 10px;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve para os itens */
+}
+
+/* Imagem do produto */
+.image-container img {
+    width: 100%; /* Imagem ocupa toda a largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: contain; /* Garante que a imagem inteira seja visível */
+    border-radius: 10px; /* Bordas arredondadas na imagem */
+}
+
+/* Título e preço do produto */
+.image-container h3 {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.image-container p {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    margin: 0;
+}
+
+
 
 
 /* Espaçamento entre as 3 caixas de texto e a imagem */

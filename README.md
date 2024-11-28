@@ -36,7 +36,10 @@ Instruções sobre como acessar e utilizar o nosso site
 Em breve ainda iremos colocar (Site ainda em construção)
 
 # Como clonar o repositório para sua máquina local
-Para clonar o repositório para sua máquina local basta você mandar uma solicitação para nós, propondo ser um afiliado ou ajudante para o nosso projeto, lembre-se de enviar uma mensagem relatando o por quê que você gostaria de ajudar e como você pode contribuir para o nosso projeto.
+Para clonar o repositório para sua máquina local basta você mandar
+uma solicitação para nós, propondo ser um afiliado ou ajudante para
+o nosso projeto, lembre-se de enviar uma mensagem relatando o por quê
+que você gostaria de ajudar e como você pode contribuir para o nosso projeto.
 
 # Como clonar o repositório para seu perfil do Github
 Aperte no botão Fork na parte de cima dos arquivos,
