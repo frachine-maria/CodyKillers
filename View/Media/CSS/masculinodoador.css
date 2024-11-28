@@ -70,37 +70,78 @@ body {
 
 
 
-
-
 /* Contêiner principal */
 .container {
     display: grid; /* Usando Grid Layout */
-    grid-template-columns: repeat(2, 1fr); /* Duas colunas com largura flexível */
-    grid-template-rows: repeat(2, 1fr);    /* Duas linhas com altura flexível */
-    gap: 15px 15px; /* Espaçamento de 15px entre as caixas (horizontal e vertical) */
-    justify-items: center; /* Centraliza as caixas dentro de cada célula */
-    align-items: center;   /* Centraliza as caixas dentro de cada célula */
-    width: 540px; /* Largura total do contêiner (2 colunas de 250px + 10px de gap) */
-    height: 620px; /* Altura total do contêiner (2 linhas de 300px + 10px de gap) */
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+    grid-template-rows: repeat(2, 450px); /* Duas linhas com altura ajustada */
+    gap: 15px; /* Espaçamento entre os itens */
+    justify-items: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza verticalmente os itens */
+    width: 740px; /* Ajustado para acomodar as novas larguras */
     margin: 0 auto; /* Centraliza o contêiner na tela */
-    margin-top: 100px; /* Move o contêiner para baixo em 40px */
+    margin-top: 100px; /* Espaçamento superior */
+    position: relative; /* Necessário para o posicionamento absoluto do botão */
 }
 
 /* Caixa de cada imagem */
 .image-container {
-    width: 250px; /* Largura fixa das caixas */
-    height: 300px; /* Altura fixa das caixas */
-    overflow: hidden; /* Garante que a imagem que ultrapassar os limites da caixa seja escondida */
+    width: 350px; /* Nova largura */
+    height: 450px; /* Nova altura */
+    overflow: hidden; /* Esconde excesso de imagem */
     border-radius: 20px; /* Bordas arredondadas */
-    margin-bottom: 45px; /* Espaçamento de 25px abaixo de cada caixa */
 }
 
 /* Imagem dentro do container */
 .image-container img {
-    width: 100%; /* A imagem ocupa toda a largura da caixa */
-    height: 100%; /* A imagem ocupa toda a altura da caixa */
-    object-fit: cover; /* A imagem vai cobrir completamente a caixa */
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    object-fit: cover; /* Preenche o container */
 }
+
+/* Novo contêiner para o botão fora da grid */
+.button-container {
+    position: absolute; /* Posicionamento absoluto em relação ao contêiner */
+    bottom: -1342px; /* Ajuste para a posição vertical do botão */
+    left: 690px; /* Ajuste a posição do botão em px */
+    top: auto; /* Inicialmente 'auto' para não influenciar o movimento vertical */
+}
+
+/* Estilo do botão */
+.ver-mais {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #435922;
+    padding: 10px 40px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
+}
+
+/* Efeito hover */
+.ver-mais:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Efeito active */
+.ver-mais:active {
+    background-color: #435922;
+    transform: scale(0.95);
+}
+
+
+
+.muitos-br {
+    margin-top: 8em; /* Ajuste a altura que desejar */
+}
+
+
+
+
+
 
 
 /* Espaçamento entre as 3 caixas de texto e a imagem */
