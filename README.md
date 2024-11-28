@@ -9,14 +9,16 @@ geral é promover a conscientização ambiental.
 
 - [Sobre](#sobre)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Instalação](#instalação)
-- [Contribuição](#contribuição)
+- [Utilização](#utilizacao)
 - [Licença](#licença)
-- [Contato](#contato)
 
 ## Sobre
 
 Nosso trabalho tem como proposta incentivar as pessoas a serem mais aliadas ao meio ambiente
+
+## Licença
+
+Nossa licença é a do MIT
 
 ## Tecnologias Utilizadas
 
