@@ -1,18 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu Suspenso</title>
   <link rel="stylesheet" href="../View/Media/CSS/Menususpenso.css">
-  <!-- Adicionando a fonte Eras Bold ITC -->
   <link href="https://fonts.googleapis.com/css2?family=Eras+Bold+ITC&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="page-content">
-    <h1>Bem-vindo ao Site</h1>
-    <p>Este é o conteúdo da página que será parcialmente visível quando o menu estiver aberto.</p>
-  </div>
 
   <div class="menu-icon" onclick="toggleMenu()">
     ☰
@@ -21,47 +16,44 @@
   <div class="menu-overlay" id="menu">
     <div class="menu-content">
       <div class="menu-top">
-        <!-- Colocando a logo no rodapé -->
         <div class="menu-item logo-footer">
-          <div class="logo">RE<span>WEAR</span></div>
+          <!-- Aqui você insere a imagem da logo -->
+          <img src="../View/Media/Logo.PNG" alt="Logo" class="logo-img">
         </div>
       </div>
       <div class="menu-items">
         <div class="menu-item">
-          <div onclick="toggleDropdown('doacoes-dropdown')" class="menu-button">
-            Doações
-          </div>
-          <ul class="submenu" id="doacoes-dropdown">
-            <li><a href="#masculino">Masculino</a></li>
-            <li><a href="#feminino">Feminino</a></li>
-            <li><a href="#enxoval">Enxoval</a></li>
-            <li><a href="#unissex">Unissex</a></li>
+          <div class="menu-button">DOAÇÕES</div>
+          <ul class="submenu active" id="doacoes-dropdown">
+            <li><a href="#masculino">MASCULINO</a></li>
+            <li><a href="#feminino">FEMININO</a></li>
+            <li><a href="#enxoval">ENXOVAL</a></li>
+            <li><a href="#unissex">UNISSEX</a></li>
           </ul>
         </div>
         <div class="menu-item">
-          <div onclick="toggleDropdown('compre-dropdown')" class="menu-button">
-            Compre
-          </div>
-          <ul class="submenu" id="compre-dropdown">
-            <li><a href="#masculino-compra">Masculino</a></li>
-            <li><a href="#feminino-compra">Feminino</a></li>
-            <li><a href="#enxoval-compra">Enxoval</a></li>
-            <li><a href="#unissex-compra">Unissex</a></li>
+          <div class="menu-button">COMPRE</div>
+          <ul class="submenu active" id="compre-dropdown">
+            <li><a href="#masculino-compra">MASCULINO</a></li>
+            <li><a href="#feminino-compra">FEMININO</a></li>
+            <li><a href="#enxoval-compra">ENXOVAL</a></li>
+            <li><a href="#unissex-compra">UNISSEX</a></li>
           </ul>
         </div>
         <div class="menu-item">
-          <div class="menu-button"><a href="#pontos">Pontos</a></div>
+          <div class="menu-button"><a href="#pontos">PONTOS</a></div>
         </div>
         <div class="menu-item">
-          <div class="menu-button"><a href="#estudos">Estudos</a></div>
+          <div class="menu-button"><a href="#estudos">ESTUDOS</a></div>
         </div>
         <div class="menu-item">
-          <div class="menu-button"><a href="#sobre">Sobre</a></div>
+          <div class="menu-button"><a href="#sobre">SOBRE</a></div>
         </div>
       </div>
       <div class="menu-bottom">
-        <div><a href="#politica">Política de Privacidade</a></div>
-        <div><a href="#termos">Termos e Condições</a></div>
+        <div><a href="#sobre">SOBRE</a></div>
+        <div><a href="#politica">POLÍTICA DE PRIVACIDADE</a></div>
+        <div><a href="#termos">TERMOS E CONDIÇÕES</a></div>
       </div>
     </div>
     <div class="glass-effect"></div>
@@ -70,13 +62,12 @@
   <script>
     function toggleMenu() {
       const menu = document.getElementById("menu");
+      const menuIcon = document.querySelector(".menu-icon");
+
       menu.classList.toggle("active");
+      menuIcon.classList.toggle("hidden");
     }
 
-    function toggleDropdown(id) {
-      const submenu = document.getElementById(id);
-      submenu.classList.toggle("active");
-    }
   </script>
 </body>
 </html>
