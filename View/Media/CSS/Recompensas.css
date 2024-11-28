@@ -94,7 +94,7 @@
     color: white;
     text-align: center;
     padding:20px;
-    margin-top: 0px;
+    margin-top: 10px;
 }
 
 /* Estilo para os links do rodapé */
@@ -133,3 +133,19 @@ h1 {
 .social-icon:hover {
     opacity: 0.7; /* Efeito de hover */
 }
+
+.moedaimg{
+    margin: 0 0 -131px 0;
+}
+
+.valor{
+    padding: 0 0 48px 197px;
+    font-family: 'Lalezar', sans-serif;
+    font-size: 45px;
+}
+
+.recompensas{
+    font-family: 'Lalezar', sans-serif;
+    font-size: 45px;
+}
+
