@@ -11,9 +11,9 @@
 
 /* Garantir que o conteúdo abaixo da navbar não fique escondido */
 body {
-    padding-top: 60px; /* Adicione um padding superior para o conteúdo não ficar escondido atrás da navbar */
     margin: 0;
-    overflow-x: hidden;
+    padding-top: 60px; /* Adiciona um padding superior para compensar a altura da navbar */
+    overflow-x: hidden; /* Evita barra de rolagem horizontal */
 }
 
 /* Outros estilos de navbar, como links, etc. */
@@ -39,14 +39,14 @@ body {
 .navbar .menu {
     display: inline-flex;  /* Exibe o ícone como flex */
     align-items: center;   /* Alinha o ícone verticalmente */
-    margin-top: 10px;       /* Move o ícone para baixo - ajuste o valor conforme necessário */
+    margin-top: 10px;      /* Move o ícone para baixo - ajuste o valor conforme necessário */
 }
 
-/* Ícone de Menu à Esquerda */
+/* Ícone de Login à Direita */
 .navbar .login-icon {
     display: inline-flex;  
     align-items: center;   
-    margin-top: 10px;       
+    margin-top: 10px;      
 }
 
 .navbar .menu img {
@@ -54,16 +54,52 @@ body {
     height: auto;   /* Mantém a proporção da imagem */
 }
 
-/* Container da imagem com o texto sobreposto */
-.image-container {
-    position: relative;
-    display: inline-block;
+/* Banner abaixo da navbar */
+.banner-container {
+    margin-top: 90px; /* Espaço equivalente à altura do menu fixo */
+    position: relative; /* Mantém a estrutura do container */
 }
 
+.banner-container img {
+    width: 100%; /* Ajusta a largura para ocupar o container */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaçamento extra ao redor da imagem */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+    object-position: top; /* Mostra o topo da imagem */
+}
+
+
+
+
+
+/* Contêiner principal */
+.container {
+    display: grid; /* Usando Grid Layout */
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas com largura flexível */
+    grid-template-rows: repeat(2, 1fr);    /* Duas linhas com altura flexível */
+    gap: 15px 15px; /* Espaçamento de 15px entre as caixas (horizontal e vertical) */
+    justify-items: center; /* Centraliza as caixas dentro de cada célula */
+    align-items: center;   /* Centraliza as caixas dentro de cada célula */
+    width: 540px; /* Largura total do contêiner (2 colunas de 250px + 10px de gap) */
+    height: 620px; /* Altura total do contêiner (2 linhas de 300px + 10px de gap) */
+    margin: 0 auto; /* Centraliza o contêiner na tela */
+    margin-top: 100px; /* Move o contêiner para baixo em 40px */
+}
+
+/* Caixa de cada imagem */
+.image-container {
+    width: 250px; /* Largura fixa das caixas */
+    height: 300px; /* Altura fixa das caixas */
+    overflow: hidden; /* Garante que a imagem que ultrapassar os limites da caixa seja escondida */
+    border-radius: 20px; /* Bordas arredondadas */
+    margin-bottom: 45px; /* Espaçamento de 25px abaixo de cada caixa */
+}
+
+/* Imagem dentro do container */
 .image-container img {
-    width: 100%;
-    height: auto;
-    display: block;
+    width: 100%; /* A imagem ocupa toda a largura da caixa */
+    height: 100%; /* A imagem ocupa toda a altura da caixa */
+    object-fit: cover; /* A imagem vai cobrir completamente a caixa */
 }
 
 
@@ -77,81 +113,6 @@ body {
     height: 80px; /* Espaço entre as caixas de texto e a imagem (ajuste conforme necessário) */
 }
 
-/* Estilos para a imagem acima do rodapé */
-.imagem-rodape {
-    margin: 0;
-    padding: 0;
-}
-
-.imagem-rodape img {
-    width: 100%;           /* Ajuste conforme necessário */
-    height: auto;
-    display: block;
-}
-
-/* Botão imagem 2 */
-.sobrepor {
-    position: absolute;
-    bottom: -1910px; 
-    justify-content: right;
-    align-items: end;
-    width: 100%;
-    right: -1150px
-}
-
-button { 
-    border: none;
-    display: block;
-    position: relative;
-    padding: 0.7em 2.4em;
-    font-size: 24px;
-    background: transparent;
-    cursor: pointer;
-    user-select: none;
-    overflow: hidden;
-    color: rgb(255, 255, 255);
-    z-index: 1;
-    font-family: inherit;
-    font-weight: 500;
-}
-  
-button span {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    z-index: -1;
-    border: 4px solid royalblue;
-}
-  
-button span::before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 8%;
-    height: 500%;
-    background: var(--lightgray);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-60deg);
-    transition: all 0.3s;
-}
-  
-button:hover span::before {
-    transform: translate(-50%, -50%) rotate(-90deg);
-    width: 100%;
-    background: royalblue;
-}
-  
-button:hover {
-    color: white;
-}
-  
-button:active span::before {
-    background: #2751cd;
-}
 
 /* Estilo para o rodapé */
 .footer {
@@ -159,7 +120,7 @@ button:active span::before {
     color: white;
     text-align: center;
     padding:20px;
-    margin-top: 0px;
+    margin-top: 14  0px;
 }
 
 /* Estilo para os links do rodapé */
@@ -193,14 +154,3 @@ button:active span::before {
 .social-icon:hover {
     opacity: 0.7; /* Efeito de hover */
 }
-
-
-
-
-
-
-
-
-
-
-
