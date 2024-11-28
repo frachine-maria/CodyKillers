@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Admin</title>
+    <link rel="stylesheet" href="../View/Media/CSS/LoginADM.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome para ícones -->
+</head>
+<body>
+    <div class="login-container">
+        <div class="image-container">
+            <img src="../View/Media/árvore.png" alt="Árvore no campo" class="image">
+        </div>
+
+        <div class="form-container">
+            <div class="form-content">
+                <h1>ENTRE COMO ADMIN</h1>
+                <p class="description">
+                    Entre como ADMIN em sua conta para visualizar usuários cadastrados, editar e excluir dados
+                </p>
+
+                <form action="#" method="post">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="Digite aqui seu E-mail">
+                    
+                    <label for="senha">Senha <span class="required">*</span></label>
+                    <div class="password-container">
+                        <input type="password" id="senha" name="senha" required placeholder="Digite aqui sua senha">
+                        <i id="toggle-password" class="toggle-password fas fa-eye"></i> <!-- Ícone para mostrar/ocultar senha -->
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Entrar como ADMIN</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const togglePassword = document.querySelector("#toggle-password");
+        const senhaInput = document.querySelector("#senha");
+        togglePassword.addEventListener("click", function () {
+            const type = senhaInput.type === "password" ? "text" : "password";
+            senhaInput.type = type;
+
+            this.classList.toggle("fa-eye-slash");
+        });
+    </script>
+</body>
+</html>

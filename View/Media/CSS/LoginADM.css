@@ -1,0 +1,195 @@
+/* Estilos Globais */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #283232;
+    overflow: hidden;
+}
+
+/* Contêiner Principal */
+.login-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.login-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../Noise\ &\ Texture.png'); /* Caminho da textura */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3; /* Ajuste da opacidade */
+    z-index: 9; /* Fica atrás de tudo */
+    pointer-events: none; /* Garante que a textura não interfira */
+}
+
+/* Fundo com Luzes */
+.form-lights {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2; /* Luzes ficam atrás do formulário */
+    pointer-events: none; /* Luzes não interferem com o formulário */
+}
+
+.form-lights .light {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.8;
+}
+
+.top-light {
+    top: 10%; /* Luz superior */
+}
+
+.bottom-light {
+    bottom: 10%; /* Luz inferior */
+}
+
+/* Estilos para o Formulário */
+.form-container {
+    width: 50%;
+    background-color: rgba(40, 50, 50, 0.9); /* Fundo escuro com transparência */
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 3; /* Conteúdo acima das luzes */
+    overflow: hidden; /* Para evitar que as luzes extrapolem */
+}
+
+.form-container .form-content {
+    width: 100%; /* Limita a largura do formulário */
+    display: flex;
+    flex-direction: column; /* Os inputs ficam empilhados */
+    align-items: center; /* Centraliza os elementos no formulário */
+    gap: 20px; /* Espaçamento entre os elementos */
+    position: relative;
+    z-index: 10; /* Conteúdo acima das luzes */
+}
+
+.form-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.form-container p {
+    font-size: 1.9rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgba(200, 200, 200, 0.9);
+}
+
+/* Labels */
+.form-container label {
+    width: 100%; /* Faz o label ocupar a largura do formulário */
+    text-align: left; /* Mantém alinhamento à esquerda */
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5px; /* Espaço entre o label e o input */
+}
+
+.form-container .required {
+    color: red; /* Asterisco vermelho */
+}
+
+/* Inputs */
+.form-container input {
+    width: 100%; /* Proporcional ao título */
+    max-width: 500px; /* Largura máxima */
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+    font-size: 1rem;
+     /* Centralização */
+}
+
+/* Botão */
+.submit-btn {
+    width: 80%; /* Centralizado com os inputs */
+    max-width: 500px; /* Largura proporcional ao input */
+    padding: 10px;
+    background-color: #ADFF00;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #9EDD00;
+}
+
+/* Estilos para a Imagem */
+.image-container {
+    width: 50%;
+    background-color: rgba(40, 50, 50, 0.9); /* Fundo igual ao formulário */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('View/Media/Noise\ &\ Texture.png'); /* Caminho da textura */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3; /* Ajuste da opacidade */
+    z-index: 1; /* Textura acima do fundo */
+    pointer-events: none;
+}
+
+.image-container img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2; /* Imagem acima da textura */
+}
+
+/* Ícone de Exibir/Ocultar Senha */
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    cursor: pointer;
+}
+
+.toggle-password:hover {
+    color: #fff; /* Muda para branco quando o usuário passa o mouse */
+}
+
+.password-container {
+    position: relative;
+    width: 100%; /* Proporcional ao título */
+    max-width:500px; /* Largura máxima para o campo de senha */
+}
