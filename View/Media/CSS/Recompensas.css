@@ -131,7 +131,7 @@ h1 {
 } 
 
 .moedaimg{ 
-    margin: 0 0 -131px 0; 
+    margin: 0px 0px -134px 14px;
 } 
 
  
@@ -146,11 +146,13 @@ h1 {
 .recompensas{ 
     font-family: 'Lalezar', sans-serif; 
     font-size: 45px; 
+    margin-left: 20px;
 } 
 
 .ReWearGold{ 
     font-family: 'Lalezar', sans-serif; 
     font-size: 30px; 
+    margin-left: 20px;
 }
 
 body {
@@ -195,11 +197,3 @@ body {
     background-color: #ffff;
 }
 
-.btn-aliexpress {
-    color: darkgrey;
-    background-color: darkgrey;
-    border-color: black;
-    padding: 0px !important;
-    border-radius: 10px;
-    font-family: 'Lalezar';
-}
