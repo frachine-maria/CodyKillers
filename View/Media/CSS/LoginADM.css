@@ -23,12 +23,37 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('View/Media/Noise\ &\ Texture.png'); /* Caminho da textura */
+    background-image: url('../Noise\ &\ Texture.png'); /* Caminho da textura */
     background-size: cover;
     background-position: center;
     opacity: 0.3; /* Ajuste da opacidade */
-    z-index: 1; /* Fica atrás do conteúdo */
+    z-index: 9; /* Fica atrás de tudo */
     pointer-events: none; /* Garante que a textura não interfira */
+}
+
+/* Fundo com Luzes */
+.form-lights {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2; /* Luzes ficam atrás do formulário */
+    pointer-events: none; /* Luzes não interferem com o formulário */
+}
+
+.form-lights .light {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.8;
+}
+
+.top-light {
+    top: 10%; /* Luz superior */
+}
+
+.bottom-light {
+    bottom: 10%; /* Luz inferior */
 }
 
 /* Estilos para o Formulário */
@@ -42,15 +67,18 @@ body, html {
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: 2; /* Conteúdo acima da textura */
+    z-index: 3; /* Conteúdo acima das luzes */
+    overflow: hidden; /* Para evitar que as luzes extrapolem */
 }
 
 .form-container .form-content {
-    width: 85%; /* Limita a largura do formulário */
+    width: 100%; /* Limita a largura do formulário */
     display: flex;
     flex-direction: column; /* Os inputs ficam empilhados */
     align-items: center; /* Centraliza os elementos no formulário */
     gap: 20px; /* Espaçamento entre os elementos */
+    position: relative;
+    z-index: 10; /* Conteúdo acima das luzes */
 }
 
 .form-container h1 {
@@ -81,20 +109,21 @@ body, html {
 
 /* Inputs */
 .form-container input {
-    width: 100%; /* Inputs ocupam a largura completa do formulário */
-    max-width: 400px; /* Largura máxima */
+    width: 100%; /* Proporcional ao título */
+    max-width: 500px; /* Largura máxima */
     padding: 10px;
     border: 1px solid #555;
     border-radius: 5px;
     background-color: #444;
     color: white;
     font-size: 1rem;
+     /* Centralização */
 }
 
 /* Botão */
 .submit-btn {
-    width: 100%; /* Centralizado com os inputs */
-    max-width: 400px; /* Largura proporcional ao input */
+    width: 80%; /* Centralizado com os inputs */
+    max-width: 500px; /* Largura proporcional ao input */
     padding: 10px;
     background-color: #ADFF00;
     color: black;
@@ -155,13 +184,12 @@ body, html {
     cursor: pointer;
 }
 
-/* Botão de Exibir Senha (Ícone) */
 .toggle-password:hover {
     color: #fff; /* Muda para branco quando o usuário passa o mouse */
 }
 
 .password-container {
     position: relative;
-    width: 100%;
-    max-width: 400px; /* Largura máxima para o campo de senha */
+    width: 100%; /* Proporcional ao título */
+    max-width:500px; /* Largura máxima para o campo de senha */
 }

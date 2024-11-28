@@ -60,6 +60,8 @@
     display: grid; /* Define o layout como grid */
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Ajusta automaticamente o número de colunas */
     gap: 10px; /* Adiciona espaçamento entre os itens */
+    margin: 0 0 5px 0;
+
 }
 
 .grid-item {
@@ -92,7 +94,7 @@
     color: white;
     text-align: center;
     padding:20px;
-    margin-top: 0px;
+    margin-top: 10px;
 }
 
 /* Estilo para os links do rodapé */
@@ -117,7 +119,7 @@ h1 {
     font-size: 45px;
   }
 
-  .social-icons {
+.social-icons {
     margin-top: 15px;
 }
 
@@ -131,3 +133,19 @@ h1 {
 .social-icon:hover {
     opacity: 0.7; /* Efeito de hover */
 }
+
+.moedaimg{
+    margin: 0 0 -131px 0;
+}
+
+.valor{
+    padding: 0 0 48px 197px;
+    font-family: 'Lalezar', sans-serif;
+    font-size: 45px;
+}
+
+.recompensas{
+    font-family: 'Lalezar', sans-serif;
+    font-size: 45px;
+}
+
