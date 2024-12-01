@@ -52,36 +52,81 @@
     height: auto;   
 } 
 
-/* Grid */ 
-.grid { 
-    display: grid; 
-    grid-template-columns:repeat(3, 1fr);; 
-    gap: 10px;
-    margin: 0 auto;
+/* Reset Básico: Remove margens e preenchimentos padrão dos elementos e ajusta o cálculo de tamanho de caixa */
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Estilo Global: Define a fonte padrão, altura das linhas e cor para o texto */
+  body {
+    font-family: Arial, sans-serif; /* Define a fonte do site */
+    line-height: 1.6; /* Ajusta o espaçamento vertical entre as linhas */
+    color: #333; /* Define a cor do texto */
+    background-color: #f9f9f9; /* Define a cor de fundo da página */
+  }
+
+  /* Container Geral: Centraliza e ajusta a largura do conteúdo principal */
+  .container {
+    width: 100%; /* Largura do conteúdo como 90% da tela */
+    max-width: 1200px; /* Define uma largura máxima de 1200px */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+  }
+
+  /* Cabeçalho */
+  .header {
+    background-color: #0077cc; /* Cor de fundo do cabeçalho */
+    color: #fff; /* Cor do texto dentro do cabeçalho */
+    padding: 20px 0; /* Espaçamento interno no topo e embaixo */
+  }
+
+  .header h1 {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 10px; /* Adiciona espaçamento abaixo do título */
+  }
+
+  /* Corpo Principal */
+  .main {
+    padding: 20px 0; /* Adiciona espaçamento interno no topo e embaixo */
+  }
+
+  .tituloCorpo {
+    text-align: center; /* Centraliza o conteúdo na seção */
+    margin-bottom: 20px; /* Adiciona espaçamento abaixo da seção */
+  }
+
+  .tituloCorpo h2 {
+    color: #0077cc; /* Define a cor do título */
+    margin-bottom: 10px; /* Adiciona espaçamento abaixo do título */
+  }
+
+  /* Grid */
+  .grid {
+
+        display: grid; /* Define o layout como grid */
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas com tamanhos iguais */
+        gap: 20px; /* Adiciona espaçamento entre os itens */
+        align-items: center; /* Centraliza verticalmente os itens */
+        margin: 30px;
+    }
     
 
-} 
+  .grid-item {
+    background-color: #D9D9D9; /* Define a cor de fundo dos itens */
+    padding: 20px; /* Adiciona espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    border: 1px solid #ccc; /* Adiciona uma borda cinza clara */
+    border-radius: 5px; /* Arredonda os cantos */
+  }
 
-.grid-item { 
-    padding: 70px;
-    justify-content:center;
-    align-items: center;
-    border-radius: 5px;
-    width: 250px;  
-    height: 100px; 
-  } 
+  /* Rodapé */
+  .footer {
+    background-color: #333; /* Cor de fundo do rodapé */
+    color: #fff; /* Cor do texto no rodapé */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px 0; /* Adiciona espaçamento interno no topo e embaixo */
+    margin-top: 20px; /* Adiciona espaço acima do rodapé */}
 
-.image-card img { 
-    display: grid;
-    grid-template-columns: repeat(auto-fit,1fr); 
-    margin: 40px; 
-    padding: 10px;  
-} 
-
-.grid-item { 
-    font-family: 'Lalezar', 'sans-serif'; 
-    font-size: 30px;
-} 
 
 /* Estilo para o rodapé */ 
 .footer { 
@@ -131,13 +176,13 @@ h1 {
 } 
 
 .moedaimg{ 
-    margin: 0px 0px -134px 14px;
+    margin: 0px 0px -134px 26px;
 } 
 
  
 
 .valor{ 
-    padding: 0 0 48px 197px; 
+    padding: 4px 0px 48px 209px;
     font-family: 'Lalezar', sans-serif; 
     font-size: 45px; 
 } 
@@ -146,13 +191,13 @@ h1 {
 .recompensas{ 
     font-family: 'Lalezar', sans-serif; 
     font-size: 45px; 
-    margin-left: 20px;
+    margin-left: 30px;
 } 
 
 .ReWearGold{ 
     font-family: 'Lalezar', sans-serif; 
     font-size: 30px; 
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 body {
@@ -167,13 +212,13 @@ body {
     gap: 20px;
     padding: 20px;
     grid-template-columns: 1fr; /* Uma coluna, ajustável para telas menores */
-    margin: 0 auto;
+    margin: 20px;
     border-radius: 5px; /* Arredonda os cantos */ 
   }
   
   .coupon {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr;
     align-items: center;
     background-color: #e0e0e0;
     padding: 15px;
@@ -197,3 +242,11 @@ body {
     background-color: #ffff;
 }
 
+.coupon-grid {
+    display: grid;
+    grid-template-columns: 3fr;
+    align-items: center;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 5px;
+  }
