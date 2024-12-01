@@ -31,7 +31,46 @@
     padding: 5px; 
 } 
 
- 
+.navbar .menu { 
+    display: inline-flex;  
+    align-items: center; 
+    margin-top: 10px; 
+}
+
+.navbar .login-icon { 
+    display: inline-flex;   
+    align-items: center;   
+    margin-top: 10px;       
+} 
+
+.navbar .menu img { 
+    width: 45px;    
+    height: auto;   
+} 
+
+  .navbar { 
+    width: 100%;          /* Faz a navbar ocupar toda a largura da tela */ 
+    background-color: #435922; /* Cor de fundo da navbar */ 
+    padding: 10px 0;      /* Ajuste de padding conforme necessário */ 
+} 
+
+/* Outros estilos de navbar, como links, etc. */ 
+.navbar ul { 
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+    justify-content: space-around; 
+} 
+
+.navbar li { 
+    display: inline; 
+} 
+
+.navbar a { 
+    color: white; 
+    text-decoration: none; 
+    padding: 5px; 
+} 
 
 /* Ícone de Menu à Esquerda */ 
 .navbar .menu { 
@@ -52,82 +91,112 @@
     height: auto;   
 } 
 
-/* Reset Básico: Remove margens e preenchimentos padrão dos elementos e ajusta o cálculo de tamanho de caixa */
+/* Logo */ 
+.logo img { 
+    width: 440px; 
+    height: auto; 
+    vertical-align: middle;  
+    margin-left: 50px;  
+    align-self: center; 
+} 
+
 * {
     margin: 0;
     padding: 0;
   }
 
-  /* Estilo Global: Define a fonte padrão, altura das linhas e cor para o texto */
   body {
-    font-family: Arial, sans-serif; /* Define a fonte do site */
+    font-family: 'Lalezar',Arial, sans-serif; 
     line-height: 1.6; /* Ajusta o espaçamento vertical entre as linhas */
-    color: #333; /* Define a cor do texto */
-    background-color: #f9f9f9; /* Define a cor de fundo da página */
+    color: #333; 
+    background-color: #f9f9f9; 
   }
 
-  /* Container Geral: Centraliza e ajusta a largura do conteúdo principal */
   .container {
-    width: 100%; /* Largura do conteúdo como 90% da tela */
-    max-width: 1200px; /* Define uma largura máxima de 1200px */
-    margin: 0 auto; /* Centraliza o container horizontalmente */
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 0 auto;
   }
 
-  /* Cabeçalho */
-  .header {
-    background-color: #0077cc; /* Cor de fundo do cabeçalho */
-    color: #fff; /* Cor do texto dentro do cabeçalho */
-    padding: 20px 0; /* Espaçamento interno no topo e embaixo */
-  }
-
-  .header h1 {
-    text-align: center; /* Centraliza o título */
-    margin-bottom: 10px; /* Adiciona espaçamento abaixo do título */
-  }
-
-  /* Corpo Principal */
   .main {
     padding: 20px 0; /* Adiciona espaçamento interno no topo e embaixo */
   }
 
-  .tituloCorpo {
-    text-align: center; /* Centraliza o conteúdo na seção */
-    margin-bottom: 20px; /* Adiciona espaçamento abaixo da seção */
-  }
-
-  .tituloCorpo h2 {
-    color: #0077cc; /* Define a cor do título */
-    margin-bottom: 10px; /* Adiciona espaçamento abaixo do título */
-  }
+  .moedaimg{ 
+    margin: 0px 0px -134px 26px;
+} 
+.valor{ 
+    padding: 4px 0px 48px 209px;
+    font-family: 'Lalezar', sans-serif; 
+    font-size: 45px; 
+} 
+.recompensas{ 
+    font-family: 'Lalezar', sans-serif; 
+    font-size: 45px; 
+    margin-left: 30px;
+    color: black;
+} 
+.ReWearGold{ 
+    font-family: 'Lalezar', sans-serif; 
+    font-size: 30px; 
+    margin-left: 30px;
+}
 
   /* Grid */
-  .grid {
-
-        display: grid; /* Define o layout como grid */
-        grid-template-columns: repeat(3, 1fr); /* 3 colunas com tamanhos iguais */
-        gap: 20px; /* Adiciona espaçamento entre os itens */
-        align-items: center; /* Centraliza verticalmente os itens */
-        margin: 30px;
-    }
+.grid {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; 
+    align-items: center;
+    margin: 30px;
+}
     
 
-  .grid-item {
-    background-color: #D9D9D9; /* Define a cor de fundo dos itens */
-    padding: 20px; /* Adiciona espaçamento interno */
-    text-align: center; /* Centraliza o texto */
-    border: 1px solid #ccc; /* Adiciona uma borda cinza clara */
-    border-radius: 5px; /* Arredonda os cantos */
-  }
+.grid-item {
+    background-color: #D9D9D9; 
+    padding: 20px; 
+    text-align: center; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+}
 
-  /* Rodapé */
-  .footer {
+.coupon-container {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    grid-template-columns: 1fr; 
+    margin: 20px;
+    border-radius: 5px;
+  }
+  
+.coupon {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 5px;
+}
+  
+.text-cupom {
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+} 
+.coupon-container a {
+    text-decoration: none;
+}
+.coupon-container a:hover {
+    text-decoration: underline; 
+}
+
+.footer {
     background-color: #333; /* Cor de fundo do rodapé */
     color: #fff; /* Cor do texto no rodapé */
     text-align: center; /* Centraliza o texto */
     padding: 10px 0; /* Adiciona espaçamento interno no topo e embaixo */
-    margin-top: 20px; /* Adiciona espaço acima do rodapé */}
-
-
+    margin-top: 20px; /* Adiciona espaço acima do rodapé */
+}
 /* Estilo para o rodapé */ 
 .footer { 
     background-color: #435922; 
@@ -154,12 +223,6 @@
 
 } 
 
-h1 { 
-    font-family: 'Lalezar', 'sans-serif'; 
-    color: #333; 
-    font-size: 45px; 
-  } 
-
 .social-icons { 
     margin-top: 15px; 
 } 
@@ -174,79 +237,3 @@ h1 {
 .social-icon:hover { 
     opacity: 0.7; /* Efeito de hover */ 
 } 
-
-.moedaimg{ 
-    margin: 0px 0px -134px 26px;
-} 
-
- 
-
-.valor{ 
-    padding: 4px 0px 48px 209px;
-    font-family: 'Lalezar', sans-serif; 
-    font-size: 45px; 
-} 
-
- 
-.recompensas{ 
-    font-family: 'Lalezar', sans-serif; 
-    font-size: 45px; 
-    margin-left: 30px;
-} 
-
-.ReWearGold{ 
-    font-family: 'Lalezar', sans-serif; 
-    font-size: 30px; 
-    margin-left: 30px;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-  }
-  
-  .coupon-container {
-    display: grid;
-    gap: 20px;
-    padding: 20px;
-    grid-template-columns: 1fr; /* Uma coluna, ajustável para telas menores */
-    margin: 20px;
-    border-radius: 5px; /* Arredonda os cantos */ 
-  }
-  
-  .coupon {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    background-color: #e0e0e0;
-    padding: 15px;
-    border-radius: 5px;
-  }
-  
-
-  .text-cupom {
-    text-align: center;
-    font-weight: bold;
-    font-size: 16px;
-    color: #333;
-  }
-  
-.col-md-6{
-    font-family: 'Lalezar';
-}
-
-
-.recompensas2{
-    background-color: #ffff;
-}
-
-.coupon-grid {
-    display: grid;
-    grid-template-columns: 3fr;
-    align-items: center;
-    background-color: #e0e0e0;
-    padding: 15px;
-    border-radius: 5px;
-  }
