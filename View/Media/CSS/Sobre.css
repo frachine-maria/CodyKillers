@@ -31,8 +31,6 @@
     padding: 5px; 
 } 
 
- 
-
 /* Ícone de Menu à Esquerda */ 
 .navbar .menu { 
     display: inline-flex;  /* Exibe o ícone como flex */ 
@@ -53,8 +51,67 @@
 } 
 
 
+.container{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+}
+.imagem{
+    width: 447px;
+}
 
+.texto{
+    font-family: 'Lalezar', Arial, Helvetica, sans-serif;
+    background-color:#435922;
+    color:white ;
+    text-align:justify;
+    font-size: larger;
+    ;
+}
 
+.container2{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+}
+
+.texto2{
+    font-family: 'Lalezar', Arial, Helvetica, sans-serif;
+    background-color:#435922;
+    color:white ;
+    text-align:justify;
+    font-size: larger;
+    ;
+}
+
+.perfil {
+    text-align: center;
+}
+
+.perfil img {
+    width: 150px; /* Tamanho da imagem */
+    height: 150px;
+    border-radius: 50%; /* Torna a imagem redonda */
+    object-fit: cover; /* Ajusta a imagem dentro do círculo */
+}
+
+.nome {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: normal;
+    color: black;
+}
+
+.footer {
+    background-color: #333; /* Cor de fundo do rodapé */
+    color: #fff; /* Cor do texto no rodapé */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px 0; /* Adiciona espaçamento interno no topo e embaixo */
+    margin-top: 20px; /* Adiciona espaço acima do rodapé */
+}
+/* Estilo para o rodapé */ 
 .footer { 
     background-color: #435922; 
     color: white; 
@@ -78,4 +135,19 @@
 .footer-links a:hover { 
     text-decoration: underline; 
 
+} 
+
+.social-icons { 
+    margin-top: 15px; 
+} 
+
+.social-icon { 
+    color: white; 
+    font-size: 25px; 
+    margin: 0 10px; 
+    text-decoration: none; 
+} 
+
+.social-icon:hover { 
+    opacity: 0.7; /* Efeito de hover */ 
 } 
