@@ -81,3 +81,26 @@ body {
   color: #333; 
   background-color: #efefef; 
 }  
+
+.footer {
+  background-color: #435922;
+  color: white;
+  text-align: center;
+  padding:20px;
+  margin-top: 10px;
+}
+
+.footer-links {
+  margin: 0px 0;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 15px;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}

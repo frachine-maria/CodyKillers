@@ -8,20 +8,59 @@
       font-size: 1.8em;
     } 
   
-   
-  label {
-    font-size: 14px;
-    margin-bottom: 5px;
+  .container{
+    display: grid; 
+    margin: 10px 50px 10px 50px;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: repeat(7, 70px);
+    column-gap: 20px;
+    row-gap: 10px; 
   }
-  
-  input[type="text"] {
-    width: 100%; 
-    padding: 20px; 
-    border: 1px solid #ccc; 
-    border-radius: 4px;
-    font-size: 14px; 
+   
+  input{
+    border: none; 
+    border-radius: 10px;
+    background-color: #ffffff; 
+    font-size: 16px; 
+    width: 300px; 
+    height: 50px;
+  }
+
+  .nome{
+    grid-row: 1; 
+    grid-column: 1/2;
   } 
-  
+
+  .nascimento{
+    grid-row: 2; 
+    grid-column: 1/2;
+  } 
+
+  .telefone{
+    grid-row: 3; 
+    grid-column: 1/2;
+  } 
+
+  .email{
+    grid-row: 4; 
+    grid-column: 1;
+  } 
+
+  .pais{
+    grid-row: 4; 
+    grid-column: 1;
+  } 
+
+  .sexo{
+    grid-row: 5; 
+    grid-column: 1;
+  } 
+
+  .estado{
+    grid-row: 5; 
+    grid-column: 2;
+  } 
+
   .navbar {
    width: 100%; 
     background-color: #435922; 
@@ -77,10 +116,28 @@
     background-color: #efefef; 
   }    
 
-  .grid{
-    grid-template-columns: 300px 300px;
-    grid-template-rows: repeat(7,auto);
+  .footer {
+    background-color: #435922;
+    color: white;
+    text-align: center;
+    padding:20px;
+    margin-top: 10px;
   }
-
+  
+  .footer-links {
+    margin: 0px 0;
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
   
   

@@ -1,0 +1,77 @@
+/* Reset básico */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    background-color: #f4f4f4;
+  }
+  
+  /* Ícone do Menu */
+  .menu-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 2000;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Menu suspenso */
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Menu escondido inicialmente */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: left 0.3s ease-in-out;
+  }
+  
+  .menu-content {
+    width: 300px;
+    background-color: #223322;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 1000;
+  }
+  
+  .menu-content .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .menu-content a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 0;
+    margin: 5px 0;
+    font-size: 16px;
+    display: block;
+    transition: color 0.3s;
+  }
+  
+  .menu-content a:hover {
+    color: #a5d6a7;
+  }
+  
+  /* Efeito de vidro */
+  .glass-effect {
+    flex: 1;
+    background-color: rgba(67, 89, 34, 0.25); /* Cor #435922 com 25% de transparência */
+    backdrop-filter: blur(10px);
+    z-index: 900;
+  }
+  
+  /* Quando o menu está ativo */
+  .menu-overlay.active {
+    left: 0;
+  }
+  

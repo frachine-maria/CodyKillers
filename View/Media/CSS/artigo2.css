@@ -15,10 +15,7 @@
     background-color: #ffffff; 
   }  
 
- 
-
-
-.navbar {
+ .navbar {
    width: 100%;          
   background-color: #435922; 
   padding: 10px 0;     
@@ -94,7 +91,6 @@
   padding:20px;
   margin-top: 10px;
 }
-
 
 .footer-links {
   margin: 0px 0;
