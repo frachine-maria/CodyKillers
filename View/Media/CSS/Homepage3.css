@@ -35,7 +35,7 @@ body {
     padding: 10px;
 }
 
-/* Imagem principal com texto "CATEGORIAS" */
+/* Estilo para a imagem principal e texto sobreposto */
 .image-container {
     position: relative;
 }
@@ -47,10 +47,11 @@ body {
 
 .overlay-text {
     position: absolute;
-    bottom: 20px; /* Próximo à parte inferior da imagem */
-    left: 20px; /* Alinhado à esquerda */
+    bottom:50%; /* Ajuste proporcional para centralizar verticalmente */
+    left: 20%;   /* Centraliza horizontalmente */
+    transform: translate(-50%, 50%); /* Alinha perfeitamente ao centro */
     color: white;
-    font-size: 48px;
+    font-size: 100px; /* Ajuste conforme necessário */
     font-weight: bold;
     font-family: 'Lalezar', sans-serif;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
@@ -61,11 +62,11 @@ body {
     background-color: #B6D0F2;
     color: white;
     width: 100%;
-    padding: 20px;
+    padding: 40px 20px;  /* Aumenta o padding para dar mais espaço */
     border-radius: 40px;
     text-align: center;
     font-size: 25px;
-    margin: 40px auto; /* Espaçamento entre elementos */
+    margin: 40px auto;
     box-sizing: border-box;
     position: relative;
 }
@@ -73,38 +74,22 @@ body {
 .text-box p {
     font-size: 38px;
     line-height: 1.6;
+    margin-bottom: 20px;  /* Dá um pouco de espaçamento entre o texto e o ícone */
 }
 
-/* Ícone de dinheiro na caixa azul */
+/* Ícone de dinheiro dentro da caixa azul */
 .money-icon {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 100px;  /* Posição ajustada para não sobrepor o texto */
+    left: 100px;
     font-size: 36px;
     color: white;
-}
-
-/* Botão dentro da caixa azul */
-.text-box button {
-    background-color: royalblue;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-size: 20px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-}
-
-.text-box button:hover {
-    background-color: #1f3b7c;
 }
 
 /* Botão sobreposto na imagem da área do doador */
 .image-donor {
     position: relative;
-    margin-bottom: 0; /* Remove o espaço entre imagem e rodapé */
+    margin-bottom: 0; 
 }
 
 .image-donor img {
@@ -144,8 +129,8 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 colunas de tamanho igual */
-    grid-gap: 20px; /* Espaçamento entre as imagens */
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-gap: 20px; 
     padding: 10px 0;
 }
 
@@ -174,7 +159,7 @@ body {
     display: block;
 }
 
-/* Estilo para o rodapé */
+/* Rodapé */
 .footer {
     background-color: #435922;
     color: white;
