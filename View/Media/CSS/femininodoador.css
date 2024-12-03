@@ -1,0 +1,197 @@
+/* Navegação fixa no topo */
+.navbar {
+    position: fixed;      /* Fixa a navbar */
+    top: 0;               /* Alinha ao topo da página */
+    left: 0;              /* Alinha à esquerda da página */
+    width: 100%;          /* Faz a navbar ocupar toda a largura da tela */
+    z-index: 1000;        /* Garante que a navbar fique acima de outros elementos */
+    background-color: #435922; /* Cor de fundo da navbar */
+    padding: 10px 0;      /* Ajuste de padding conforme necessário */
+}
+
+/* Garantir que o conteúdo abaixo da navbar não fique escondido */
+body {
+    margin: 0;
+    padding-top: 60px; /* Adiciona um padding superior para compensar a altura da navbar */
+    overflow-x: hidden; /* Evita barra de rolagem horizontal */
+}
+
+/* Outros estilos de navbar, como links, etc. */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Ícone de Menu à Esquerda */
+.navbar .menu {
+    display: inline-flex;  /* Exibe o ícone como flex */
+    align-items: center;   /* Alinha o ícone verticalmente */
+    margin-top: 10px;      /* Move o ícone para baixo - ajuste o valor conforme necessário */
+}
+
+/* Ícone de Login à Direita */
+.navbar .login-icon {
+    display: inline-flex;  
+    align-items: center;   
+    margin-top: 10px;      
+}
+
+.navbar .menu img {
+    width: 70px;    /* Ajuste o tamanho do ícone conforme necessário */
+    height: auto;   /* Mantém a proporção da imagem */
+}
+
+/* Banner abaixo da navbar */
+.banner-container {
+    margin-top: 90px; /* Espaço equivalente à altura do menu fixo */
+    position: relative; /* Mantém a estrutura do container */
+}
+
+.banner-container img {
+    width: 100%; /* Ajusta a largura para ocupar o container */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaçamento extra ao redor da imagem */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+    object-position: top; /* Mostra o topo da imagem */
+}
+
+
+
+/* Contêiner principal */
+.container {
+    display: grid; /* Usando Grid Layout */
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+    grid-template-rows: repeat(2, 450px); /* Duas linhas com altura ajustada */
+    gap: 15px; /* Espaçamento entre os itens */
+    justify-items: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza verticalmente os itens */
+    width: 740px; /* Ajustado para acomodar as novas larguras */
+    margin: 0 auto; /* Centraliza o contêiner na tela */
+    margin-top: 100px; /* Espaçamento superior */
+    position: relative; /* Necessário para o posicionamento absoluto do botão */
+}
+
+/* Caixa de cada imagem */
+.image-container {
+    width: 350px; /* Nova largura */
+    height: 450px; /* Nova altura */
+    overflow: hidden; /* Esconde excesso de imagem */
+    border-radius: 20px; /* Bordas arredondadas */
+}
+
+/* Imagem dentro do container */
+.image-container img {
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    object-fit: cover; /* Preenche o container */
+}
+
+/* Novo contêiner para o botão fora da grid */
+.button-container {
+    position: absolute; /* Posicionamento absoluto em relação ao contêiner */
+    bottom: -1342px; /* Ajuste para a posição vertical do botão */
+    left: 690px; /* Ajuste a posição do botão em px */
+    top: auto; /* Inicialmente 'auto' para não influenciar o movimento vertical */
+}
+
+/* Estilo do botão */
+.ver-mais {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #435922;
+    padding: 10px 40px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
+}
+
+/* Efeito hover */
+.ver-mais:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Efeito active */
+.ver-mais:active {
+    background-color: #435922;
+    transform: scale(0.95);
+}
+
+
+
+.muitos-br {
+    margin-top: 8em; /* Ajuste a altura que desejar */
+}
+
+
+
+
+
+
+
+/* Espaçamento entre as 3 caixas de texto e a imagem */
+.caixas-de-texto {
+    margin-bottom: 50px; /* Ajuste o valor conforme necessário para o espaçamento desejado */
+}
+
+/* Espaço adicional entre as caixas de texto e a imagem */
+.espaco-caixas-imagem {
+    height: 80px; /* Espaço entre as caixas de texto e a imagem (ajuste conforme necessário) */
+}
+
+
+/* Estilo para o rodapé */
+.footer {
+    background-color: #435922;
+    color: white;
+    text-align: center;
+    padding:20px;
+    margin-top: 14  0px;
+}
+
+/* Estilo para os links do rodapé */
+.footer-links {
+    margin: 0px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para os ícones sociais */
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 25px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    opacity: 0.7; /* Efeito de hover */
+}
