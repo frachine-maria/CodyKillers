@@ -7,16 +7,16 @@
     z-index: 1000;
     background-color: #435922;
     display: flex;
-    align-items: center; /* Alinha os itens verticalmente */
-    justify-content: space-between; /* Espaça os itens nas extremidades */
-    padding: 0 20px; /* Adiciona um espaçamento horizontal */
-    height: 150px; /* Define a altura da navbar */
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 150px;
     box-sizing: border-box;
 }
 
 /* Garantir que o conteúdo abaixo da navbar não fique escondido */
 body {
-    padding-top: 60px;
+    padding-top: 150px;
     margin: 0;
     overflow-x: hidden;
 }
@@ -27,20 +27,20 @@ body {
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: space-between; /* Espaça os elementos entre si */
+    justify-content: space-between;
     margin: 0;
     padding: 0;
 }
 
 .navbar .menu img, 
 .navbar .login-icon img {
-    height: 90px; /* Ajusta o tamanho dos ícones */
-    cursor: pointer; /* Adiciona um cursor clicável */
+    height: 90px;
+    cursor: pointer;
 }
 
 .navbar .logo img {
-    height: 150px; /* Define o tamanho da logo */
-    margin: auto; /* Centraliza automaticamente */
+    height: 150px;
+    margin: auto;
 }
 
 .navbar li {
@@ -65,7 +65,7 @@ body {
 
 .overlay-text {
     position: absolute;
-    bottom:60%; /* Ajuste proporcional para centralizar verticalmente */
+    bottom: 60%;
     left: 20%;
     transform: translate(-50%, 50%);
     color: white;
@@ -75,21 +75,21 @@ body {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
+/* Caixa azul */
 .text-box {
     font-family: 'Lalezar', sans-serif; 
     background-color: #B6D0F2;
     color: white;
-    width: 1200px; /* Define uma largura fixa */
-    max-width: 100%; /* Limita a largura a 90% da tela menor */
-    padding: 40px 20px; 
+    width: 1200px; 
+    max-width: 90%; 
+    padding: 40px 20px;
     border-radius: 40px;
     text-align: center;
     font-size: 25px;
-    margin: 40px auto; /* Centraliza horizontalmente */
+    margin: 40px auto;
     box-sizing: border-box;
     position: relative;
 }
-
 
 .button-link {
     text-decoration: none;
@@ -99,80 +99,101 @@ body {
 .text-box p {
     font-size: 38px;
     line-height: 1.6;
-    margin-bottom: 20px;  /* Dá um pouco de espaçamento entre o texto e o ícone */
+    margin-bottom: 20px;
 }
 
-/* Ícone de dinheiro dentro da caixa azul */
 .money-icon {
     position: absolute;
-    top: 100px;  /* Posição ajustada para não sobrepor o texto */
+    top: 100px;
     left: 100px;
     font-size: 36px;
     color: white;
 }
 
 /* Grid para categorias */
-.page-container {
-    width: 100%;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
-    grid-gap: 20px; 
-    padding: 10px 0;
+    grid-template-columns: 1fr 1.5fr; /* Coluna esquerda menor (1fr) e direita maior (2fr) */
+    grid-template-rows: 1fr 1fr; /* Duas linhas na esquerda */
+    grid-template-areas: 
+        "unissex enxoval"
+        "feminina enxoval"
+        "masculino enxoval";
+    grid-gap: 10px;
+    width: 100%;
+    max-width: 1200px; /* Centraliza o grid */
+    margin: 0 auto;
 }
 
-.grid-container img {
+.item {
+    position: relative;
+}
+
+.item img {
     width: 100%;
     height: auto;
     object-fit: cover;
 }
 
-.grid-container .category-title {
-    text-align: left;
+.text-overlay {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    color: white;
     font-size: 24px;
     font-weight: bold;
-    margin-top: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
-/* Estilo para a imagem acima do rodapé */
+.unissex {
+    grid-area: unissex;
+}
+
+.enxoval {
+    grid-area: enxoval;
+}
+
+.feminina {
+    grid-area: feminina;
+}
+
+.masculino {
+    grid-area: masculino;
+}
+
 .imagem-rodape {
-    display: block; /* Garante que o bloco esteja visível */
-    margin: 0; /* Adiciona espaçamento entre a imagem e o conteúdo acima */
+    display: block;
+    margin: 0;
     padding: 0;
     position: relative;
-    text-align: center; /* Centraliza horizontalmente */
+    text-align: center;
 }
-
 
 .imagem-rodape .botao-doador {
-    position: absolute; /* Permite centralizar sobre a imagem */
-    top: 60%; /* Centraliza verticalmente */
-    left: 80%; /* Centraliza horizontalmente */
-    background-color: #5FA0D9; /* Cor do fundo */
-    color: white; /* Cor do texto */
-    padding: 15px 30px; /* Espaçamento interno */
-    font-size: 20px; /* Tamanho do texto */
-    font-family: 'Lalezar', sans-serif; /* Aplica a fonte Lalezar */
-    text-decoration: none; /* Remove o sublinhado */
-    border-radius: 25px; /* Bordas arredondadas */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
-    transition: background-color 0.3s ease-in-out; /* Efeito de hover */
-    cursor: pointer; /* Aplica o cursor de clique */
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #5FA0D9;
+    color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-family: 'Lalezar', sans-serif;
+    text-decoration: none;
+    border-radius: 25px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
 }
 
-
 .imagem-rodape .botao-doador:hover {
-    background-color: #4274a1; /* Cor de fundo ao passar o mouse */
+    background-color: #4274a1;
 }
 
 .imagem-rodape img {
-    width: 100%; /* Ajusta para ocupar toda a largura do container */
-    height: auto; /* Mantém a proporção da imagem */
-    display: block; /* Garante que a imagem esteja visível */
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* Rodapé */
@@ -184,7 +205,6 @@ body {
     margin: 0;
 }
 
-/* Links do rodapé */
 .footer-links {
     margin: 0;
 }
@@ -200,7 +220,6 @@ body {
     text-decoration: underline;
 }
 
-/* Ícones sociais no rodapé */
 .social-icons {
     margin-top: 15px;
 }
