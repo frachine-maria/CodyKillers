@@ -1,9 +1,39 @@
+<<<<<<< HEAD
+
+* {
+    margin: 0;
+    padding: 0;
+  }  
+  
+  h1 {
+    text-align: center; 
+    margin-bottom: 30px; 
+  } 
+   
+   body {
+    font-family: Arial,sans-serif; 
+    line-height: 1.6; 
+    color: #333; 
+    background-color: #ffffff; 
+  }  
+
+  p {
+    text-align: center; 
+    margin-bottom: 50px; 
+  }  
+
+ .navbar {
+ width: 100%;          
+  background-color: #435922; 
+  padding: 10px 0;     
+=======
 /* Reset básico */
 body {
   margin: 0;
   font-family: 'Eras Bold ITC', Arial, sans-serif;
   overflow-x: hidden;
   background-color: #FFFFFF;
+>>>>>>> 204e84dd9e07e62619b503ea47a94920d7d6658b
 }
 
 /* Ícone do Menu */
@@ -165,6 +195,32 @@ body {
   align-items: center;
 }
 
+<<<<<<< HEAD
+.footer {
+  background-color: #435922;
+  color: white;
+  text-align: center;
+  padding:20px;
+  margin-top: 10px;
+}
+
+.footer-links {
+  margin: 0px 0;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 15px;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+
+=======
 .logo-footer .logo {
   font-size: 24px;
   font-weight: bold;
@@ -191,3 +247,4 @@ body {
 .menu-bottom a:hover {
   color: #fff;
 }
+>>>>>>> 204e84dd9e07e62619b503ea47a94920d7d6658b
