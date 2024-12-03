@@ -6,7 +6,12 @@
     width: 100%;
     z-index: 1000;
     background-color: #435922;
-    padding: 10px 0;
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente */
+    justify-content: space-between; /* Espaça os itens nas extremidades */
+    padding: 0 20px; /* Adiciona um espaçamento horizontal */
+    height: 150px; /* Define a altura da navbar */
+    box-sizing: border-box;
 }
 
 /* Garantir que o conteúdo abaixo da navbar não fique escondido */
@@ -19,10 +24,23 @@ body {
 /* Estilo para links da navbar */
 .navbar ul {
     list-style-type: none;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between; /* Espaça os elementos entre si */
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: space-around;
+}
+
+.navbar .menu img, 
+.navbar .login-icon img {
+    height: 90px; /* Ajusta o tamanho dos ícones */
+    cursor: pointer; /* Adiciona um cursor clicável */
+}
+
+.navbar .logo img {
+    height: 150px; /* Define o tamanho da logo */
+    margin: auto; /* Centraliza automaticamente */
 }
 
 .navbar li {
@@ -47,7 +65,7 @@ body {
 
 .overlay-text {
     position: absolute;
-    bottom:50%; /* Ajuste proporcional para centralizar verticalmente */
+    bottom:60%; /* Ajuste proporcional para centralizar verticalmente */
     left: 20%;   /* Centraliza horizontalmente */
     transform: translate(-50%, 50%); /* Alinha perfeitamente ao centro */
     color: white;
@@ -59,6 +77,7 @@ body {
 
 /* Caixa azul de "Ganhe Pontos" */
 .text-box {
+    font-family: 'Lalezar', sans-serif; /* Aplica a fonte Lalezar */
     background-color: #B6D0F2;
     color: white;
     width: 100%;
@@ -69,6 +88,11 @@ body {
     margin: 40px auto;
     box-sizing: border-box;
     position: relative;
+}
+
+.button-link {
+    text-decoration: none;
+    color: white;
 }
 
 .text-box p {
@@ -87,38 +111,6 @@ body {
 }
 
 /* Botão sobreposto na imagem da área do doador */
-.image-donor {
-    position: relative;
-    margin-bottom: 0; 
-}
-
-.image-donor img {
-    width: 100%;
-    height: auto;
-}
-
-.image-donor .button-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-}
-
-.image-donor .button-overlay button {
-    background-color: royalblue;
-    color: white;
-    padding: 15px 30px;
-    font-size: 18px;
-    border: none;
-    cursor: pointer;
-    border-radius: 20px;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.image-donor .button-overlay button:hover {
-    background-color: #1f3b7c;
-}
 
 /* Grid para categorias */
 .page-container {
