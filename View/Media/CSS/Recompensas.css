@@ -71,23 +71,23 @@
   }
 
   .moedaimg{ 
-    margin: 0px 0px -134px 26px;
+    margin: 0px -119px -120px;
 } 
 .valor{ 
-    padding: 4px 0px 48px 209px;
+    padding: 4px 0px 40px 64px;
     font-family: 'Lalezar', sans-serif; 
     font-size: 45px; 
 } 
 .recompensas{ 
     font-family: 'Lalezar', sans-serif; 
     font-size: 45px; 
-    margin-left: 30px;
+    margin-left: -120px;
     color: black;
 } 
 .ReWearGold{ 
     font-family: 'Lalezar', sans-serif; 
     font-size: 30px; 
-    margin-left: 30px;
+    margin-left: -120px;
 }
 
   /* Grid */
