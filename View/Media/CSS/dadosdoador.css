@@ -1,31 +1,40 @@
 * {
   margin: 0;
-  padding: 0;
+  padding: 100;
 }  
 
-  .h1 {
-    margin-bottom: center;
-    font-size: 1.8em;
-  } 
-
-  .input_container {
-  display: flex;
-  flex-direction: column;
-  margin: 10px 0; 
+form h1 {
+  margin-bottom: 20px;
 }
 
 label {
-  font-size: 14px;
+  display: block;
   margin-bottom: 5px;
+  font-weight: bold;
 }
 
-input[type="text"] {
-  width: 100%; 
-  padding: 20px; 
-  border: 1px solid #ccc; 
-  border-radius: 4px;
-  font-size: 14px; 
-} 
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.row div {
+  flex: 1;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
 .navbar {
   width: 100%; 

@@ -24,55 +24,109 @@
         </ul>
     </nav>
 
- <h1>Dados Pessoais:</h1>
-  <div class="nome">
-    <label for="nome">Nome Completo:</label>
-    <input type="text" id="nome" name="nome" placeholder="">
-  </div>
-
-  <div class="nascimento">
-    <label for="nascimento-">Data de Nascimento:</label> 
-    <input type="text" id="nascimento" name="nascimento" placeholder="">
-  </div> 
- 
-  <div class="telefone">
-    <label for="telefone">Telefone:</label> 
-    <input type="text" id="telefone" name="Telefone" placeholder="">
-  </div> 
-
-  <div class="email">
-    <label for="email">Email ou CPF:</label>
-    <input type="text" id="email" name="email" placeholder="">
-  </div> 
-
-  <div class="país">
-    <label for="país">Pais:</label>
-    <input type="text" id="país" name="país" placeholder="">
-  </div>  
-
-  <div class="sexo">
-    <label for="sexo">Sexo:</label>
-    <input type="text" id="sexo" name="sexo" placeholder="">
-  </div>  
-
-  <div class="estado">
-    <label for="estado">Estado:</label>
-    <input type="text" id="estado" name="estado" placeholder="">
-  </div> 
-
-
-  <div class="pergunta1">
-    <label for="pergunta1">Como vc escolheu quais roupas doar:</label>
-    <input type="text" id="pergunta1" name="pergunta1" placeholder="">
-  </div> 
-
-  <div class="pergunta2">
-    <label for="pergunta2">O que te motivou a doar suas roupas:</label>
-    <input type="text" id="pergunta2" name="pergunta2" placeholder="">
-  </div>
-
-
-  <footer class="footer">
+    <main class="dados_container">
+      <form>
+        <h1>Dados Pessoais:</h1>
+  
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome" required>
+  
+        <label for="nascimento">Data de Nascimento:</label>
+        <input type="date" id="nascimento" name="nascimento" required>
+  
+        <label for="telefone">Telefone:</label>
+        <input type="telefone" id="telefone" name="telefone" required>
+  
+        <label for="email">Email ou CPF:</label>
+        <input type="text" id="email" name="email" required>
+  
+        <div class="row">
+          <div>
+            <label for="pais">País:</label>
+            <select id="pais" name="pais" required>
+              <option value="">Selecione</option>
+              <option value="br">Brasil</option>
+              <option value="">Afeganistão</option>
+              <option value="">África do Sul</option>
+              <option value="">Albânia</option> 
+              <option value="">Alemanha</option>
+              <option value="">Andorra</option>
+              <option value="">Angola</option> 
+              <option value="">Arábia Saudita</option>
+              <option value="">Austrália</option>
+              <option value="">Áustria</option>
+              <option value="">Coreia do Sul</option> 
+              <option value="">Coreia do Norte</option> 
+              <option value="">China</option> 
+              <option value="">Chile</option> 
+              <option value="">Catar</option>
+              <option value="">Colombia</option>
+              <option value="">Japão</option> 
+              <option value="">Bolívia</option>
+              <option value="">India</option>
+              <option value="">Italia</option> 
+              <option value="">México</option> 
+              <option value="">Reino Unido</option>
+              <option value="">Portugal</option> 
+              <option value="">Nova Zelândia</option>
+              <option value="">Nigéria</option>
+              <option value="">Noruega</option> 
+              <option value="">Moçambique</option>
+              <option value="">Marrocos</option>
+              <option value="">Tailandia</option> 
+              <option value="">Suécia</option>
+            </select>
+          </div>
+          <div>
+            <label for="estado">Estado:</label>
+            <select id="estado" name="estado" required>
+              <option value="">Selecione</option>
+              <option value="sp">São Paulo</option>
+              <option value="">Acre</option> 
+              <option value="">Alagoas</option>
+              <option value="">Amapá</option>
+              <option value="">Amazonas</option> 
+              <option value="">Bahia</option>
+              <option value="">Ceara</option>
+              <option value="">Goias</option>
+              <option value="">Mato Grosso</option>
+              <option value="">Maranhão</option>
+              <option value="">Minas Gerais</option>
+              <option value="">Pará</option> 
+              <option value="">Parana</option> 
+              <option value="">Rondônia</option>
+              <option value="">Pernambuco</option>
+              <option value="">Rio de Janeiro</option>
+              <option value="">Santa Catarina</option> 
+              <option value="">Distrito Fedderal</option>
+              <option value="">Espirito Santo</option>
+            </select>
+          </div>
+        </div>
+  
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" name="sexo" required>
+          <option value="">Selecione</option>
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+          <option value="outro">Outro</option>
+        </select>
+  
+        <label for="pergunta1">Como você escolheu quais roupas doar:</label>
+        <textarea id="pergunta1" name="pergunta1" rows="3"></textarea>
+  
+        <label for="pergunta2">O que te motivou a doar suas roupas:</label>
+        <textarea id="pergunta2" name="pergunta2" rows="3"></textarea>
+  
+        <div class="checkbox">
+          <input type="checkbox" id="termos" name="termos" required>
+          <label for="termos">Li e estou de acordo com o Termo de Uso e Política de Privacidade</label>
+        </div>
+  
+      </form>
+    </main>
+  
+ <footer class="footer">
     <div class="footer-links">
         <a href="#sobre">Sobre</a>
         <a href="#termos">Termos e Condições</a>
