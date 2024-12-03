@@ -155,20 +155,6 @@
     opacity: 0.7; /* Efeito de hover */ 
 } 
 
-.card{
-    position: absolute;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #e9f8da;
-    background-clip: border-box;
-    border: none;
-    border-radius: .25rem;
-    width: 20%;
-}
 
 .texto1{
     font-family: 'Lalezar';
