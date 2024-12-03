@@ -149,14 +149,16 @@ body {
 
 /* Estilo para a imagem acima do rodapé */
 .imagem-rodape {
-    margin: 0;
+    display: block; /* Garante que o bloco esteja visível */
+    margin: 0; /* Adiciona espaçamento entre a imagem e o conteúdo acima */
     padding: 0;
+    text-align: center; /* Centraliza horizontalmente */
 }
 
 .imagem-rodape img {
-    width: 100%;
-    height: auto;
-    display: block;
+    width: 100%; /* Ajusta para ocupar toda a largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Garante que a imagem esteja visível */
 }
 
 /* Rodapé */
@@ -165,7 +167,7 @@ body {
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 0;
+    margin: 0;
 }
 
 /* Links do rodapé */
