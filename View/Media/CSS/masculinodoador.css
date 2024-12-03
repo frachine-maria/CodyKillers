@@ -84,6 +84,7 @@ body {
     position: relative; /* Necessário para o posicionamento absoluto do botão */
 }
 
+
 /* Caixa de cada imagem */
 .image-container {
     width: 350px; /* Nova largura */
