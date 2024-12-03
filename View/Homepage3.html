@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sua Página</title>
-    <link rel="stylesheet" href="../View/Media/CSS/Homepage3.css">
+    <link rel="stylesheet" href="../View/Media/CSS/Homepage3.css"> <!-- CSS do layout -->
     <link rel="stylesheet" href="../View/Media/CSS/Menususpenso.css"> <!-- CSS do menu -->
 
     <!-- Link para o Font Awesome -->
@@ -35,47 +35,111 @@
         </ul>
     </nav>
 
+    <!-- Efeito de vidro -->
+    <div id="glass-effect" class="glass-effect"></div>
+
     <!-- Menu lateral -->
     <div id="menu" class="menu-overlay">
         <div class="menu-content">
-            <h2>Menu</h2>
-            <ul class="submenu">
-                <li><a href="#doacoes">DOAÇÕES</a></li>
-                <li><a href="#compre">COMPRE</a></li>
-                <li><a href="#pontos">PONTOS</a></li>
-                <li><a href="#estudos">ESTUDOS</a></li>
-                <li><a href="#sobre">SOBRE</a></li>
-            </ul>
+            <div class="menu-top">
+                <div class="menu-item logo-footer">
+                    <img src="../View/Media/Logo.PNG" alt="Logo" class="logo-img">
+                </div>
+            </div>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-button">DOAÇÕES</div>
+                    <ul class="submenu">
+                        <li><a href="#masculino">MASCULINO</a></li>
+                        <li><a href="#feminino">FEMININO</a></li>
+                        <li><a href="#enxoval">ENXOVAL</a></li>
+                        <li><a href="#unissex">UNISSEX</a></li>
+                    </ul>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button">COMPRE</div>
+                    <ul class="submenu">
+                        <li><a href="#masculino-compra">MASCULINO</a></li>
+                        <li><a href="#feminino-compra">FEMININO</a></li>
+                        <li><a href="#enxoval-compra">ENXOVAL</a></li>
+                        <li><a href="#unissex-compra">UNISSEX</a></li>
+                    </ul>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button"><a href="#pontos">PONTOS</a></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button"><a href="#estudos">ESTUDOS</a></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button"><a href="#sobre">SOBRE</a></div>
+                </div>
+            </div>
+            <div class="menu-bottom">
+                <div><a href="#sobre">SOBRE</a></div>
+                <div><a href="#politica">POLÍTICA DE PRIVACIDADE</a></div>
+                <div><a href="#termos">TERMOS E CONDIÇÕES</a></div>
+            </div>
         </div>
     </div>
 
-    <!-- Efeito de vidro para o fundo -->
-    <div id="glass" class="glass-effect"></div>
+    <!-- Conteúdo Principal -->
+    <div class="main-content">
+        <!-- Banner com o título "CATEGORIAS" -->
+        <div class="banner-container">
+            <img src="../View/Media/Fundo montanha.jpg" alt="Imagem de Banner" class="banner">
+            <div class="overlay-text">CATEGORIAS</div>
+        </div>
 
-    <!-- Resto do conteúdo -->
-    <div class="banner-container">
-        <img src="../View/Media/Fundo montanha.jpg" alt="Imagem de Banner" class="banner">
-        <div class="overlay-text">CATEGORIAS</div>
+        <!-- Grid de categorias -->
+        <div class="grid-container">
+            <div class="item1"><img src="../View/Media/unisex.png" alt="Imagem 1"></div>
+            <div class="item2"><img src="../View/Media/enxoval.png" alt="Imagem 2"></div>
+
+            <div class="item3"><img src="../View/Media/feminina.png" alt="Imagem 3"></div>
+            <div class="item4"><img src="../View/Media/masculina.png" alt="Imagem 4"></div>
+        </div>
+
+        <!-- Caixa de Benefícios -->
+        <div class="text-box">
+            <div class="money-box">
+                <img src="../View/Media/money.png" alt="Ícone de Dinheiro" class="money-icon">
+            </div>
+            <h1>GANHE PONTOS E TROQUE POR DIVERSOS BENEFÍCIOS</h1>
+            <p><a href="#" class="button-link">Clique aqui</a></p>
+        </div>
+
+        <!-- Seção da área doador -->
+        <div class="espaco-caixas-imagem">
+            <div class="imagem-rodape">
+                <div class="img-container">
+                    <img src="../View/Media/areadoador copy.png" alt="Imagem Descrição" class="area-doador-img">
+                    <div class="sobrepor">
+                        <button class="button-link">Clique aqui</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="grid-container">
-        <div class="item1"><img src="../View/Media/unisex.png" alt="Imagem 1"></div>
-        <div class="item2"><img src="../View/Media/enxoval.png" alt="Imagem 2"></div>
-        <div class="item3"><img src="../View/Media/feminina.png" alt="Imagem 3"></div>
-        <div class="item4"><img src="../View/Media/masculina.png" alt="Imagem 4"></div>
-    </div>
-
-    <div class="text-box">
-        <img src="../View/Media/money.png" alt="Imagem decorativa">
-        <h1>GANHE PONTOS E TROQUE POR <br> DIVERSOS BENEFÍCIOS</h1>
-        <p>Clique aqui</p>
-    </div>
-
+    <!-- Rodapé -->
     <footer class="footer">
         <div class="footer-links">
             <a href="#sobre">SOBRE</a>
             <a href="#termos">TERMOS E CONDIÇÕES</a>
             <a href="#politica">POLÍTICA DE PRIVACIDADE</a>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://x.com" target="_blank" class="social-icon">
+                <i class="fab fa-x"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+            </a>
         </div>
     </footer>
 
@@ -83,14 +147,32 @@
     <script>
         function toggleMenu() {
             const menu = document.getElementById("menu");
-            const glass = document.getElementById("glass");
+            const glassEffect = document.getElementById("glass-effect");
 
-            menu.classList.toggle("active");
-            glass.classList.toggle("active");
+            if (menu.classList.contains("active")) {
+                menu.classList.remove("active");
+                glassEffect.classList.remove("active");
+            } else {
+                menu.classList.add("active");
+                glassEffect.classList.add("active");
+            }
         }
 
-        // Fecha o menu ao clicar no efeito de vidro
-        document.getElementById("glass").addEventListener("click", toggleMenu);
+        // Fecha o menu ao clicar fora dele
+        window.addEventListener("click", (event) => {
+            const menu = document.getElementById("menu");
+            const glassEffect = document.getElementById("glass-effect");
+            const menuIcon = document.querySelector(".menu img");
+
+            if (
+                menu.classList.contains("active") &&
+                !menu.contains(event.target) &&
+                !menuIcon.contains(event.target)
+            ) {
+                menu.classList.remove("active");
+                glassEffect.classList.remove("active");
+            }
+        });
     </script>
 </body>
 </html>

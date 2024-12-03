@@ -3,6 +3,8 @@ body {
   font-family: 'Eras Bold ITC', Arial, sans-serif;
   overflow-x: hidden;
   background-color: #FFFFFF;
+  position: relative;
+  z-index: 1; /* Conteúdo abaixo do menu e do vidro */
 }
 
 .menu-icon {
@@ -28,9 +30,7 @@ body {
   left: -100%;
   width: 350px;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  z-index: 1000;
+  z-index: 1000; /* Menu acima do conteúdo principal */
   transition: left 0.5s ease-in-out;
 }
 
@@ -150,9 +150,14 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(67, 89, 34, 0.25);
-  backdrop-filter: blur(10px);
-  z-index: 900;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 900; /* Vidro atrás do menu, mas acima do conteúdo */
+  display: none; /* Não aparece inicialmente */
+}
+
+.glass-effect.active {
+  display: block; /* Aparece apenas quando o menu está ativo */
 }
 
 /* Logo no rodapé */
