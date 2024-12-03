@@ -150,9 +150,8 @@ body {
 
 .imagem-rodape .botao-doador {
     position: absolute; /* Permite centralizar sobre a imagem */
-    top: 80%; /* Centraliza verticalmente */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translate(-50%, -50%); /* Ajuste exato ao centro */
+    top: 60%; /* Centraliza verticalmente */
+    left: 80%; /* Centraliza horizontalmente */
     background-color: #5FA0D9; /* Cor do fundo */
     color: white; /* Cor do texto */
     padding: 15px 30px; /* Espaçamento interno */
