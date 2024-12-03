@@ -20,7 +20,9 @@
     margin-bottom: 50px; 
   }  
 
- .navbar {
+ 
+
+.navbar {
  width: 100%;          
   background-color: #435922; 
   padding: 10px 0;     
@@ -87,7 +89,7 @@
   line-height: 2.0; 
   text-align: justify; 
   font-family: 'Lalezar','sans-serif';
-} 
+}
 
 .footer {
   background-color: #435922;
