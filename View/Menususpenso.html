@@ -1,34 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu Suspenso</title>
   <link rel="stylesheet" href="../View/Media/CSS/Menususpenso.css">
+  <link href="https://fonts.googleapis.com/css2?family=Eras+Bold+ITC&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Botão para abrir o menu -->
+
   <div class="menu-icon" onclick="toggleMenu()">
     ☰
   </div>
 
-  <!-- Menu suspenso -->
   <div class="menu-overlay" id="menu">
     <div class="menu-content">
-      <div class="logo">RE<span>WEAR</span></div>
-      <a href="#home">Home</a>
-      <a href="#doacoes">Doações</a>
-      <a href="#compre">Compre</a>
-      <a href="#pontos">Pontos</a>
-      <a href="#estudos">Estudos</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#dados-pessoais">Dados Pessoais</a>
-      <a href="#verificacao">Verificação de Compra</a>
-      <a href="#ranking">Ranking</a>
+      <div class="menu-top">
+        <div class="menu-item logo-footer">
+          <img src="../View/Media/Logo.PNG" alt="Logo" class="logo-img">
+        </div>
+      </div>
+      <div class="menu-items">
+        <div class="menu-item">
+          <div class="menu-button">DOAÇÕES</div>
+          <ul class="submenu active" id="doacoes-dropdown">
+            <li><a href="#masculino">MASCULINO</a></li>
+            <li><a href="#feminino">FEMININO</a></li>
+            <li><a href="#enxoval">ENXOVAL</a></li>
+            <li><a href="#unissex">UNISSEX</a></li>
+          </ul>
+        </div>
+        <div class="menu-item">
+          <div class="menu-button">COMPRE</div>
+          <ul class="submenu active" id="compre-dropdown">
+            <li><a href="#masculino-compra">MASCULINO</a></li>
+            <li><a href="#feminino-compra">FEMININO</a></li>
+            <li><a href="#enxoval-compra">ENXOVAL</a></li>
+            <li><a href="#unissex-compra">UNISSEX</a></li>
+          </ul>
+        </div>
+        <div class="menu-item">
+          <div class="menu-button"><a href="#pontos">PONTOS</a></div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-button"><a href="#estudos">ESTUDOS</a></div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-button"><a href="#sobre">SOBRE</a></div>
+        </div>
+      </div>
+      <div class="menu-bottom">
+        <div><a href="#sobre">SOBRE</a></div>
+        <div><a href="#politica">POLÍTICA DE PRIVACIDADE</a></div>
+        <div><a href="#termos">TERMOS E CONDIÇÕES</a></div>
+      </div>
     </div>
     <div class="glass-effect"></div>
   </div>
 
-  <script src="../View/Menususpenso.js"></script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      const menuIcon = document.querySelector(".menu-icon");
+  
+      if (!menu.classList.contains("active")) {
+        menu.classList.add("active");
+        menuIcon.style.display = "none"; // Esconde o ícone ao abrir
+      } else {
+        menu.classList.remove("active");
+        menuIcon.style.display = "block"; // Mostra o ícone ao fechar
+      }
+    }
+  
+    // Fecha o menu ao clicar fora dele
+    window.addEventListener("click", (event) => {
+      const menu = document.getElementById("menu");
+      const menuIcon = document.querySelector(".menu-icon");
+  
+      if (menu.classList.contains("active") && !menu.contains(event.target) && !menuIcon.contains(event.target)) {
+        menu.classList.remove("active");
+        menuIcon.style.display = "block"; // Mostra o ícone novamente
+      }
+    });
+  </script>  
 </body>
 </html>
+
+
+

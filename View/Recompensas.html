@@ -1,21 +1,19 @@
+
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recompensas - ReWear</title>
-    <link rel="stylesheet" href="../View/Media/CSS/Recompensas.css">
-    <!-- Link para o Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recompensas - ReWear</title>
+  <link rel="stylesheet" href="Media/CSS/Recompensas.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
-
 <body>
-
     <nav class="navbar">
         <ul>
             <li class="menu">
-                <a href="pagina-do-menu.html"> <!-- Substitua com o link desejado -->
+                <a href="pagina-do-menu.html"> 
                     <img src="Media/menu-aberto.png" alt="Ícone de Menu">
                 </a>
             </li>
@@ -25,7 +23,7 @@
             </li>
 
             <li class="login-icon">
-                <a href="pagina-do-menu.html"> <!-- Substitua com o link desejado -->
+                <a href="pagina-do-menu.html"> 
                     <img src="Media/login-icon.png" alt="Ícone de Login">
                 </a>
             </li>
@@ -39,7 +37,7 @@
                     <h2 class="recompensas">Recompensas</h2>
                 </div>
                 <div class="col-md-6">
-                    <h3 class="recompensas">ReWear Gold</h3>
+                    <h3 class="ReWearGold">ReWear Gold</h3>
                     <img class="moedaimg" src="Media/moeda.png" alt="Moeda">
                 </div>
                 <div class="col-md-6">
@@ -49,57 +47,41 @@
         </div>
     </section>
 
+    <main class="main">
     <section class="grid">
-        <button>
-            <div class="grid-item">Cupom AliExpress garante 30% off em novas compras.</div>
-        </button>
-        <button>
-            <div class="grid-item">Cupom Casas Bahia oferece até 20%.</div>
-        </button>
-        <button>
-            <div class="grid-item">15% de desconto em produtos OBoticário.</div>
-        </button>
+        
+      <div class="grid-item"> Cupom AliExpress garante 30% off.</div>
+      <div class="grid-item">Cupom Casas Bahia oferece até 20%.</div>
+      <div class="grid-item">15% de desconto em produtos OBoticário</div>
+      <div class="grid-item">
+        <img src="Media/GooglePlay.png" alt="Gift Card Google Play">
+    </div>
+    <div class="grid-item">
+        <img src="Media/Ifood.png" alt="Gift Card iFood">
+    </div>
 
-        <button>
-            <div class="card image-card">
-                <img src="Media/GooglePlay.png" alt="Gift Card Google Play">
-            </div>
-        </button>
-        <button>
-            <div class="card image-card">
-                <img src="Media/Ifood.png" alt="Gift Card iFood">
-            </div>
-        </button>
-        <button>
-            <div class="card image-card">
-                <img src="Media/uber.png" alt="Gift Card Uber">
-            </div>
-        </button>
-        <button>
-            <div class="grid-item">Recarga de celular. Operadora TIM - R$40.</div>
-        </button>
-        <button>
-            <div class="grid-item">Recarga de celular. Operadora Claro - R$40.</div>
-        </button>
-        <button>
-            <div class="grid-item">Recarga de celular. Operadora VIVO - R$40.</div>
-        </button>
+    <div class="grid-item">
+        <img src="Media/uber.png" alt="Gift Card Uber">
+    </div>
+    <div class="grid-item">Recarga de celular. Operadora TIM - R$40.</div>
+    <div class="grid-item">Recarga de celular. Operadora Claro - R$40</div>
+    <div class="grid-item">Recarga de celular. Operadora VIVO - R$40</div>
     </section>
 
-    <div class="coupon-container">
-        <a href="https://www.vivara.com.br/cupom?gad_source=1&gclid=CjwKCAiAxqC6BhBcEiwAlXp4580udpmgmv0Gv2s73h1UP7zSUAd4gAW5YUq6JSPJ_Sw2pXORSc_GgxoCoIEQAvD_BwE" class="coupon">
+    <section class="coupon-container">
+        <a href=https://www.vivara.com.br/cupom?gad_source=1&gclid=Cj0KCQiAr7C6BhDRARIsAOUKifiuUSJR5tYowpIGDLqfVO5yeV9lBv_108MMgjA7LOyw7bvYnZgDVEAaAl44EALw_wcB" class="coupon">
             <div class="coupon">
                 <p class="text-cupom">Cupom Vivara - 30% off na próxima compra + 2,5% de cashback.</p>
             </div>
         </a>
-        <a href="https://www.cuponomia.com.br/desconto/droga-raia?c=283809" class="coupon">   <!-- Se não precisar, só tirar essa parte. -->
+        <a href="https://www.cuponomia.com.br/desconto/droga-raia" class="coupon">   
             <div class="coupon">
-                <p class="text-cupom">Cupom Droga Leão - 10% de desconto em todo o site.</p>
+                <p class="text-cupom">Cupom Droga Raia - 10% de desconto em todo o site.</p>
             </div>
         </a>
-    </div>
+    </section>
+  </main>
 
-    <!-- Rodapé -->
     <footer class="footer">
         <div class="footer-links">
             <a href="#sobre">Sobre</a>
@@ -119,7 +101,6 @@
             </a>
         </div>
     </footer>
-
+    
 </body>
-
 </html>
