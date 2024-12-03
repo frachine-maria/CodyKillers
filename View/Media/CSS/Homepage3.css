@@ -66,29 +66,30 @@ body {
 .overlay-text {
     position: absolute;
     bottom:60%; /* Ajuste proporcional para centralizar verticalmente */
-    left: 20%;   /* Centraliza horizontalmente */
-    transform: translate(-50%, 50%); /* Alinha perfeitamente ao centro */
+    left: 20%;
+    transform: translate(-50%, 50%);
     color: white;
-    font-size: 100px; /* Ajuste conforme necessário */
+    font-size: 100px;
     font-weight: bold;
     font-family: 'Lalezar', sans-serif;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
-/* Caixa azul de "Ganhe Pontos" */
 .text-box {
-    font-family: 'Lalezar', sans-serif; /* Aplica a fonte Lalezar */
+    font-family: 'Lalezar', sans-serif; 
     background-color: #B6D0F2;
     color: white;
-    width: 100%;
-    padding: 40px 20px;  /* Aumenta o padding para dar mais espaço */
+    width: 1200px; /* Define uma largura fixa */
+    max-width: 100%; /* Limita a largura a 90% da tela menor */
+    padding: 40px 20px; 
     border-radius: 40px;
     text-align: center;
     font-size: 25px;
-    margin: 40px auto;
+    margin: 40px auto; /* Centraliza horizontalmente */
     box-sizing: border-box;
     position: relative;
 }
+
 
 .button-link {
     text-decoration: none;
@@ -109,8 +110,6 @@ body {
     font-size: 36px;
     color: white;
 }
-
-/* Botão sobreposto na imagem da área do doador */
 
 /* Grid para categorias */
 .page-container {
@@ -144,7 +143,31 @@ body {
     display: block; /* Garante que o bloco esteja visível */
     margin: 0; /* Adiciona espaçamento entre a imagem e o conteúdo acima */
     padding: 0;
+    position: relative;
     text-align: center; /* Centraliza horizontalmente */
+}
+
+
+.imagem-rodape .botao-doador {
+    position: absolute; /* Permite centralizar sobre a imagem */
+    top: 80%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste exato ao centro */
+    background-color: #5FA0D9; /* Cor do fundo */
+    color: white; /* Cor do texto */
+    padding: 15px 30px; /* Espaçamento interno */
+    font-size: 20px; /* Tamanho do texto */
+    font-family: 'Lalezar', sans-serif; /* Aplica a fonte Lalezar */
+    text-decoration: none; /* Remove o sublinhado */
+    border-radius: 25px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
+    transition: background-color 0.3s ease-in-out; /* Efeito de hover */
+    cursor: pointer; /* Aplica o cursor de clique */
+}
+
+
+.imagem-rodape .botao-doador:hover {
+    background-color: #4274a1; /* Cor de fundo ao passar o mouse */
 }
 
 .imagem-rodape img {
