@@ -1,3 +1,4 @@
+
 .navbar { 
     width: 100%;          /* Faz a navbar ocupar toda a largura da tela */ 
     background-color: #435922; /* Cor de fundo da navbar */ 
@@ -26,7 +27,7 @@
 } 
 
 .navbar a { 
-    color: white; 
+    color: #fff;
     text-decoration: none; 
     padding: 5px; 
 } 
@@ -63,7 +64,7 @@
     object-position: top; /* Mostra o topo da imagem */
 }
 
-.h1{
+.h2{
     font-family: 'Lalezar', Arial, Helvetica, sans-serif;
     font-size: medium;
     font-weight: bold;
@@ -95,15 +96,15 @@
 /* Caixa de cada imagem */
 .image-container {
     width: 350px; /* Nova largura */
-    height: 450px; /* Nova altura */
+    height: 300; /* Nova altura */
     overflow: hidden; /* Esconde excesso de imagem */
-    border-radius: 20px; /* Bordas arredondadas */
+    border-radius: 0px; /* Bordas arredondadas */
 }
 
 /* Imagem dentro do container */
 .image-container img {
     width: 100%; /* Largura total */
-    height: 100%; /* Altura total */
+    height: 300px; /* Altura total */
     object-fit: cover; /* Preenche o container */
 }
 
@@ -155,26 +156,6 @@
     opacity: 0.7; /* Efeito de hover */ 
 } 
 
-.card{
-    position: absolute;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #e9f8da;
-    background-clip: border-box;
-    border: none;
-    border-radius: .25rem;
-    width: 20%;
-}
 
-.texto1{
-    font-family: 'Lalezar';
-    font-size: 16px;
-    line-height: 57px;
-    margin: 0;
-    padding: 0 0 4px 0;
-    text-align: center;
-}
+
+
