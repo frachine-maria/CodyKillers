@@ -4,15 +4,6 @@
     padding: 10px 0;      /* Ajuste de padding conforme necessário */ 
 } 
 
-/* Logo */ 
-.logo img { 
-    width: 440px; 
-    height: auto; 
-    vertical-align: middle;  
-    margin-left: 50px;  
-    align-self: center; 
-} 
-
 /* Outros estilos de navbar, como links, etc. */ 
 .navbar ul { 
     margin: 0; 
@@ -31,16 +22,12 @@
     padding: 5px; 
 } 
 
- 
-
-/* Ícone de Menu à Esquerda */ 
 .navbar .menu { 
-    display: inline-flex;  /* Exibe o ícone como flex */ 
-    align-items: center;   /* Alinha o ícone verticalmente */ 
-    margin-top: 10px;       /* Move o ícone para baixo - ajuste o valor conforme necessário */
-} 
+    display: inline-flex;  
+    align-items: center; 
+    margin-top: 10px; 
+}
 
-/* Ícone de Menu à Esquerda */ 
 .navbar .login-icon { 
     display: inline-flex;   
     align-items: center;   
@@ -52,37 +39,112 @@
     height: auto;   
 } 
 
-/* Grid */ 
-.grid { 
-    display: grid; 
-    grid-template-columns:repeat(3, 1fr);; 
-    gap: 10px;
+/* Logo */ 
+.logo img { 
+    width: 440px; 
+    height: auto; 
+    vertical-align: middle;  
+    margin-left: 50px;  
+    align-self: center; 
+} 
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Lalezar',Arial, sans-serif; 
+    line-height: 1.6; /* Ajusta o espaçamento vertical entre as linhas */
+    color: #333; 
+    background-color: #f9f9f9; 
+  }
+
+  .container {
+    width: 100%; 
+    max-width: 1200px; 
     margin: 0 auto;
+  }
+
+  .main {
+    padding: 20px 0; /* Adiciona espaçamento interno no topo e embaixo */
+  }
+
+  .moedaimg{ 
+    margin: 0px -119px -120px;
+} 
+.valor{ 
+    padding: 4px 0px 40px 64px;
+    font-family: 'Lalezar', sans-serif; 
+    font-size: 45px; 
+} 
+.recompensas{ 
+    font-family: 'Lalezar', sans-serif; 
+    font-size: 45px; 
+    margin-left: -120px;
+    color: black;
+} 
+.ReWearGold{ 
+    font-family: 'Lalezar', sans-serif; 
+    font-size: 30px; 
+    margin-left: -120px;
+}
+
+  /* Grid */
+.grid {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; 
+    align-items: center;
+    margin: 30px;
+}
     
 
-} 
+.grid-item {
+    background-color: #D9D9D9; 
+    padding: 20px; 
+    text-align: center; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+}
 
-.grid-item { 
-    padding: 70px;
-    justify-content:center;
-    align-items: center;
-    border-radius: 5px;
-    width: 250px;  
-    height: 100px; 
-  } 
-
-.image-card img { 
+.coupon-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit,1fr); 
-    margin: 40px; 
-    padding: 10px;  
+    gap: 20px;
+    padding: 20px;
+    grid-template-columns: 1fr; 
+    margin: 20px;
+    border-radius: 5px;
+  }
+  
+.coupon {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 5px;
+}
+  
+.text-cupom {
+    text-align: center;
+    font-size: 16px;
+    color: #333;
 } 
+.coupon-container a {
+    text-decoration: none;
+}
+.coupon-container a:hover {
+    text-decoration: underline; 
+}
 
-.grid-item { 
-    font-family: 'Lalezar', 'sans-serif'; 
-    font-size: 30px;
-} 
-
+.footer {
+    background-color: #333; /* Cor de fundo do rodapé */
+    color: #fff; /* Cor do texto no rodapé */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px 0; /* Adiciona espaçamento interno no topo e embaixo */
+    margin-top: 20px; /* Adiciona espaço acima do rodapé */
+}
 /* Estilo para o rodapé */ 
 .footer { 
     background-color: #435922; 
@@ -109,12 +171,6 @@
 
 } 
 
-h1 { 
-    font-family: 'Lalezar', 'sans-serif'; 
-    color: #333; 
-    font-size: 45px; 
-  } 
-
 .social-icons { 
     margin-top: 15px; 
 } 
@@ -129,77 +185,3 @@ h1 {
 .social-icon:hover { 
     opacity: 0.7; /* Efeito de hover */ 
 } 
-
-.moedaimg{ 
-    margin: 0 0 -131px 0; 
-} 
-
- 
-
-.valor{ 
-    padding: 0 0 48px 197px; 
-    font-family: 'Lalezar', sans-serif; 
-    font-size: 45px; 
-} 
-
- 
-.recompensas{ 
-    font-family: 'Lalezar', sans-serif; 
-    font-size: 45px; 
-} 
-
-.ReWearGold{ 
-    font-family: 'Lalezar', sans-serif; 
-    font-size: 30px; 
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-  }
-  
-  .coupon-container {
-    display: grid;
-    gap: 20px;
-    padding: 20px;
-    grid-template-columns: 1fr; /* Uma coluna, ajustável para telas menores */
-    margin: 0 auto;
-    border-radius: 5px; /* Arredonda os cantos */ 
-  }
-  
-  .coupon {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    background-color: #e0e0e0;
-    padding: 15px;
-    border-radius: 5px;
-  }
-  
-
-  .text-cupom {
-    text-align: center;
-    font-weight: bold;
-    font-size: 16px;
-    color: #333;
-  }
-  
-.col-md-6{
-    font-family: 'Lalezar';
-}
-
-
-.recompensas2{
-    background-color: #ffff;
-}
-
-.btn-aliexpress {
-    color: darkgrey;
-    background-color: darkgrey;
-    border-color: black;
-    padding: 0px !important;
-    border-radius: 10px;
-    font-family: 'Lalezar';
-}

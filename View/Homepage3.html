@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sua Página</title>
-    <link rel="stylesheet" href="Homepage3.css">
+    <link rel="stylesheet" href="../View/Media/CSS/Homepage3.css">
+    <link rel="stylesheet" href="../View/Media/CSS/Menususpenso.css"> <!-- CSS do menu -->
 
     <!-- Link para o Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -15,101 +16,81 @@
         <ul>
             <!-- Ícone de Menu à Esquerda -->
             <li class="menu">
-                <a href="javascript:void(0);">
-                    <img src="media/menu.png" alt="Ícone de Menu"> <!-- Substitua pelo seu ícone -->
+                <a href="javascript:void(0);" onclick="toggleMenu()">
+                    <img src="../View/Media/menu.png" alt="Ícone de Menu">
                 </a>
             </li>
 
             <!-- Imagem centralizada na navbar -->
             <li class="logo">
-                <img src="media/Screenshot_3.png" alt="Logo">
+                <img src="../View/Media/logo2.png" alt="Logo">
             </li>
 
             <!-- Ícone de Login à Direita -->
             <li class="login-icon">
-                <a href="login.html">
-                    <img src="media/login-icon.png" alt="Ícone de Login"> <!-- Substitua pelo seu ícone -->
+                <a href="../View/">
+                    <img src="../View/Media/login-icon.png" alt="Ícone de Login">
                 </a>
             </li>
         </ul>
     </nav>
 
-
- <!-- Imagem abaixo da navbar -->
- <div class="banner-container">
-    <img src="media/aaa.jpg" alt="Imagem de Banner" class="banner">
-    <div class="overlay-text">CATEGORIAS</div>
-</div>
-
-
-
-
-<div class="grid-container">
-    <!-- Primeira Linha -->
-    <div class="item1"><img src="media/unisex.png" alt="Imagem 1"></div>
-    <div class="item2"><img src="media/enxoval.png" alt="Imagem 2"></div>
-  
-    <!-- Segunda Linha -->
-    <div class="item3"><img src="media/feminina.png" alt="Imagem 3"></div>
-    <div class="item4"><img src="media/masculina.png" alt="Imagem 4"></div>
-  </div>
-  
-
-  <!-- Caixa de texto 1 -->
-  <div class="text-box">
-    <img src="media/money.png" alt="Imagem decorativa">
-    <br>
-    <h1>GANHE PONTOS E  TROQUE POR 
-        <br>
-         DIVERSOS BENEFÍCIOS</h1>
-        <Br>
-            <p>Clique aqui </p>
-</div>
-
-
-
-
-<!-- Espaço entre as caixas de texto e a imagem -->
-<div class="espaco-caixas-imagem"></div>
-
-<!-- Imagem acima do rodapé -->
-<div class="imagem-rodape">
-    <div>
-    <img src="media/areadoador.png" alt="Imagem Descrição">
-    </div>
-    <div class="sobrepor">
-        <button> Clique aqui
-          <span></span>
-        </button>
-    </div>
-    
-
-</div>
-
-<!-- Rodapé -->
-<footer class="footer">
-    <!-- Links de navegação no rodapé -->
-    <div class="footer-links">
-        <a href="#sobre">Sobre</a>
-        <a href="#termos">Termos e Condições</a>
-        <a href="#politica">Política de Privacidade</a>
+    <!-- Menu lateral -->
+    <div id="menu" class="menu-overlay">
+        <div class="menu-content">
+            <h2>Menu</h2>
+            <ul class="submenu">
+                <li><a href="#doacoes">DOAÇÕES</a></li>
+                <li><a href="#compre">COMPRE</a></li>
+                <li><a href="#pontos">PONTOS</a></li>
+                <li><a href="#estudos">ESTUDOS</a></li>
+                <li><a href="#sobre">SOBRE</a></li>
+            </ul>
+        </div>
     </div>
 
-    <!-- Ícones das redes sociais -->
-    <div class="social-icons">
-        <a href="https://www.instagram.com" target="_blank" class="social-icon">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://x.com" target="_blank" class="social-icon">
-            <i class="fab fa-x"></i> <!-- Ícone correto para X (anteriormente Twitter) -->
-        </a>
-        <a href="https://www.facebook.com" target="_blank" class="social-icon">
-            <i class="fab fa-facebook-f"></i>
-        </a>
+    <!-- Efeito de vidro para o fundo -->
+    <div id="glass" class="glass-effect"></div>
+
+    <!-- Resto do conteúdo -->
+    <div class="banner-container">
+        <img src="../View/Media/Fundo montanha.jpg" alt="Imagem de Banner" class="banner">
+        <div class="overlay-text">CATEGORIAS</div>
     </div>
-    <br>
 
-</footer>
+    <div class="grid-container">
+        <div class="item1"><img src="../View/Media/unisex.png" alt="Imagem 1"></div>
+        <div class="item2"><img src="../View/Media/enxoval.png" alt="Imagem 2"></div>
+        <div class="item3"><img src="../View/Media/feminina.png" alt="Imagem 3"></div>
+        <div class="item4"><img src="../View/Media/masculina.png" alt="Imagem 4"></div>
+    </div>
 
+    <div class="text-box">
+        <img src="../View/Media/money.png" alt="Imagem decorativa">
+        <h1>GANHE PONTOS E TROQUE POR <br> DIVERSOS BENEFÍCIOS</h1>
+        <p>Clique aqui</p>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#sobre">SOBRE</a>
+            <a href="#termos">TERMOS E CONDIÇÕES</a>
+            <a href="#politica">POLÍTICA DE PRIVACIDADE</a>
+        </div>
+    </footer>
+
+    <!-- Script para o menu -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            const glass = document.getElementById("glass");
+
+            menu.classList.toggle("active");
+            glass.classList.toggle("active");
+        }
+
+        // Fecha o menu ao clicar no efeito de vidro
+        document.getElementById("glass").addEventListener("click", toggleMenu);
+    </script>
 </body>
 </html>

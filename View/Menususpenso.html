@@ -17,7 +17,6 @@
     <div class="menu-content">
       <div class="menu-top">
         <div class="menu-item logo-footer">
-          <!-- Aqui você insere a imagem da logo -->
           <img src="../View/Media/Logo.PNG" alt="Logo" class="logo-img">
         </div>
       </div>
@@ -63,11 +62,26 @@
     function toggleMenu() {
       const menu = document.getElementById("menu");
       const menuIcon = document.querySelector(".menu-icon");
-
-      menu.classList.toggle("active");
-      menuIcon.classList.toggle("hidden");
+  
+      if (!menu.classList.contains("active")) {
+        menu.classList.add("active");
+        menuIcon.style.display = "none"; // Esconde o ícone ao abrir
+      } else {
+        menu.classList.remove("active");
+        menuIcon.style.display = "block"; // Mostra o ícone ao fechar
+      }
     }
-
+  
+    // Fecha o menu ao clicar fora dele
+    window.addEventListener("click", (event) => {
+      const menu = document.getElementById("menu");
+      const menuIcon = document.querySelector(".menu-icon");
+  
+      if (menu.classList.contains("active") && !menu.contains(event.target) && !menuIcon.contains(event.target)) {
+        menu.classList.remove("active");
+        menuIcon.style.display = "block"; // Mostra o ícone novamente
+      }
+    });
   </script>
 </body>
 </html>
