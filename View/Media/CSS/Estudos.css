@@ -77,7 +77,7 @@
     gap: 15px; 
     justify-items: center; 
     width: 740px; 
-    margin: 108px; 
+    margin: 205px;
     margin-top: 50px; 
 }
 
@@ -86,7 +86,7 @@
     gap: 15px; 
     align-items: center; 
     width: 740px;
-    margin: 300px; 
+    margin: 401px;
     margin-top: 50px; 
     grid-template-columns: repeat(2, 1fr); 
     grid-template-rows: repeat(1, 450px); 
