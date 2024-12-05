@@ -115,6 +115,8 @@ h1 {
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
 }
 
 .comment-form .submit-comment:hover {
@@ -130,23 +132,23 @@ h1 {
 }
 
 .more-articles {
-  background-color: #e91e63;
+  background-color: #435922; 
   color: white;
-  padding: 10px 20px;
+  padding: 10px 30px; 
   border: none;
   border-radius: 5px;
-  font-size: 16px;
-  font-family: Arial, sans-serif;
+  font-size: 16px; 
+  font-family: Arial, sans-serif; 
   cursor: pointer;
   display: block;
   text-align: center;
-  margin: 20px auto;
+  margin: 20px auto; 
   text-decoration: none;
-  width: auto; /* Reduz o tamanho do botão */
+  width: fit-content; 
 }
 
 .more-articles:hover {
-  background-color: #c2185b;
+  background-color: #3b4e1f; 
 }
 
 .footer {
@@ -154,6 +156,7 @@ h1 {
   color: white;
   text-align: center;
   padding: 20px;
+  font-family: 'Lalezar', sans-serif; 
 }
 
 .footer-links a {
@@ -165,4 +168,18 @@ h1 {
 
 .footer-links a:hover {
   text-decoration: underline;
+}
+
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons .social-icon i {
+  color: white; 
+  font-size: 24px; 
+  margin: 0 10px;
+}
+
+.social-icons .social-icon i:hover {
+  color: #ccc; 
 }

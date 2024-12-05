@@ -1,59 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artigo 5 - ReWear</title> 
-    <link rel="stylesheet" href="Media/CSS/artigo5.css"> 
+    <title>Artigo 2 - ReWear</title> 
+    <link rel="stylesheet" href="../View/Media/CSS/artigo2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Lalezar&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
         <ul>
             <li class="menu">
-                    <img src="Media/menu-aberto.png"; alt="Ícone de Menu"> 
-                </a>
+                <img src="../View/Media/menu-aberto.png" alt="Ícone de Menu"> 
             </li>
             <li class="logo">
-                <img src="Media/Logo.PNG" alt="Logo">
+                <img src="../View/Media/Logo.PNG" alt="Logo">
             </li>
             <li class="login-icon">
-                    <img src="Media/login-icon.png" alt="Ícone de Login"> 
-                </a>
+                <img src="../View/Media/login-icon.png" alt="Ícone de Login"> 
             </li>
         </ul>
-    </nav> 
-<h1>Como a moda responsável pode transformar o consumo</h1> 
-<div class="content">
-    <img src="Media/Выкладка кофты.jpeg" alt="cabide" class="image">
-    <p class="text">
-        O texto aborda a importância da moda responsável e consciente, destacando que as tendências são cíclicas e que é fundamental entender a origem das roupas que consumimos. A Renner, ciente dessa necessidade, tem implementado iniciativas para promover a sustentabilidade em seus processos, como o uso de matérias-primas mais responsáveis e o incentivo ao re-sale de peças. 
-        Uma das principais ações da marca é o uso de algodão responsável, que inclui práticas de cultivo sustentável e sem agrotóxicos. O algodão agroecológico, presente em algumas coleções, é produzido no semiárido brasileiro e beneficia tanto o meio ambiente quanto os agricultores locais, especialmente as mulheres. A Renner também celebra o Dia da Moda Responsável (08/10), destacando seu compromisso com a sustentabilidade, o que a posiciona como uma das marcas de moda mais bem avaliadas no Índice de Sustentabilidade do Dow Jones (DJSI). 
-        Em resumo, o texto enfatiza o movimento da Renner em direção a uma moda mais consciente, com foco em práticas sustentáveis e na responsabilidade social e ambiental. 
-    </p>
-</div>  
+    </nav>
 
-<a href="https://stealthelook.com.br/como-a-sustentabilidade-e-a-moda-responsavel-podem-transformar-o-consumo/?gad_source=1&gclid=Cj0KCQjwm5e5BhCWARIsANwm06jZjDTbwfhHRkfLfrsT59XaPXmlqOWC5zHozjEQ5Ttob8T6dAg6OxcaAvLcEALw_wcB  "target="_blank" rel="external">Clique aqui para ter acesso a integra do artigo -></a></p>
+    <h1>Como a moda responsável pode transformar o consumo</h1>
 
+    <div class="content">
+        <img src="../View/Media/ImagemRoupa1.jpeg" alt="roupas" class="image">
+        <p class="text">
+            O texto aborda a importância da moda responsável e consciente, destacando que as tendências são cíclicas e que é fundamental entender a origem das roupas que consumimos. A Renner, ciente dessa necessidade, tem implementado iniciativas para promover a sustentabilidade em seus processos, como o uso de matérias-primas mais responsáveis e o incentivo ao re-sale de peças. 
+            Uma das principais ações da marca é o uso de algodão responsável, que inclui práticas de cultivo sustentável e sem agrotóxicos. O algodão agroecológico, presente em algumas coleções, é produzido no semiárido brasileiro e beneficia tanto o meio ambiente quanto os agricultores locais, especialmente as mulheres. A Renner também celebra o Dia da Moda Responsável (08/10), destacando seu compromisso com a sustentabilidade, o que a posiciona como uma das marcas de moda mais bem avaliadas no Índice de Sustentabilidade do Dow Jones (DJSI). 
+            Em resumo, o texto enfatiza o movimento da Renner em direção a uma moda mais consciente, com foco em práticas sustentáveis e na responsabilidade social e ambiental.     </div>
 
-<footer class="footer">
-    <div class="footer-links">
-        <a href="../View/Sobre.html">SOBRE</a>
-        <a href="../View/Termos e Condições.html">TERMOS E CONDIÇÕES</a>
-        <a href="../View/Política de Privacidade.html">POLÍTICA DE PRIVACIDADE</a>
+    <div class="link-container">
+        <a href="https://www.ecycle.com.br/consumo-consciente-de-roupas/" target="_blank" rel="external">CLIQUE AQUI PARA TER ACESSO A ÍNTEGRA DO ARTIGO -></a>
     </div>
 
-    <div class="social-icons">
-        <a href="https://www.instagram.com" target="_blank" class="social-icon">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://x.com" target="_blank" class="social-icon">
-            <i class="fab fa-x"></i> 
-        </a>
-        <a href="https://www.facebook.com" target="_blank" class="social-icon">
-            <i class="fab fa-facebook-f"></i>
-        </a>
+    <div class="comments-section">
+        <h2>Comentários</h2>
+        <div class="comment-form">
+            <textarea id="comment-input" placeholder="Deixe seu comentário..."></textarea>
+            <button class="submit-comment" onclick="submitComment()">ENVIAR COMENTÁRIO</button>
+        </div>
+        <div class="comment-list" id="comment-list">
+            <!-- Comentários serão adicionados aqui -->
+        </div>
+        <!-- Botão de Ver Mais Artigos -->
+        <a href="../View/Manutenção.html" class="more-articles">VER MAIS ARTIGOS</a>
     </div>
 
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="../View/Sobre.html">SOBRE</a>
+            <a href="../View/Termos e Condições.html">TERMOS E CONDIÇÕES</a>
+            <a href="../View/Política de Privacidade.html">POLÍTICA DE PRIVACIDADE</a>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://x.com" target="_blank" class="social-icon">
+                <i class="fab fa-x"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Função para enviar e exibir o comentário
+        function submitComment() {
+            var commentInput = document.getElementById('comment-input');
+            var commentList = document.getElementById('comment-list');
+            
+            if (commentInput.value.trim() !== "") {
+                var newComment = document.createElement('div');
+                newComment.classList.add('comment');
+                newComment.innerHTML = "<p><strong>Você:</strong> " + commentInput.value + "</p>";
+                commentList.appendChild(newComment);
+                
+                // Limpar o campo de comentário
+                commentInput.value = "";
+            } else {
+                alert("Por favor, escreva um comentário!");
+            }
+        }
+    </script>
 </body>
 </html>

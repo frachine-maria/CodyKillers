@@ -1,61 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artigo 3 - ReWear</title>
-    <link rel="stylesheet" href="Media/CSS/artigo3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <title>Artigo 4 - ReWear</title> 
+    <link rel="stylesheet" href="../View/Media/CSS/artigo2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Lalezar&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
         <ul>
             <li class="menu">
-                    <img src="Media/menu-aberto.png"; alt="Ícone de Menu"> 
-                </a>
+                <img src="../View/Media/menu-aberto.png" alt="Ícone de Menu"> 
             </li>
             <li class="logo">
-                <img src="Media/Logo.PNG" alt="Logo">
+                <img src="../View/Media/Logo.PNG" alt="Logo">
             </li>
             <li class="login-icon">
-                    <img src="Media/login-icon.png" alt="Ícone de Login"> 
-                </a>
+                <img src="../View/Media/login-icon.png" alt="Ícone de Login"> 
             </li>
         </ul>
-    </nav> 
+    </nav>
 
     <h1>Consumo consciente de moda e a percepção do consumidor</h1>
+
     <div class="content">
-      <img src="Media/transferir (2).jpeg" alt="transferir2" class="image">
-      <p class="text">
-        O aumento da consciência sobre consumo sustentável tem levado os consumidores a demandar produtos e serviços que respeitem questões socioambientais. Apesar da crescente preocupação com a sustentabilidade, estudos indicam que há uma lacuna entre a consciência socioambiental e as ações efetivas de compra, sugerindo que apenas ter consciência não garante um comportamento de consumo sustentável. 
-Fatores como a preferência por produtos verdes, a percepção das ações de responsabilidade social das empresas e a sensibilidade ao preço influenciam as decisões de compra. Este estudo investiga como esses fatores afetam o consumo consciente no setor de moda, que é uma das indústrias mais poluentes. 
-A pesquisa quantitativa, realizada por meio de questionários online, revela que a compra de produtos verdes impacta a sensibilidade a preços, enquanto a percepção de responsabilidade social influencia positivamente o consumo consciente. No entanto, a relação entre a compra de produtos verdes e o consumo consciente foi negativa, desafiando expectativas. Além disso, a sensibilidade ao preço não mostrou uma relação significativa com o consumo consciente. 
-O estudo destaca a complexidade das decisões de consumo, enfatizando a importância das ações sociais e ambientais das empresas e sugerindo que, embora os consumidores reconheçam essas questões, elas se refletem de maneira diferente em seu comportamento de compra. 
-      </p>
-  </div>  
+        <img src="../View/Media/ImagemRoupa5.jpeg" alt="roupas" class="image">
+        <p class="text">
+            O aumento da consciência sobre consumo sustentável tem levado os consumidores a demandar produtos e serviços que respeitem questões socioambientais. Apesar da crescente preocupação com a sustentabilidade, estudos indicam que há uma lacuna entre a consciência socioambiental e as ações efetivas de compra, sugerindo que apenas ter consciência não garante um comportamento de consumo sustentável. 
+            Fatores como a preferência por produtos verdes, a percepção das ações de responsabilidade social das empresas e a sensibilidade ao preço influenciam as decisões de compra. Este estudo investiga como esses fatores afetam o consumo consciente no setor de moda, que é uma das indústrias mais poluentes. 
+            A pesquisa quantitativa, realizada por meio de questionários online, revela que a compra de produtos verdes impacta a sensibilidade a preços, enquanto a percepção de responsabilidade social influencia positivamente o consumo consciente. No entanto, a relação entre a compra de produtos verdes e o consumo consciente foi negativa, desafiando expectativas. Além disso, a sensibilidade ao preço não mostrou uma relação significativa com o consumo consciente. 
+            O estudo destaca a complexidade das decisões de consumo, enfatizando a importância das ações sociais e ambientais das empresas e sugerindo que, embora os consumidores reconheçam essas questões, elas se refletem de maneira diferente em seu comportamento de compra.     </div>
 
-  <a href="https://www.scielo.br/j/bbr/a/J9kydH8YxqcdcpxFMmSRy9D/?format=pdf&lang=pt"target="_blank" rel="external">Clique aqui para ter acesso a integra do artigo -></a></p>
-
-  <footer class="footer">
-    <div class="footer-links">
-        <a href="../View/Sobre.html">SOBRE</a>
-        <a href="../View/Termos e Condições.html">TERMOS E CONDIÇÕES</a>
-        <a href="../View/Política de Privacidade.html">POLÍTICA DE PRIVACIDADE</a>
+    <div class="link-container">
+        <a href="https://www.ecycle.com.br/consumo-consciente-de-roupas/" target="_blank" rel="external">CLIQUE AQUI PARA TER ACESSO A ÍNTEGRA DO ARTIGO -></a>
     </div>
 
-  <div class="social-icons">
-    <a href="https://www.instagram.com" target="_blank" class="social-icon">
-        <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://x.com" target="_blank" class="social-icon">
-        <i class="fab fa-x"></i> 
-    </a>
-    <a href="https://www.facebook.com" target="_blank" class="social-icon">
-        <i class="fab fa-facebook-f"></i>
-    </a>
-</div>
+    <div class="comments-section">
+        <h2>Comentários</h2>
+        <div class="comment-form">
+            <textarea id="comment-input" placeholder="Deixe seu comentário..."></textarea>
+            <button class="submit-comment" onclick="submitComment()">ENVIAR COMENTÁRIO</button>
+        </div>
+        <div class="comment-list" id="comment-list">
+            <!-- Comentários serão adicionados aqui -->
+        </div>
+        <!-- Botão de Ver Mais Artigos -->
+        <a href="../View/Manutenção.html" class="more-articles">VER MAIS ARTIGOS</a>
+    </div>
 
-</footer> 
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="../View/Sobre.html">SOBRE</a>
+            <a href="../View/Termos e Condições.html">TERMOS E CONDIÇÕES</a>
+            <a href="../View/Política de Privacidade.html">POLÍTICA DE PRIVACIDADE</a>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://x.com" target="_blank" class="social-icon">
+                <i class="fab fa-x"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Função para enviar e exibir o comentário
+        function submitComment() {
+            var commentInput = document.getElementById('comment-input');
+            var commentList = document.getElementById('comment-list');
+            
+            if (commentInput.value.trim() !== "") {
+                var newComment = document.createElement('div');
+                newComment.classList.add('comment');
+                newComment.innerHTML = "<p><strong>Você:</strong> " + commentInput.value + "</p>";
+                commentList.appendChild(newComment);
+                
+                // Limpar o campo de comentário
+                commentInput.value = "";
+            } else {
+                alert("Por favor, escreva um comentário!");
+            }
+        }
+    </script>
 </body>
 </html>
