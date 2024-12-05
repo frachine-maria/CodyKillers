@@ -1,0 +1,288 @@
+/* Navegação fixa no topo */
+.navbar {
+    position: fixed;      /* Fixa a navbar */
+    top: 0;               /* Alinha ao topo da página */
+    left: 0;              /* Alinha à esquerda da página */
+    width: 100%;          /* Faz a navbar ocupar toda a largura da tela */
+    z-index: 1000;        /* Garante que a navbar fique acima de outros elementos */
+    background-color: #435922; /* Cor de fundo da navbar */
+    padding: 10px 0;      /* Ajuste de padding conforme necessário */
+}
+
+/* Garantir que o conteúdo abaixo da navbar não fique escondido */
+body {
+    padding-top: 60px; /* Adicione um padding superior para o conteúdo não ficar escondido atrás da navbar */
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Outros estilos de navbar, como links, etc. */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Ícone de Menu à Esquerda */
+.navbar .menu {
+    display: inline-flex;  /* Exibe o ícone como flex */
+    align-items: center;   /* Alinha o ícone verticalmente */
+    margin-top: 10px;       /* Move o ícone para baixo - ajuste o valor conforme necessário */
+}
+
+/* Ícone de Menu à Esquerda */
+.navbar .login-icon {
+    display: inline-flex;  
+    align-items: center;   
+    margin-top: 10px;       
+}
+
+.navbar .menu img {
+    width: 70px;    /* Ajuste o tamanho do ícone conforme necessário */
+    height: auto;   /* Mantém a proporção da imagem */
+}
+
+/* Container da imagem com o texto sobreposto */
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Texto sobreposto no canto inferior esquerdo, 200px acima da borda inferior */
+.overlay-text {
+    position: absolute;
+    left: 0;           /* Alinhado à borda esquerda */
+    bottom: -400px;     /* 200px acima da borda inferior da imagem */
+    color: white;
+    font-size: 128px;
+    font-weight: bold;
+    font-family: 'Lalezar', sans-serif; 
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    padding: 10px;     /* Espaço interno para evitar que o texto toque a borda */
+}
+
+/* 4 imagens */
+.page-container {
+  width: calc(100vw - 200px); /* A página começa 200px antes do lado direito */
+  margin-left: auto; /* Alinha o conteúdo ao lado direito */
+  position: relative; /* Base para deslocamentos internos */
+  overflow-x: hidden; /* Impede elementos de ultrapassarem o limite horizontal */
+  padding: 0 20px; /* Margem interna à direita e esquerda */
+  box-sizing: border-box;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 600px 300px 300px 600px; /* Define as colunas */
+  grid-template-rows: 400px 400px; /* Define as linhas */
+  gap: 10px; /* Espaçamento entre os itens */
+  position: relative;
+}
+
+.item1, .item2, .item3, .item4 {
+  position: absolute; /* Permite deslocamentos */
+}
+
+/* Ajustes individuais */
+.item1 {
+  width: 600px;
+  height: 400px;
+  left: 210px; /* Move para a direita */
+  top: 80px;  /* Move para baixo */
+}
+
+.item2 {
+  width: 300px;
+  height: 400px;
+  left: 850px; /* Alinhamento exato com base no grid */
+  top: 83px;   /* Move para baixo */
+}
+
+.item3 {
+  width: 300px;
+  height: 400px;
+  left: 527px;
+  top: 270px;   /* Calculado a partir da altura do item2 */
+}
+
+.item4 {
+  width: 600px;
+  height: 400px;
+  left: 210px;
+  top: 270px;
+}
+
+.text-box {
+    background-color: #B6D0F2;
+    color: white;
+    width: 1308px; /* Definindo a largura da caixa */
+    margin: 20px auto; /* Centralizando a caixa e dando espaço em cima e embaixo */
+    padding: 20px;
+    border-radius: 40px; /* Opcional, para bordas arredondadas */
+    text-align: center;
+    position: relative; /* Necessário para que o conteúdo interno use coordenadas absolutas */
+}
+
+.text-box p {
+    font-size: 27px;
+    line-height: 1.6;
+}
+
+.text-box img {
+    position: absolute;
+    top: 80px; /* Ajuste a posição vertical */
+    left: 160px; /* Ajuste a posição horizontal */
+    width: 100px; /* Tamanho da imagem (ajuste conforme necessário) */
+    height: auto; /* Mantém a proporção da imagem */
+    z-index: 10; /* Garante que a imagem fique sobre o texto */
+}
+
+
+
+
+
+
+/* Espaçamento entre as 3 caixas de texto e a imagem */
+.caixas-de-texto {
+    margin-bottom: 50px; /* Ajuste o valor conforme necessário para o espaçamento desejado */
+}
+
+/* Espaço adicional entre as caixas de texto e a imagem */
+.espaco-caixas-imagem {
+    height: 80px; /* Espaço entre as caixas de texto e a imagem (ajuste conforme necessário) */
+}
+
+/* Estilos para a imagem acima do rodapé */
+.imagem-rodape {
+    margin: 0;
+    padding: 0;
+}
+
+.imagem-rodape img {
+    width: 100%;           /* Ajuste conforme necessário */
+    height: auto;
+    display: block;
+}
+
+/* Botão imagem 2 */
+.sobrepor {
+    position: absolute;
+    bottom: -1910px; 
+    justify-content: right;
+    align-items: end;
+    width: 100%;
+    right: -1150px
+}
+
+button { 
+    border: none;
+    display: block;
+    position: relative;
+    padding: 0.7em 2.4em;
+    font-size: 24px;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    font-family: inherit;
+    font-weight: 500;
+}
+  
+button span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+    border: 4px solid royalblue;
+}
+  
+button span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 500%;
+    background: var(--lightgray);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    transition: all 0.3s;
+}
+  
+button:hover span::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+    background: royalblue;
+}
+  
+button:hover {
+    color: white;
+}
+  
+button:active span::before {
+    background: #2751cd;
+}
+
+/* Estilo para o rodapé */
+.footer {
+    background-color: #435922;
+    color: white;
+    text-align: center;
+    padding:20px;
+    margin-top: 0px;
+}
+
+/* Estilo para os links do rodapé */
+.footer-links {
+    margin: 0px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para os ícones sociais */
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 25px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    opacity: 0.7; /* Efeito de hover */
+}
