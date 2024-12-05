@@ -12,29 +12,45 @@
     <nav class="navbar">
       <ul>
           <li class="menu">
-                  <img src="../View/Media/menu-aberto.png" alt="Ícone de Menu"> 
-              </a>
+              <img src="../View/Media/menu-aberto.png" alt="Ícone de Menu"> 
           </li>
           <li class="logo">
               <img src="../View/Media/Logo.PNG" alt="Logo">
           </li>
           <li class="login-icon">
-                  <img src="../View/Media/login-icon.png" alt="Ícone de Login"> 
-              </a>
+              <img src="../View/Media/login-icon.png" alt="Ícone de Login"> 
           </li>
       </ul>
   </nav>
-<h1>Consumo consciente de roupas e moda sustentável</h1>
+
+  <h1>Consumo consciente de roupas e moda sustentável</h1>
+
   <div class="content">
     <img src="../View/Media/imagem1.png" alt="roupas" class="image">
     <p class="text">
       O consumo consciente de roupas é essencial para reduzir os impactos ambientais e éticos da indústria têxtil, que é uma das maiores consumidoras de recursos naturais e envolve práticas como trabalho escravo. O movimento slow fashion busca alternativas sustentáveis, priorizando a durabilidade, a produção responsável e o ciclo de vida das roupas. Algumas práticas incluem comprar em brechós, lavar menos as peças, valorizar a produção local e escolher roupas duráveis e orgânicas. Também é importante evitar microfibras, conhecer a origem das roupas e realizar o descarte correto. Essas ações podem transformar o consumo de moda e reduzir o impacto ambiental.
     </p>
-</div> 
+  </div>
 
- <a href="https://www.ecycle.com.br/consumo-consciente-de-roupas/" target="_blank" rel="external">Clique aqui para ter acesso a integra do artigo -></a>
+  <!-- Link centralizado para a íntegra do artigo -->
+  <div class="link-container">
+    <a href="https://www.ecycle.com.br/consumo-consciente-de-roupas/" target="_blank" rel="external">CLIQUE AQUI PARA TER ACESSO A ÍNTEGRA DO ARTIGO -></a>
+  </div>
 
-<footer class="footer">
+  <!-- Seção de Comentários -->
+  <div class="comments-section">
+    <h2>Comentários</h2>
+    <div class="comment-form">
+      <textarea id="comment-input" placeholder="Deixe seu comentário..."></textarea>
+      <button class="submit-comment" onclick="submitComment()">Enviar Comentário</button>
+    </div>
+    <div class="comment-list" id="comment-list">
+      <!-- Comentários serão adicionados aqui -->
+    </div>
+    <button class="more-articles">VER MAIS ARTIGOS</button>
+  </div>
+
+  <footer class="footer">
     <div class="footer-links">
         <a href="../View/Sobre.html">SOBRE</a>
         <a href="../View/Termos e Condições.html">TERMOS E CONDIÇÕES</a>
@@ -52,6 +68,26 @@
             <i class="fab fa-facebook-f"></i>
         </a>
     </div>
-</footer>
+  </footer>
+
+  <script>
+    // Função para enviar e exibir o comentário
+    function submitComment() {
+      var commentInput = document.getElementById('comment-input');
+      var commentList = document.getElementById('comment-list');
+      
+      if (commentInput.value.trim() !== "") {
+        var newComment = document.createElement('div');
+        newComment.classList.add('comment');
+        newComment.innerHTML = "<p><strong>Você:</strong> " + commentInput.value + "</p>";
+        commentList.appendChild(newComment);
+        
+        // Limpar o campo de comentário
+        commentInput.value = "";
+      } else {
+        alert("Por favor, escreva um comentário!");
+      }
+    }
+  </script>
 </body>
 </html>
