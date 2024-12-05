@@ -14,7 +14,7 @@ geral é promover a conscientização ambiental.
 
 ## Sobre
 
-Nosso trabalho tem como proposta incentivar as pessoas a serem mais aliadas ao meio ambiente
+Nosso trabalho tem como proposta incentivar as pessoas a serem mais aliadas ao meio ambiente.
 
 ## Licença
 
