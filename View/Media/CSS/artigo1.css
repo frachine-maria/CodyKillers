@@ -4,11 +4,14 @@
 }  
 
 h1 {
-  text-align: center; 
-  margin-bottom: 30px; 
+  text-align: left;
+  margin-bottom: 30px;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-family: 'Lato', sans-serif;
 } 
- 
- .body {
+
+.body {
   font-family: Arial,sans-serif; 
   line-height: 1.6; 
   color: #333; 
@@ -81,7 +84,7 @@ margin-bottom: 20px;
 font-size: 20px;
 line-height: 2.0; 
 text-align: justify; 
-font-family: 'Lalezar','sans-serif';
+font-family: 'Lato', sans-serif; /* Fonte Lato */
 }
 
 .footer {
@@ -105,4 +108,12 @@ font-weight: bold;
 
 .footer-links a:hover {
 text-decoration: underline;
+}
+
+a {
+  color: red; /* Cor do link em vermelho */
+}
+
+a:hover {
+  text-decoration: underline; /* Sublinha o link ao passar o mouse */
 }
