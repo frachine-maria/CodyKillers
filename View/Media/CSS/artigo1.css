@@ -1,16 +1,19 @@
+/* Reset de estilos */
 * {
   margin: 0;
   padding: 0;
-}  
+}
 
+/* Estilo do título */
 h1 {
-  text-align: left;
+  text-align: left; /* Alinha o título à esquerda */
   margin-bottom: 30px;
-  margin-left: 20px;
-  margin-top: 20px;
-  font-family: 'Lato', sans-serif;
+  margin-left: 20px; /* Adiciona um espaço à esquerda */
+  margin-top: 20px; /* Adiciona um espaço superior */
+  font-family: 'Lato', sans-serif; /* Fonte Lato */
 } 
 
+/* Estilo do corpo */
 .body {
   font-family: Arial,sans-serif; 
   line-height: 1.6; 
@@ -18,102 +21,188 @@ h1 {
   background-color: #ffffff; 
 }  
 
+/* Estilo da navbar */
 .navbar {
- width: 100%;          
-background-color: #435922; 
-padding: 10px 0;     
+  width: 100%;
+  background-color: #435922; 
+  padding: 10px 0;     
 } 
 
+/* Estilo do logo */
 .logo img {
-width: 440px;
-height: auto;
-vertical-align: middle; 
-margin-left: 50px; 
-align-self: center;
+  width: 440px;
+  height: auto;
+  vertical-align: middle; 
+  margin-left: 50px; 
+  align-self: center;
 } 
 
+/* Estilo da lista de itens na navbar */
 .navbar ul {
-margin: 0;
-padding: 0;
-display: flex;
-justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
 }
 
 .navbar li {
-display: inline;
+  display: inline;
 }
 
 .navbar a {
-color: white;
-text-decoration: none;
-padding: 5px;
+  color: white;
+  text-decoration: none;
+  padding: 5px;
 }
 
 .navbar .menu {
-display: inline-flex;  
-align-items: center;   
-margin-top: 10px;      
+  display: inline-flex;  
+  align-items: center;   
+  margin-top: 10px;      
 }
 
 .navbar .login-icon {
-display: inline-flex;  
-align-items: center;  
-margin-top: 10px;      
+  display: inline-flex;  
+  align-items: center;  
+  margin-top: 10px;      
 }
 
 .navbar .menu img {
-width: 45px;    
-height: auto;   
+  width: 45px;    
+  height: auto;   
 } 
 
+/* Estilo do conteúdo principal */
 .content {
-max-width: 800px; 
-margin: 0 auto; 
-text-align: left; 
+  max-width: 800px; 
+  margin: 0 auto; 
+  text-align: left; 
 }
 
 .image {
-display: block; 
-max-width: 100%; 
-height: auto; 
-margin: 0 auto; 
-margin-bottom: 20px; 
+  display: block; 
+  max-width: 100%; 
+  height: auto; 
+  margin: 0 auto; 
+  margin-bottom: 20px; 
 }
 
 .text {
-font-size: 20px;
-line-height: 2.0; 
-text-align: justify; 
-font-family: 'Lato', sans-serif; /* Fonte Lato */
+  font-size: 20px;
+  line-height: 2.0; 
+  text-align: justify; 
+  font-family: 'Lalezar', 'sans-serif';
 }
 
-.footer {
-background-color: #435922;
-color: white;
-text-align: center;
-padding:20px;
-margin-top: 10px;
-}
-
-.footer-links {
-margin: 0px 0;
-}
-
-.footer-links a {
-color: white;
-text-decoration: none;
-margin: 15px;
-font-weight: bold;
-}
-
-.footer-links a:hover {
-text-decoration: underline;
-}
-
+/* Estilo do link para o artigo completo */
 a {
-  color: red; /* Cor do link em vermelho */
+  color: #e91e63; /* Cor vermelha */
+  text-decoration: none;
+  font-weight: bold;
 }
 
 a:hover {
-  text-decoration: underline; /* Sublinha o link ao passar o mouse */
+  text-decoration: underline;
+}
+
+/* Estilo do rodapé */
+.footer {
+  background-color: #435922;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.footer-links {
+  margin: 0px 0;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 15px;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo da seção de comentários */
+.comments-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.comments-section h2 {
+  font-size: 24px;
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.comment-form {
+  margin-bottom: 20px;
+}
+
+.comment-form textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  resize: none;
+}
+
+.submit-comment {
+  background-color: #435922;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-comment:hover {
+  background-color: #435922;
+}
+
+.comment-list .comment {
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.comment-list .comment p {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+}
+
+/* Estilo do botão de "Ver Mais Artigos" */
+.more-articles {
+  background-color: #2a3d0e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.more-articles:hover {
+  background-color: #4e6927;
 }
