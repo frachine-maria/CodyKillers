@@ -32,22 +32,20 @@
     </p>
   </div>
 
-  <a href="https://www.ecycle.com.br/consumo-consciente-de-roupas/" target="_blank" rel="external">Clique aqui para ter acesso a integra do artigo -></a>
+  <!-- Link centralizado para a íntegra do artigo -->
+  <div class="link-container">
+    <a href="https://www.ecycle.com.br/consumo-consciente-de-roupas/" target="_blank" rel="external">CLIQUE AQUI PARA TER ACESSO A ÍNTEGRA DO ARTIGO -></a>
+  </div>
 
   <!-- Seção de Comentários -->
   <div class="comments-section">
     <h2>Comentários</h2>
     <div class="comment-form">
-      <textarea placeholder="Deixe seu comentário..."></textarea>
-      <button class="submit-comment">Enviar Comentário</button>
+      <textarea id="comment-input" placeholder="Deixe seu comentário..."></textarea>
+      <button class="submit-comment" onclick="submitComment()">Enviar Comentário</button>
     </div>
-    <div class="comment-list">
-      <div class="comment">
-        <p><strong>João Silva:</strong> Ótimo artigo! Super relevante para quem busca alternativas sustentáveis na moda.</p>
-      </div>
-      <div class="comment">
-        <p><strong>Maria Oliveira:</strong> Amei as dicas de consumo consciente! Já vou procurar brechós para comprar minhas roupas.</p>
-      </div>
+    <div class="comment-list" id="comment-list">
+      <!-- Comentários serão adicionados aqui -->
     </div>
     <button class="more-articles">VER MAIS ARTIGOS</button>
   </div>
@@ -71,5 +69,25 @@
         </a>
     </div>
   </footer>
+
+  <script>
+    // Função para enviar e exibir o comentário
+    function submitComment() {
+      var commentInput = document.getElementById('comment-input');
+      var commentList = document.getElementById('comment-list');
+      
+      if (commentInput.value.trim() !== "") {
+        var newComment = document.createElement('div');
+        newComment.classList.add('comment');
+        newComment.innerHTML = "<p><strong>Você:</strong> " + commentInput.value + "</p>";
+        commentList.appendChild(newComment);
+        
+        // Limpar o campo de comentário
+        commentInput.value = "";
+      } else {
+        alert("Por favor, escreva um comentário!");
+      }
+    }
+  </script>
 </body>
 </html>

@@ -94,7 +94,12 @@ h1 {
   font-family: 'Lalezar', 'sans-serif';
 }
 
-/* Estilo do link para o artigo completo */
+/* Centralizar o link do artigo */
+.link-container {
+  text-align: center; /* Centraliza o link */
+  margin: 20px 0;
+}
+
 a {
   color: #e91e63; /* Cor vermelha */
   text-decoration: none;
@@ -172,7 +177,7 @@ a:hover {
 }
 
 .submit-comment:hover {
-  background-color: #435922;
+  background-color: #3b4e1f;
 }
 
 .comment-list .comment {
@@ -189,9 +194,8 @@ a:hover {
   font-size: 16px;
 }
 
-/* Estilo do botão de "Ver Mais Artigos" */
 .more-articles {
-  background-color: #2a3d0e;
+  background-color: #435922;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -204,5 +208,5 @@ a:hover {
 }
 
 .more-articles:hover {
-  background-color: #4e6927;
+  background-color: #5b7a2c;
 }
