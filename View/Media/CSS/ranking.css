@@ -1,0 +1,288 @@
+/* Navegação fixa no topo */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #435922;
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente */
+    justify-content: space-between; /* Espaça os itens nas extremidades */
+    padding: 0 20px; /* Adiciona um espaçamento horizontal */
+    height: 150px; /* Define a altura da navbar */
+    box-sizing: border-box;
+}
+
+/* Garantir que o conteúdo abaixo da navbar não fique escondido */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garantir que o rodapé fique no fim */
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Estilo para links da navbar */
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between; /* Espaça os elementos entre si */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .menu img, 
+.navbar .login-icon img {
+    height: 90px; /* Ajusta o tamanho dos ícones */
+    cursor: pointer; /* Adiciona um cursor clicável */
+}
+
+.navbar .logo img {
+    height: 150px; /* Define o tamanho da logo */
+    margin: auto; /* Centraliza automaticamente */
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Estilo para a imagem principal e texto sobreposto */
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 72%; /* Ajuste proporcional para centralizar verticalmente */
+    left: 40%;
+    transform: translate(-50%, 50%);
+    color: white;
+    font-size: 100px;
+    font-weight: bold;
+    font-family: 'Lalezar', sans-serif;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.text-box {
+    font-family: 'Lalezar', sans-serif; 
+    background-color: #B6D0F2;
+    color: white;
+    width: 1200px; /* Define uma largura fixa */
+    max-width: 100%; /* Limita a largura a 90% da tela menor */
+    padding: 40px 20px; 
+    border-radius: 40px;
+    text-align: center;
+    font-size: 25px;
+    margin: 40px auto; /* Centraliza horizontalmente */
+    box-sizing: border-box;
+    position: relative;
+}
+
+.button-link {
+    text-decoration: none;
+    color: white;
+}
+
+.text-box p {
+    font-size: 38px;
+    line-height: 1.6;
+    margin-bottom: 20px;  /* Dá um pouco de espaçamento entre o texto e o ícone */
+}
+
+
+
+
+
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9; /* Cor de fundo opcional */
+  }
+  
+  .ranking-container {
+    display: flex;
+    flex-direction: column;
+    gap: 70px; /* Espaçamento entre as caixas */
+    align-items: center; /* Centraliza os itens dentro do container */
+  }
+
+
+
+
+  .ranking-item {
+    position: relative; /* Define o contexto para posicionamento absoluto */
+    background-color: #B6D0F2;
+    border-radius: 45px;
+    width: 607px;
+    height: 99px;
+    padding: 0 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.ranking-item:first-child {
+    margin-top: 70px; /* Ajuste este valor para o espaço desejado */
+  }
+
+
+.ranking-icon {
+    position: absolute;
+    top: 10px; /* Ajuste para a posição vertical */
+    left: 100px; /* Ajuste para a posição horizontal */
+    width: 80px;
+    height: 80px;
+}
+
+.ranking-text {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 90px; /* Garante que o texto não sobreponha a imagem */
+    line-height: 99px; /* Centraliza o texto verticalmente */
+}
+
+
+
+
+
+
+
+
+
+
+/* Caixa de texto para acúmulo de pontos */
+.caixa-texto {
+    background-color: #435922;
+    color: white;
+    width: 1308px; /* Largura da caixa */
+    height: 300px; /* Altura da caixa */
+    padding: 40px; /* Espaçamento interno */
+    border-radius: 10px;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; /* Garantir que o texto não vaze */
+}
+
+h2 {
+    font-size: 32px; /* Tamanho proporcional do título */
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 30px; /* Tamanho proporcional do texto */
+    line-height: 1.8;
+}
+
+/* Ícone de dinheiro dentro da caixa azul */
+.money-icon {
+    position: absolute;
+    top: 100px; /* Posição ajustada para não sobrepor o texto */
+    left: 100px;
+    font-size: 36px;
+    color: white;
+}
+
+/* Grid para categorias */
+.page-container {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-gap: 20px; 
+    padding: 10px 0;
+}
+
+.grid-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.grid-container .category-title {
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Estilo para a imagem acima do rodapé */
+.imagem-rodape {
+    display: block; /* Garante que o bloco esteja visível */
+    margin: 0; /* Adiciona espaçamento entre a imagem e o conteúdo acima */
+    padding: 0;
+    position: relative;
+    text-align: center; /* Centraliza horizontalmente */
+}
+
+/* Rodapé */
+.footer {
+    background-color: #435922;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* Faz o rodapé "grudar" no final */
+    width: 100%; /* Garante que ocupe toda a largura */
+    box-sizing: border-box; /* Inclui o padding na largura total */
+    z-index: 10; /* Garante que o rodapé fique acima de outros elementos */
+}
+
+/* Links do rodapé */
+.footer-links {
+    margin: 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Ícones sociais no rodapé */
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 25px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    opacity: 0.7;
+}
