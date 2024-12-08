@@ -1,46 +1,33 @@
+html, body {
+    height: 100%; /* Definir altura para garantir que o conteúdo ocupe toda a tela */
+    margin: 0;    /* Remover margens padrão */
+}
+
 /* Navegação fixa no topo */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #435922;
-    display: flex;
-    align-items: center; /* Alinha os itens verticalmente */
-    justify-content: space-between; /* Espaça os itens nas extremidades */
-    padding: 0 20px; /* Adiciona um espaçamento horizontal */
-    height: 150px; /* Define a altura da navbar */
-    box-sizing: border-box;
+    position: fixed;      /* Fixa a navbar */
+    top: 0;               /* Alinha ao topo da página */
+    left: 0;              /* Alinha à esquerda da página */
+    width: 100%;          /* Faz a navbar ocupar toda a largura da tela */
+    z-index: 1000;        /* Garante que a navbar fique acima de outros elementos */
+    background-color: #435922; /* Cor de fundo da navbar */
+    padding: 10px 0;      /* Ajuste de padding conforme necessário */
 }
 
 /* Garantir que o conteúdo abaixo da navbar não fique escondido */
 body {
-    padding-top: 60px;
+    padding-top: 60px; /* Adicione um padding superior para o conteúdo não ficar escondido atrás da navbar */
     margin: 0;
     overflow-x: hidden;
 }
 
-/* Estilo para links da navbar */
+/* Outros estilos de navbar, como links, etc. */
 .navbar ul {
     list-style-type: none;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between; /* Espaça os elementos entre si */
     margin: 0;
     padding: 0;
-}
-
-.navbar .menu img, 
-.navbar .login-icon img {
-    height: 90px; /* Ajusta o tamanho dos ícones */
-    cursor: pointer; /* Adiciona um cursor clicável */
-}
-
-.navbar .logo img {
-    height: 150px; /* Define o tamanho da logo */
-    margin: auto; /* Centraliza automaticamente */
+    display: flex;
+    justify-content: space-around;
 }
 
 .navbar li {
@@ -53,141 +40,239 @@ body {
     padding: 10px;
 }
 
-/* Estilo para a imagem principal e texto sobreposto */
+/* Ícone de Menu à Esquerda */
+.navbar .menu {
+    display: inline-flex;  /* Exibe o ícone como flex */
+    align-items: center;   /* Alinha o ícone verticalmente */
+    margin-top: 10px;       /* Move o ícone para baixo - ajuste o valor conforme necessário */
+}
+
+/* Ícone de Menu à Esquerda */
+.navbar .login-icon {
+    display: inline-flex;  
+    align-items: center;   
+    margin-top: 10px;       
+}
+
+.navbar .menu img {
+    width: 70px;    /* Ajuste o tamanho do ícone conforme necessário */
+    height: auto;   /* Mantém a proporção da imagem */
+}
+
+/* Container da imagem com o texto sobreposto */
 .image-container {
     position: relative;
+    display: inline-block;
 }
 
 .image-container img {
     width: 100%;
     height: auto;
+    display: block;
 }
 
+/* Texto sobreposto no canto inferior esquerdo, 200px acima da borda inferior */
 .overlay-text {
     position: absolute;
-    bottom:60%; /* Ajuste proporcional para centralizar verticalmente */
-    left: 20%;
-    transform: translate(-50%, 50%);
+    left: 50px;           /* Alinhado à borda esquerda */
+    bottom: -150px;     /* 200px acima da borda inferior da imagem */
     color: white;
-    font-size: 100px;
+    font-size: 128px;
     font-weight: bold;
-    font-family: 'Lalezar', sans-serif;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-}
-
-.text-box {
     font-family: 'Lalezar', sans-serif; 
-    background-color: #B6D0F2;
-    color: white;
-    width: 1200px; /* Define uma largura fixa */
-    max-width: 100%; /* Limita a largura a 90% da tela menor */
-    padding: 40px 20px; 
-    border-radius: 40px;
-    text-align: center;
-    font-size: 25px;
-    margin: 40px auto; /* Centraliza horizontalmente */
-    box-sizing: border-box;
-    position: relative;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    padding: 10px;     /* Espaço interno para evitar que o texto toque a borda */
 }
 
-
-.button-link {
-    text-decoration: none;
-    color: white;
-}
-
-.text-box p {
-    font-size: 38px;
-    line-height: 1.6;
-    margin-bottom: 20px;  /* Dá um pouco de espaçamento entre o texto e o ícone */
-}
-
-/* Ícone de dinheiro dentro da caixa azul */
-.money-icon {
-    position: absolute;
-    top: 100px;  /* Posição ajustada para não sobrepor o texto */
-    left: 100px;
-    font-size: 36px;
-    color: white;
-}
-
-/* Grid para categorias */
+/* 4 imagens */
 .page-container {
-    width: 100%;
-    padding: 0 20px;
+    width: 100%; /* Garantir que o conteúdo ocupe toda a largura da tela */
+    margin-left: 0; /* Garantir que o conteúdo comece do lado esquerdo */
+    position: relative; /* Base para deslocamentos internos */
+    overflow-x: hidden; /* Impede elementos de ultrapassarem o limite horizontal */
+    padding: 0 20px; /* Margem interna à direita e esquerda */
     box-sizing: border-box;
+    min-height: 100%; /* Garante que a página ocupe toda a altura da tela */
+    display: flex;
+    flex-direction: column;
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
-    grid-gap: 20px; 
-    padding: 10px 0;
+  display: grid;
+  grid-template-columns: 600px 300px 300px 600px; /* Define as colunas */
+  grid-template-rows: 400px 400px; /* Define as linhas */
+  gap: 10px; /* Espaçamento entre os itens */
+  position: relative;
 }
 
-.grid-container img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+.item1, .item2, .item3, .item4 {
+  position: absolute; /* Permite deslocamentos */
 }
 
-.grid-container .category-title {
-    text-align: left;
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 10px;
+/* Ajustes individuais */
+.item1 {
+  width: 600px;
+  height: 400px;
+  left: 210px; /* Move para a direita */
+  top: 80px;  /* Move para baixo */
 }
 
-/* Estilo para a imagem acima do rodapé */
-.imagem-rodape {
-    display: block; /* Garante que o bloco esteja visível */
-    margin: 0; /* Adiciona espaçamento entre a imagem e o conteúdo acima */
-    padding: 0;
-    position: relative;
-    text-align: center; /* Centraliza horizontalmente */
+.item2 {
+  width: 300px;
+  height: 400px;
+  left: 850px; /* Alinhamento exato com base no grid */
+  top: 83px;   /* Move para baixo */
 }
 
+.item3 {
+  width: 300px;
+  height: 400px;
+  left: 527px;
+  top: 270px;   /* Calculado a partir da altura do item2 */
+}
 
-.imagem-rodape .botao-doador {
-    position: absolute; /* Permite centralizar sobre a imagem */
-    top: 80%; /* Centraliza verticalmente */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translate(-50%, -50%); /* Ajuste exato ao centro */
-    background-color: #5FA0D9; /* Cor do fundo */
-    color: white; /* Cor do texto */
-    padding: 15px 30px; /* Espaçamento interno */
-    font-size: 20px; /* Tamanho do texto */
-    font-family: 'Lalezar', sans-serif; /* Aplica a fonte Lalezar */
+.item4 {
+  width: 600px;
+  height: 400px;
+  left: 210px;
+  top: 270px;
+}
+
+.text-box {
+    background-color: #B6D0F2;
+    color: white;
+    width: 1308px; /* Definindo a largura da caixa */
+    margin: 20px auto; /* Centralizando a caixa e dando espaço em cima e embaixo */
+    padding: 20px;
+    border-radius: 40px; /* Opcional, para bordas arredondadas */
+    text-align: center;
+    position: relative; /* Necessário para que o conteúdo interno use coordenadas absolutas */
+}
+
+.text-box p {
+    font-size: 27px;
+    line-height: 1.6;
+}
+
+.text-box a {
     text-decoration: none; /* Remove o sublinhado */
-    border-radius: 25px; /* Bordas arredondadas */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
-    transition: background-color 0.3s ease-in-out; /* Efeito de hover */
-    cursor: pointer; /* Aplica o cursor de clique */
+    color: inherit; /* Faz com que a cor do link herde a cor do texto ao invés de usar o azul padrão */
 }
 
+.text-box img {
+    position: absolute;
+    top: 80px; /* Ajuste a posição vertical */
+    left: 160px; /* Ajuste a posição horizontal */
+    width: 100px; /* Tamanho da imagem (ajuste conforme necessário) */
+    height: auto; /* Mantém a proporção da imagem */
+    z-index: 10; /* Garante que a imagem fique sobre o texto */
+}
 
-.imagem-rodape .botao-doador:hover {
-    background-color: #4274a1; /* Cor de fundo ao passar o mouse */
+/* Espaçamento entre as 3 caixas de texto e a imagem */
+.caixas-de-texto {
+    margin-bottom: 50px; /* Ajuste o valor conforme necessário para o espaçamento desejado */
+}
+
+/* Espaço adicional entre as caixas de texto e a imagem */
+.espaco-caixas-imagem {
+    height: 80px; /* Espaço entre as caixas de texto e a imagem (ajuste conforme necessário) */
+}
+
+/* Estilos para a imagem acima do rodapé */
+.imagem-rodape {
+    margin: 0;
+    padding: 0;
 }
 
 .imagem-rodape img {
-    width: 100%; /* Ajusta para ocupar toda a largura do container */
-    height: auto; /* Mantém a proporção da imagem */
-    display: block; /* Garante que a imagem esteja visível */
+    width: 100%;           /* Ajuste conforme necessário */
+    height: auto;
+    display: block;
 }
 
-/* Rodapé */
+/* Botão imagem 2 */
+.sobrepor {
+    position: absolute;
+    bottom: -1700px; /* Mantém o valor ajustado para mover o botão para cima */
+    justify-content: right;
+    align-items: end;
+    width: 100%;
+    right: -800px; /* Valor ajustado para mover o botão mais para a direita */
+}
+
+.sobrepor a {
+    text-decoration: none; /* Remove o sublinhado */
+    display: inline-block; /* Garante que o link se comporte como um bloco, permitindo o clique em toda a área do botão */
+}
+
+button { 
+    border: none;
+    display: block;
+    position: relative;
+    padding: 0.7em 2.4em;
+    font-size: 24px;
+    background: transparent;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    font-family: inherit;
+    font-weight: 500;
+}
+  
+button span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+    border: 4px solid royalblue;
+}
+  
+button span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8%;
+    height: 500%;
+    background: var(--lightgray);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-60deg);
+    transition: all 0.3s;
+}
+  
+button:hover span::before {
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 100%;
+    background: royalblue;
+}
+  
+button:hover {
+    color: white;
+}
+  
+button:active span::before {
+    background: #2751cd;
+}
+
+/* Estilo para o rodapé */
 .footer {
+    font-family: 'Lalezar', cursive; /* Aplica a fonte Lalezar Regular */
     background-color: #435922;
     color: white;
     text-align: center;
     padding: 20px;
-    margin: 0;
+    margin-top: 0px;
+    letter-spacing: 1.6px;
 }
 
-/* Links do rodapé */
+/* Estilo para os links do rodapé */
 .footer-links {
-    margin: 0;
+    margin: 0px 0;
 }
 
 .footer-links a {
@@ -201,7 +286,7 @@ body {
     text-decoration: underline;
 }
 
-/* Ícones sociais no rodapé */
+/* Estilo para os ícones sociais */
 .social-icons {
     margin-top: 15px;
 }
@@ -214,5 +299,41 @@ body {
 }
 
 .social-icon:hover {
-    opacity: 0.7;
+    opacity: 0.7; /* Efeito de hover */
+}
+
+/* Estilo do menu lateral */
+.menu-overlay {
+    position: fixed;         /* Fixa o menu */
+    top: 0;                  /* Alinha ao topo */
+    left: 0;                 /* Alinha à esquerda */
+    width: 250px;            /* Largura do menu lateral */
+    height: 100vh;           /* Garantir que ocupe toda a altura da tela */
+    background-color: #435922;  /* Cor de fundo do menu */
+    transform: translateX(-100%); /* Inicialmente fora da tela */
+    transition: transform 0.3s ease; /* Transição suave para abrir/fechar */
+    z-index: 999;            /* Coloca o menu acima do conteúdo */
+}
+
+/* Quando o menu estiver ativo (aberto) */
+.menu-overlay.active {
+    transform: translateX(0); /* Move o menu para a tela */
+}
+
+/* Estilo do efeito de vidro (para a área atrás do menu) */
+.glass-effect {
+    position: fixed;         /* Fixa o efeito de vidro */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;            /* Ocupa toda a tela */
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    z-index: 998;             /* Coloca o efeito de vidro abaixo do menu */
+    display: none;            /* Inicialmente oculto */
+    transition: opacity 0.3s ease; /* Transição suave */
+}
+
+/* Quando o efeito de vidro estiver ativo */
+.glass-effect.active {
+    display: block;          /* Exibe o efeito de vidro */
 }
