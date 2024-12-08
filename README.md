@@ -25,7 +25,7 @@ Nossa licença é a do MIT
 - Listar as tecnologias e frameworks utilizados no projeto, por exemplo:
   - **Linguagem de Programação:** Um pouco de javascript.
   - **Frameworks:** Nenhum até o momento...
-  - **Banco de Dados:** Futuramente MySQL.
+  - **Banco de Dados:** MySQL
 
 ## Instalação
 
