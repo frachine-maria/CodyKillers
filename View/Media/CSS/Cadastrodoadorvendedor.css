@@ -1,3 +1,4 @@
+/* Reset de estilo */
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +12,113 @@ body {
     background-color: #EFEFEF;
 }
 
+/* Navbar */
+.navbar {
+    background-color: #435922;
+    padding: 10px 20px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .menu img {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.navbar .logo img {
+    max-height: 80px;
+}
+
+.navbar .login-icon img {
+    max-height: 40px;
+}
+
+/* Menu Overlay */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    z-index: 1000;
+}
+
+.menu-overlay.active {
+    display: block;
+}
+
+.menu-content {
+    position: relative;
+    background-color: #fff;
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.menu-top, .menu-bottom {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.menu-items .menu-item {
+    margin: 15px 0;
+}
+
+.menu-button {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submenu {
+    list-style: none;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.submenu li {
+    margin: 5px 0;
+}
+
+.submenu a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Efeito Glass */
+#glass-effect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    z-index: 900;
+}
+
+#glass-effect.active {
+    display: block;
+}
+
+/* Remove o scroll ao abrir o menu */
+body.menu-open {
+    overflow: hidden;
+}
+
+/* Header */
 .header {
     background-color: #435922;
     color: white;
@@ -40,6 +148,7 @@ body {
     max-height: 100px;
 }
 
+/* Form Container */
 .form-container {
     padding: 20px;
     max-width: 800px;
@@ -98,6 +207,7 @@ input, select {
     background-color: #6a823d;
 }
 
+/* Footer */
 .footer {
     background-color: #435922;
     color: white;
