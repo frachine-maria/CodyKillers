@@ -122,39 +122,40 @@
         </div>
     </footer>
 
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById("menu");
-            const glassEffect = document.getElementById("glass-effect");
-            const body = document.body;  // Referência ao elemento body
-    
-            // Verifica se o menu está aberto
-            if (menu.classList.contains("active")) {
-                menu.classList.remove("active");
-                glassEffect.classList.remove("active");
-                body.classList.remove("menu-open");  // Remove a classe menu-open do body
-            } else {
-                menu.classList.add("active");
-                glassEffect.classList.add("active");
-                body.classList.add("menu-open");  // Adiciona a classe menu-open ao body
-            }
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById("menu");
+        const glassEffect = document.getElementById("glass-effect");
+        const body = document.body;  // Referência ao elemento body
+
+        // Verifica se o menu está aberto
+        if (menu.classList.contains("active")) {
+            menu.classList.remove("active");
+            glassEffect.classList.remove("active");
+            body.classList.remove("menu-open");  // Remove a classe menu-open do body
+        } else {
+            menu.classList.add("active");
+            glassEffect.classList.add("active");
+            body.classList.add("menu-open");  // Adiciona a classe menu-open ao body
         }
-    
-        // Fecha o menu se o clique for fora do menu e do ícone
-        window.addEventListener("click", (event) => {
-            const menu = document.getElementById("menu");
-            const glassEffect = document.getElementById("glass-effect");
-            const menuIcon = document.querySelector(".menu a");
-    
-            // Se o menu estiver aberto e o clique for fora do menu ou do ícone
-            if (menu.classList.contains("active") && 
-                !menu.contains(event.target) && 
-                !menuIcon.contains(event.target)) {
-                menu.classList.remove("active");
-                glassEffect.classList.remove("active");
-                document.body.classList.remove("menu-open");
-            }
-        });
-    </script>
+    }
+
+    // Fecha o menu se o clique for fora do menu e do ícone
+    window.addEventListener("click", (event) => {
+        const menu = document.getElementById("menu");
+        const glassEffect = document.getElementById("glass-effect");
+        const menuIcon = document.querySelector(".menu a");
+
+        // Se o menu estiver aberto e o clique for fora do menu ou do ícone
+        if (menu.classList.contains("active") && 
+            !menu.contains(event.target) && 
+            !menuIcon.contains(event.target)) {
+            menu.classList.remove("active");
+            glassEffect.classList.remove("active");
+            document.body.classList.remove("menu-open");
+        }
+    });
+</script>
+
 </body>
 </html>
