@@ -26,7 +26,7 @@
 body {
     padding-top: 60px;
     margin: 0;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Evitar o overflow horizontal */
 }
 
 .navbar ul {
@@ -82,15 +82,18 @@ body {
 
 .overlay-text {
     position: absolute;
-    left: 0;
-    bottom: -400px;
+    left: 25%; /* Ajuste a posição horizontal */
+    top: 35%;  /* Ajuste a posição vertical */
+    transform: translate(-50%, -50%); /* Centraliza o título na tela */
     color: white;
     font-size: 128px;
     font-weight: bold;
-    font-family: 'Lalezar', sans-serif; 
+    font-family: 'Lalezar', sans-serif;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
     padding: 10px;
+    line-height: 1;
 }
+
 
 .text-box {
     background-color: #435922;
@@ -147,6 +150,7 @@ body {
 }
 
 .imagem-rodape {
+    position: relative; /* Para o botão ser posicionado em relação ao seu contêiner */
     margin: 0;
     padding: 0;
 }
@@ -159,11 +163,13 @@ body {
 
 .sobrepor {
     position: absolute;
-    bottom: -1610px; 
-    justify-content: right;
-    align-items: end;
+    top: 300px; /* Mova para cima ajustando o valor */
+    left: 80%;
+    transform: translateX(-50%);
     width: 100%;
-    right: -1170px
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button { 
@@ -180,6 +186,7 @@ button {
     z-index: 1;
     font-family: inherit;
     font-weight: 500;
+    text-decoration: none;
   }
   
   button span {
@@ -284,3 +291,37 @@ button {
     font-family: 'Lalezar', sans-serif;
 }
 
+.menu-overlay {
+    position: fixed;         /* Fixa o menu */
+    top: 0;                  /* Alinha ao topo */
+    left: 0;                 /* Alinha à esquerda */
+    width: 250px;            /* Largura do menu lateral */
+    height: 100vh;           /* Garantir que ocupe toda a altura da tela */
+    background-color: #435922;  /* Cor de fundo do menu */
+    transform: translateX(-100%); /* Inicialmente fora da tela */
+    transition: transform 0.3s ease; /* Transição suave para abrir/fechar */
+    z-index: 999;            /* Coloca o menu acima do conteúdo */
+}
+
+/* Quando o menu estiver ativo (aberto) */
+.menu-overlay.active {
+    transform: translateX(0); /* Move o menu para a tela */
+}
+
+/* Estilo do efeito de vidro (para a área atrás do menu) */
+.glass-effect {
+    position: fixed;         /* Fixa o efeito de vidro */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;            /* Ocupa toda a tela */
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    z-index: 998;             /* Coloca o efeito de vidro abaixo do menu */
+    display: none;            /* Inicialmente oculto */
+    transition: opacity 0.3s ease; /* Transição suave */
+}
+
+/* Quando o efeito de vidro estiver ativo */
+.glass-effect.active {
+    display: block;          /* Exibe o efeito de vidro */
+}
