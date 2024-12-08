@@ -159,7 +159,10 @@ body {
     width: 100%;
     height: auto;
     display: block;
+    margin-bottom: 0; /* Remove a margem abaixo da imagem */
+    padding-bottom: 0; /* Remove o padding, se houver */
 }
+
 
 .sobrepor {
     position: absolute;
@@ -188,7 +191,11 @@ button {
     font-weight: 500;
     text-decoration: none;
   }
-  
+
+.sem-sublinhado {
+    text-decoration: none;  /* Remove o sublinhado somente do link com esta classe */
+}
+
   button span {
     position: absolute;
     left: 0;
@@ -227,12 +234,12 @@ button {
     background: #2751cd;
   }
 
-.footer {
+  .footer {
     background-color: #435922;
     color: white;
     text-align: center;
-    padding:20px;
-    margin-top: 0px;
+    padding: 20px;
+    margin-top: 0;  /* Remove a margem superior */
 }
 
 .footer-links {
