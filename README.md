@@ -18,7 +18,7 @@ Nosso trabalho tem como proposta incentivar as pessoas a serem mais aliadas ao m
 
 ## Licença
 
-Nossa licença é a do MIT
+Nossa licença é a do MIT.
 
 ## Tecnologias Utilizadas
 
