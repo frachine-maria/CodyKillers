@@ -24,27 +24,36 @@
 
     <main>
         <section class="checkout">
+            <!-- Sessão de detalhes da conta -->
             <div class="account-section">
-                <h2>Conta</h2>
-                <p>Detalhes da Conta</p>
+                <h2>Detalhes da Conta</h2>
                 <form>
                     <label for="email">Endereço de E-mail</label>
                     <input type="email" id="email" placeholder="exemplo@email.com" required>
                     
-                    <label for="password">Password</label>
+                    <label for="password">Senha</label>
                     <input type="password" id="password" placeholder="********" required>
                     
                     <div class="buttons">
-                        <button type="button">Fazer cadastro</button>
-                        <button type="submit" class="login">Login</button>
+                        <a href="../View/Cadastro.html">
+                            <button type="button">Fazer cadastro</button>
+                        </a>
+                        <a href="../View/Login.html">
+                            <button type="submit" class="styled-button login">Login</button>
+                        </a>
+                    </div>
+                    <div class="navigation-buttons">
+                        <a href="javascript:void(0)" onclick="window.history.back();">
+                            <button type="button">Cancelar pedido</button>
+                        </a>
+                        <a href="../View/Checkout2.html">
+                            <button type="button" class="styled-button advance">Avançar</button>
+                        </a>
                     </div>
                 </form>
-                <div class="navigation-buttons">
-                    <button type="button">Cancelar pedido</button>
-                    <button type="button" class="advance">Avançar</button>
-                </div>
             </div>
 
+            <!-- Sessão de resumo da compra -->
             <div class="summary-section">
                 <h3>Resumo da compra</h3>
                 <div class="item">
@@ -66,6 +75,12 @@
                     <p>Total: <span>R$ 19,99</span></p>
                 </div>
             </div>
+
+            <!-- Imagem retangular ao lado do resumo -->
+            <div class="extra-image">
+                <img src="../View/Media/Agradecimentos 1.png" alt="Imagem adicional">
+            </div>
+        </section>
     </main>
 </body>
 </html>

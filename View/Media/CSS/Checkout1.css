@@ -43,7 +43,7 @@ main {
 
 .checkout {
     display: grid;
-    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-columns: 2fr 2fr 1fr; /* Ajusta para ter a imagem ao lado */
     gap: 20px;
 }
 
@@ -97,4 +97,57 @@ main {
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+
+.summary-section h3 {
+    margin-bottom: 20px; /* Adiciona um espaço abaixo do título */
+}
+
+/* Estilização dos botões estilizados */
+.styled-button {
+    background-color: #435922; /* Cor do fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Remove bordas padrão */
+    padding: 10px 20px; /* Ajusta o preenchimento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho do texto */
+    font-family: Arial, sans-serif; /* Fonte */
+    cursor: pointer; /* Mostra um cursor ao passar o mouse */
+    transition: background-color 0.3s; /* Efeito suave ao passar o mouse */
+}
+
+.styled-button:hover {
+    background-color: #3b501c; /* Cor do fundo ao passar o mouse */
+}
+
+/* Estilização para os botões não estilizados */
+button {
+    background: none; /* Remove o fundo */
+    color: #333; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 0; /* Sem preenchimento */
+    font-size: 16px; /* Mantém tamanho consistente */
+    cursor: pointer; /* Cursor padrão de botão */
+}
+
+button:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Estilização dos inputs */
+input[type="email"], input[type="password"], input[type="text"] {
+    background-color: #E2E8F0; /* Cor de fundo */
+    border: 1px solid #ccc; /* Borda padrão */
+    padding: 10px; /* Preenchimento */
+    border-radius: 8px; /* Bordas arredondadas */
+    width: 100%; /* Ocupa toda a largura disponível */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Imagem retangular ao lado do resumo da compra */
+.extra-image img {
+    width: 100%; /* Largura da imagem */
+    height: auto; /* Mantém a proporção */
+    border-radius: 8px; /* Bordas arredondadas */
+    object-fit: cover; /* Cobre o espaço sem distorcer */
 }
