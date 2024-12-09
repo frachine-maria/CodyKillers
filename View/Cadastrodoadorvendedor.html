@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Rewear</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../View/Media/CSS/Cadastrodoadorvendedor.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <img src="../View/Media/menu.png" alt="Ícone do menu" class="menu-icon">
+            <img src="../View/Media/Logo.PNG" alt="Logo Rewear" class="logo">
+            <img src="../View/Media/login-icon.png" alt="Ícone de Login" class="profile-icon">
+        </div>
+    </header>
+    <main class="form-container">
+        <h1>CADASTRO DO</h1>
+        <h2>DOADOR/VENDEDOR</h2>
+        <form class="form" action="#" method="POST">
+            <fieldset>
+                <legend>Dados Pessoais:</legend>
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="data-nascimento">Data de Nascimento:</label>
+                <input type="date" id="data-nascimento" name="data-nascimento" required>
+                
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="+55 XX XXXXX-XXXX" required>
+                
+                <label for="email">Email ou CPF:</label>
+                <input type="text" id="email" name="email" required>
+                
+                <label for="pais">País:</label>
+                <select id="pais" name="pais">
+                    <option value="">Selecionar idioma</option>
+                    <option value="brasil">Brasil</option>
+                    <option value="outro">Outro</option>
+                </select>
+                
+                <label for="rg">RG:</label>
+                <input type="text" id="rg" name="rg" required>
+            </fieldset>
+            <button class="submit-btn" onclick="window.location.href='../View/Homepage3Vendedor.html'">
+                CRIAR CONTA
+            </button>             
+    </main>
+    <footer class="footer">
+        <nav class="footer-nav">
+            <a href="../View/Sobre.html">SOBRE</a>
+            <a href="../View/Termos e Condições.html">TERMOS E CONDIÇÕES</a>
+            <a href="../View/Política de Privacidade.html">POLÍTICA DE PRIVACIDADE</a>
+        </nav>
+        <div class="footer-logo">
+            <img src="../View/Media/Logo.PNG" alt="Logo Rewear Footer">
+        </div>
+        <div class="social-media">
+            <a href="https://www.facebook.com/?locale=pt_BR"><img src="../View/Media/facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com"><img src="../View/Media/instagram.png" alt="Instagram"></a>
+            <a href="https://x.com/home"><img src="../View/Media/twitter.png" alt="Twitter"></a>
+        </div>
+    </footer>
+</body>
+</html>

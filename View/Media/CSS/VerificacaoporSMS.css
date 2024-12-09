@@ -1,0 +1,165 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #283232;
+    background-image: url('../Noise\ &\ Texture.png'); /* Textura de fundo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Container Principal */
+  .container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+  }
+  
+  /* Sessão Esquerda */
+  .left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative; /* Permite sobrepor a imagem com a textura */
+    text-align: center; /* Centraliza todo o texto dentro da seção */
+  }
+  
+  
+  .left-image {
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: 20px;
+    filter: blur(8px); /* Aplica o efeito de desfoque */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color: #4CAF50; /* Cor verde para o dot ativo */
+  }
+  
+  /* Sessão Direita */
+  .right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .right-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .form-image {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .phone-number {
+    color: #ADFF00;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Formulário */
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o input e o botão */
+    gap: 10px; /* Espaçamento entre input e botão */
+  }
+  
+  .input-code {
+    width: 80%;
+    max-width: 300px;
+    padding: 10px;
+    margin-top: 10px; /* Espaçamento acima do input */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center; /* Alinha o texto no input */
+  }
+  
+  .submit-btn {
+    width: 80%;
+    max-width: 300px;
+    padding: 10px;
+    background-color: #ADFF00;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .submit-btn:hover {
+    background-color: #8cd757;
+  }
+  
+  .resend {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .resend-link {
+    color: #ADFF00;
+    text-decoration: none;
+  }
+  
+  .resend-link:hover {
+    text-decoration: underline;
+  }
+  

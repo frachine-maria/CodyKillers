@@ -1,38 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Artigo 2 - ReWear</title> 
     <link rel="stylesheet" href="../View/Media/CSS/artigo2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Lalezar&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
-      <ul>
-          <li class="menu">
-                  <img src="midia1/menu-aberto.png"; alt="Ícone de Menu"> 
-              </a>
-          </li>
+        <ul>
+            <li class="menu">
+                <img src="../View/Media/menu-aberto.png" alt="Ícone de Menu"> 
+            </li>
+            <li class="logo">
+                <img src="../View/Media/Logo.PNG" alt="Logo">
+            </li>
+            <li class="login-icon">
+                <img src="../View/Media/login-icon.png" alt="Ícone de Login"> 
+            </li>
+        </ul>
+    </nav>
 
-          <li class="logo">
-              <img src="midia1/Logo.PNG" alt="Logo">
-          </li>
-          <li class="login-icon">
-                  <img src="midia1/login-icon.png" alt="Ícone de Login"> 
-              </a>
-          </li>
-      </ul>
-  </nav>
- <h1>Consumo consciente: porque adotá-los?</h1>
-  <div class="content">
-    <img src="midia1/transferir.jpeg" alt="peças de roupas" class="image">
-    <p class="text">
-        A indústria da moda está em crescimento acelerado, impulsionada pelo modelo de fast fashion, que gera tendências rápidas e alto consumo. Contudo, a crescente preocupação ambiental trouxe à tona a moda sustentável e o consumo consciente. A moda sustentável utiliza materiais eco-friendly e práticas como upcycling, que reusa tecidos descartados, como exemplificado pela marca Mali Brand, que cria peças a partir de retalhos.
+    <h1>Consumo consciente: porque adotá-los?</h1>
 
-        Outra abordagem é o slow fashion, que prioriza qualidade, durabilidade e produção justa. O consumo consciente se destaca na compra de roupas em brechós, promovendo a reutilização e evitando desperdício. Influenciadores digitais têm contribuído para a popularização desse consumo responsável, como Caroline Granström, que busca inspirar mudanças nas práticas de compra.
+    <div class="content">
+        <img src="../View/Media/ImagemRoupa4.jpeg" alt="roupas" class="image">
+        <p class="text">
+            A indústria da moda está em crescimento acelerado, impulsionada pelo modelo de fast fashion, que gera tendências rápidas e alto consumo. Contudo, a crescente preocupação ambiental trouxe à tona a moda sustentável e o consumo consciente. A moda sustentável utiliza materiais eco-friendly e práticas como upcycling, que reusa tecidos descartados, como exemplificado pela marca Malí Brand, que cria peças a partir de retalhos. 
+            Outra abordagem é o slow fashion, que prioriza qualidade, durabilidade e produção justa. O consumo consciente se destaca na compra de roupas em brechós, promovendo a reutilização e evitando desperdício. Influenciadores digitais têm contribuído para a popularização desse consumo responsável, como Caroline Granström, que busca inspirar mudanças nas práticas de compra. 
+            O fast fashion gera impactos negativos significativos, como a produção de 170 mil toneladas de lixo têxtil anualmente, contribuindo para a degradação ambiental e a emissão de carbono. Apesar dos benefícios da moda sustentável, ela ainda enfrenta desafios para se impor no mercado, devido à dominância das grandes marcas de fast fashion.          </p>
+    </div>
 
-        O fast fashion gera impactos negativos significativos, como a produção de 170 mil toneladas de lixo têxtil anualmente, contribuindo para a degradação ambiental e a emissão de carbono. Apesar dos benefícios da moda sustentável, ela ainda enfrenta desafios para se impor no mercado, devido à dominância das grandes marcas de fast fashion.
-    </p>
+    <div class="link-container">
+        <a href="https://www.ecycle.com.br/consumo-consciente-de-roupas/" target="_blank" rel="external">CLIQUE AQUI PARA TER ACESSO A ÍNTEGRA DO ARTIGO -></a>
+    </div>
 
+    <div class="comments-section">
+        <h2>Comentários</h2>
+        <div class="comment-form">
+            <textarea id="comment-input" placeholder="Deixe seu comentário..."></textarea>
+            <button class="submit-comment" onclick="submitComment()">ENVIAR COMENTÁRIO</button>
+        </div>
+        <div class="comment-list" id="comment-list">
+            <!-- Comentários serão adicionados aqui -->
+        </div>
+        <!-- Botão de Ver Mais Artigos -->
+        <a href="../View/Manutenção.html" class="more-articles">VER MAIS ARTIGOS</a>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="../View/Sobre.html">SOBRE</a>
+            <a href="../View/Termos e Condições.html">TERMOS E CONDIÇÕES</a>
+            <a href="../View/Política de Privacidade.html">POLÍTICA DE PRIVACIDADE</a>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://x.com" target="_blank" class="social-icon">
+                <i class="fab fa-x"></i>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Função para enviar e exibir o comentário
+        function submitComment() {
+            var commentInput = document.getElementById('comment-input');
+            var commentList = document.getElementById('comment-list');
+            
+            if (commentInput.value.trim() !== "") {
+                var newComment = document.createElement('div');
+                newComment.classList.add('comment');
+                newComment.innerHTML = "<p><strong>Você:</strong> " + commentInput.value + "</p>";
+                commentList.appendChild(newComment);
+                
+                // Limpar o campo de comentário
+                commentInput.value = "";
+            } else {
+                alert("Por favor, escreva um comentário!");
+            }
+        }
+    </script>
 </body>
 </html>

@@ -14,18 +14,18 @@ geral é promover a conscientização ambiental.
 
 ## Sobre
 
-Nosso trabalho tem como proposta incentivar as pessoas a serem mais aliadas ao meio ambiente
+Nosso trabalho tem como proposta incentivar as pessoas a serem mais aliadas ao meio ambiente.
 
 ## Licença
 
-Nossa licença é a do MIT
+Nossa licença é a do MIT.
 
 ## Tecnologias Utilizadas
 
 - Listar as tecnologias e frameworks utilizados no projeto, por exemplo:
   - **Linguagem de Programação:** Um pouco de javascript.
   - **Frameworks:** Nenhum até o momento...
-  - **Banco de Dados:** Futuramente MySQL.
+  - **Banco de Dados:** MySQL
 
 ## Instalação
 

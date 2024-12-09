@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificação por SMS</title>
+  <link rel="stylesheet" href="../View/Media/CSS/VerificacaoporSMS.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sessão Esquerda -->
+    <div class="left-section">
+      <div class="carousel">
+        <img src="../View/Media/pessoanaesquerda1.png" alt="Imagem 1" class="carousel-image">
+        <p class="carousel-text">Doe e ganhe pontos que podem ser trocados por recompensas em nosso site</p>
+      </div>
+      <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+
+    <!-- Sessão Direita -->
+    <div class="right-section">
+      <h2>Segunda Etapa de Verificação</h2>
+      <img src="../View/Media/icone.png" alt="Ícone de Verificação" class="form-image">
+      <p>O código foi enviado para <span class="phone-number">+55 11 00000-0000</span></p>
+      <form class="form">
+        <input type="text" placeholder="Insira o código aqui" class="input-code" required>
+        <button type="submit" class="submit-btn">Enviar</button>
+      </form>
+      <p class="resend">
+        Não recebeu o código? <a href="#" class="resend-link">Reenviar</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- JavaScript do Carrossel -->
+  <script>
+    // Arrays de imagens e textos
+    const images = [
+      '../View/Media/pessoanaesquerda1.png',
+      '../View/Media/pessoanaesquerda2.png',
+      '../View/Media/pessoanaesquerda3.png'
+    ];
+    const texts = [
+      'Doe e ganhe pontos que podem ser trocados por recompensas em nosso site',
+      'Uma peça de roupa parada no seu armário pode aquecer alguém em momentos difíceis',
+      'Suas doações de roupas fazem mais do que aquecer corpos: elas renovam esperanças!'
+    ];
+
+    let currentIndex = 0;
+
+    // Seleciona os elementos HTML necessários
+    const carouselImage = document.querySelector('.carousel-image');
+    const carouselText = document.querySelector('.carousel-text');
+    const dots = document.querySelectorAll('.dot');
+
+    // Função para atualizar o carrossel
+    function updateCarousel() {
+      // Atualiza a imagem e o texto
+      carouselImage.src = images[currentIndex];
+      carouselText.textContent = texts[currentIndex];
+
+      // Atualiza os indicadores (dots)
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+      });
+
+      // Incrementa o índice para o próximo slide (loop infinito)
+      currentIndex = (currentIndex + 1) % images.length;
+    }
+
+    // Inicia o carrossel (troca a cada 2 segundos)
+    setInterval(updateCarousel, 2000);
+
+    // Eventos para clicar nos dots (navegação manual)
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentIndex = index; // Define o índice selecionado
+        updateCarousel(); // Atualiza imediatamente
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,3 +1,8 @@
+html, body {
+    height: 100%; /* Definir altura para garantir que o conteúdo ocupe toda a tela */
+    margin: 0;    /* Remover margens padrão */
+}
+
 /* Navegação fixa no topo */
 .navbar {
     position: fixed;      /* Fixa a navbar */
@@ -69,8 +74,8 @@ body {
 /* Texto sobreposto no canto inferior esquerdo, 200px acima da borda inferior */
 .overlay-text {
     position: absolute;
-    left: 0;           /* Alinhado à borda esquerda */
-    bottom: -400px;     /* 200px acima da borda inferior da imagem */
+    left: 50px;           /* Alinhado à borda esquerda */
+    bottom: -150px;     /* 200px acima da borda inferior da imagem */
     color: white;
     font-size: 128px;
     font-weight: bold;
@@ -81,12 +86,15 @@ body {
 
 /* 4 imagens */
 .page-container {
-  width: calc(100vw - 200px); /* A página começa 200px antes do lado direito */
-  margin-left: auto; /* Alinha o conteúdo ao lado direito */
-  position: relative; /* Base para deslocamentos internos */
-  overflow-x: hidden; /* Impede elementos de ultrapassarem o limite horizontal */
-  padding: 0 20px; /* Margem interna à direita e esquerda */
-  box-sizing: border-box;
+    width: 100%; /* Garantir que o conteúdo ocupe toda a largura da tela */
+    margin-left: 0; /* Garantir que o conteúdo comece do lado esquerdo */
+    position: relative; /* Base para deslocamentos internos */
+    overflow-x: hidden; /* Impede elementos de ultrapassarem o limite horizontal */
+    padding: 0 20px; /* Margem interna à direita e esquerda */
+    box-sizing: border-box;
+    min-height: 100%; /* Garante que a página ocupe toda a altura da tela */
+    display: flex;
+    flex-direction: column;
 }
 
 .grid-container {
@@ -146,6 +154,11 @@ body {
     line-height: 1.6;
 }
 
+.text-box a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Faz com que a cor do link herde a cor do texto ao invés de usar o azul padrão */
+}
+
 .text-box img {
     position: absolute;
     top: 80px; /* Ajuste a posição vertical */
@@ -154,56 +167,6 @@ body {
     height: auto; /* Mantém a proporção da imagem */
     z-index: 10; /* Garante que a imagem fique sobre o texto */
 }
-
-
-
-
-/* Container principal que organiza a galeria */
-.container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas de tamanhos iguais */
-    grid-gap: 20px; /* Espaçamento entre as imagens */
-    width: 100%;
-    margin-top: 20px; /* Distância do topo */
-}
-
-/* Contêiner da imagem de cada produto */
-.image-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #f5f5f5; /* Cor de fundo para os itens */
-    padding: 10px;
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve para os itens */
-}
-
-/* Imagem do produto */
-.image-container img {
-    width: 100%; /* Imagem ocupa toda a largura do container */
-    height: auto; /* Mantém a proporção da imagem */
-    object-fit: contain; /* Garante que a imagem inteira seja visível */
-    border-radius: 10px; /* Bordas arredondadas na imagem */
-}
-
-/* Título e preço do produto */
-.image-container h3 {
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    margin: 10px 0;
-}
-
-.image-container p {
-    font-size: 14px;
-    color: #333;
-    text-align: center;
-    margin: 0;
-}
-
-
-
 
 /* Espaçamento entre as 3 caixas de texto e a imagem */
 .caixas-de-texto {
@@ -230,11 +193,11 @@ body {
 /* Botão imagem 2 */
 .sobrepor {
     position: absolute;
-    bottom: -1910px; 
+    bottom: -1600px; /* Mantém o valor ajustado para mover o botão para cima */
     justify-content: right;
     align-items: end;
     width: 100%;
-    right: -1150px
+    right: -1400px; /* Valor ajustado para mover o botão mais para a direita */
 }
 
 button { 
@@ -293,11 +256,13 @@ button:active span::before {
 
 /* Estilo para o rodapé */
 .footer {
+    font-family: 'Lalezar', cursive; /* Aplica a fonte Lalezar Regular */
     background-color: #435922;
     color: white;
     text-align: center;
-    padding:20px;
+    padding: 20px;
     margin-top: 0px;
+    letter-spacing: 1.6px;
 }
 
 /* Estilo para os links do rodapé */
@@ -332,13 +297,38 @@ button:active span::before {
     opacity: 0.7; /* Efeito de hover */
 }
 
+/* Estilo do menu lateral */
+.menu-overlay {
+    position: fixed;         /* Fixa o menu */
+    top: 0;                  /* Alinha ao topo */
+    left: 0;                 /* Alinha à esquerda */
+    width: 250px;            /* Largura do menu lateral */
+    height: 100vh;           /* Garantir que ocupe toda a altura da tela */
+    background-color: #435922;  /* Cor de fundo do menu */
+    transform: translateX(-100%); /* Inicialmente fora da tela */
+    transition: transform 0.3s ease; /* Transição suave para abrir/fechar */
+    z-index: 999;            /* Coloca o menu acima do conteúdo */
+}
 
+/* Quando o menu estiver ativo (aberto) */
+.menu-overlay.active {
+    transform: translateX(0); /* Move o menu para a tela */
+}
 
+/* Estilo do efeito de vidro (para a área atrás do menu) */
+.glass-effect {
+    position: fixed;         /* Fixa o efeito de vidro */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;            /* Ocupa toda a tela */
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    z-index: 998;             /* Coloca o efeito de vidro abaixo do menu */
+    display: none;            /* Inicialmente oculto */
+    transition: opacity 0.3s ease; /* Transição suave */
+}
 
-
-
-
-
-
-
-
+/* Quando o efeito de vidro estiver ativo */
+.glass-effect.active {
+    display: block;          /* Exibe o efeito de vidro */
+}

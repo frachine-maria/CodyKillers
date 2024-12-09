@@ -1,193 +1,229 @@
-/* Reset básico */
-body {
+* {
   margin: 0;
-  font-family: 'Eras Bold ITC', Arial, sans-serif;
-  overflow-x: hidden;
-  background-color: #FFFFFF;
+  padding: 0;
 }
 
-/* Ícone do Menu */
-.menu-icon {
-  position: fixed;
-  top: 20px;
-  left: 20px;
+h1 {
+  text-align: left; 
+  margin: 20px 0 30px 20px; 
+}
+
+.body {
+  font-family: Arial, sans-serif; 
+  line-height: 1.6; 
+  color: #333; 
+  background-color: #ffffff; 
+}  
+
+body.menu-open {
+  overflow: hidden;  /* Impede a rolagem da página quando o menu estiver aberto */
+  background-color: #435922;  /* Altera a cor de fundo da página */
+}
+
+body.menu-open .content {
+  padding-right: 250px; /* Ajuste conforme a largura do seu menu */
+}
+
+.navbar {
+  width: 100%;          
+  background-color: #435922; 
+  padding: 10px 0;     
+} 
+
+.logo img {
+  width: 440px;
+  height: auto;
+  vertical-align: middle; 
+  margin-left: 50px; 
+  align-self: center;
+} 
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.navbar .menu img {
+  width: 45px;    
+  height: auto;   
+} 
+
+.content {
+  max-width: 800px; 
+  margin: 0 auto; 
+  text-align: left; 
+}
+
+.image {
+  display: block; 
+  max-width: 100%; 
+  height: auto; 
+  margin: 0 auto; 
+  margin-bottom: 20px; 
+}
+
+.text {
+  font-size: 20px;
+  line-height: 2.0; 
+  text-align: justify; 
+  font-family: 'Lato', sans-serif;
+}
+
+.link-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.link-container a {
+  color: red;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-container a:hover {
+  text-decoration: underline;
+}
+
+.comments-section {
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.comments-section h2 {
   font-size: 24px;
-  cursor: pointer;
-  z-index: 2000;
-  background-color: #333;
-  color: #fff;
+  margin-bottom: 20px;
+}
+
+.comment-form textarea {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
   padding: 10px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-/* Ícone do menu escondido quando o menu está aberto */
-.menu-overlay.active + .menu-icon {
-  display: none; /* Esconde o ícone quando o menu é aberto */
+.comment-form .submit-comment {
+  background-color: #435922;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
 }
 
-/* Menu suspenso */
+.comment-form .submit-comment:hover {
+  background-color: #3b4e1f;
+}
+
+.comment {
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.more-articles {
+  background-color: #435922; 
+  color: white;
+  padding: 10px 30px; 
+  border: none;
+  border-radius: 5px;
+  font-size: 16px; 
+  font-family: Arial, sans-serif; 
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  margin: 20px auto; 
+  text-decoration: none;
+  width: fit-content; 
+}
+
+.more-articles:hover {
+  background-color: #3b4e1f; 
+}
+
+.footer {
+  background-color: #435922;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Lalezar', sans-serif; 
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 15px;
+  font-weight: bold;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons .social-icon i {
+  color: white; 
+  font-size: 24px; 
+  margin: 0 10px;
+}
+
+.social-icons .social-icon i:hover {
+  color: #ccc; 
+}
+
 .menu-overlay {
   position: fixed;
   top: 0;
-  left: -100%;
-  width: 350px; /* Aumentando a largura do menu */
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  z-index: 1000;
-  transition: left 0.5s ease-in-out;
-}
-
-.menu-overlay.active {
   left: 0;
-}
-
-.menu-content {
-  width: 100%;
-  background-color: #223322;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  z-index: 1001;
-  overflow-y: auto;
-}
-
-/* Nova área de logo, fundo verde até o topo */
-.menu-top {
-  background-color: #435922; /* Cor de fundo da logo */
-  padding: 20px 0;
-  text-align: center; /* Centraliza a logo */
-  width: 100%; /* Garante que o fundo se estenda por toda a largura */
-  display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-}
-
-/* Logo */
-.logo-footer .logo img {
-  height: 40px; /* Defina o tamanho adequado para a sua logo */
-  object-fit: contain;
-  display: block; /* Garante que a imagem ocupe o espaço */
-}
-
-.menu-items {
-  padding: 20px;
-}
-
-/* Botão do menu com quadrado verde */
-.menu-button {
+  width: 250px;  /* Largura do menu lateral */
+  height: 100vh; /* Ocupa toda a altura da tela */
   background-color: #435922;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  text-align: center;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 999;
 }
 
-.menu-button:hover {
-  background-color: #4e6f29;
+/* Quando o menu estiver ativo (aberto) */
+.menu-overlay.active {
+  transform: translateX(0); /* Move o menu para a tela */
 }
 
-.menu-button a {
-  text-decoration: none;
-  color: #fff;
-  display: block;
-}
-
-/* Submenu (dropdown) */
-.submenu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;  /* Mudança para exibir os submenus ao abrir o menu */
-  flex-direction: column;
-  background-color: #2d3b2d;
-  border-radius: 10px;
-}
-
-.submenu li {
-  padding: 10px;
-}
-
-.submenu li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 14px;
-  display: block;
-  transition: color 0.3s;
-}
-
-.submenu li a:hover {
-  color: #a5d6a7;
-}
-
-/* Submenu visível */
-.submenu.active {
-  display: flex; /* Aumentando a visibilidade do submenu */
-  animation: dropdown 0.3s ease-in-out;
-}
-
-@keyframes dropdown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Efeito de vidro */
+/* Estilo do efeito de vidro (para a área atrás do menu) */
 .glass-effect {
-  position: fixed;
+  position: fixed;         /* Fixa o efeito de vidro */
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(67, 89, 34, 0.25);
-  backdrop-filter: blur(10px);
-  z-index: 900;
+  height: 100vh;            /* Ocupa toda a tela */
+  background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+  z-index: 998;             /* Coloca o efeito de vidro abaixo do menu */
+  display: none;            /* Inicialmente oculto */
+  transition: opacity 0.3s ease; /* Transição suave */
 }
 
-/* Logo no rodapé */
-.logo-footer {
-  text-align: left; /* Alterado para alinhamento à esquerda */
-  padding: 10px;
-  background-color: #435922;
-  margin-top: auto;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.logo-footer .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.menu-bottom {
-  padding: 20px;
-  border-top: 1px solid #445544;
-  text-align: center;
-}
-
-.menu-bottom a {
-  color: #a5d6a7;
-  text-decoration: none;
-  font-size: 14px;
-  display: block;
-  margin: 5px 0;
-}
-
-.menu-bottom a:hover {
-  color: #fff;
+/* Quando o efeito de vidro estiver ativo */
+.glass-effect.active {
+  display: block;          /* Exibe o efeito de vidro */
 }

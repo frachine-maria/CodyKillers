@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage 2</title>
+    <link rel="stylesheet" href="../View/Media/CSS/Homepage2.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../View/Media/CSS/Menususpenso.css"> <!-- CSS do menu suspenso -->
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <ul>
+            <li class="menu">
+                <a href="javascript:void(0);" onclick="toggleMenu()">
+                    <img src="../View/Media/menu.png" alt="Ícone de Menu">
+                </a>
+            </li>
+            <li class="logo">
+                <img src="../View/Media/logo2.png" alt="Logo">
+            </li>
+            <li class="login-icon">
+                <a href="login.html">
+                    <img src="../View/Media/login-icon.png" alt="Ícone de Login">
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="glass-effect" class="glass-effect"></div>
+
+    <!-- Menu Lateral -->
+    <div id="menu" class="menu-overlay">
+        <div class="menu-content">
+            <div class="menu-top">
+                <div class="menu-item logo-footer">
+                    <img src="../View/Media/Logo.PNG" alt="Logo" class="logo-img">
+                </div>
+            </div>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-button">DOAÇÕES</div>
+                    <ul class="submenu">
+                        <li><a href="../View/masculinodoador.html">MASCULINO</a></li>
+                        <li><a href="../View/doadorfeminino.html">FEMININO</a></li>
+                        <li><a href="../View/enxovaldoador.html">ENXOVAL</a></li>
+                        <li><a href="../View/unisexdoador.html">UNISSEX</a></li>
+                    </ul>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button">COMPRE</div>
+                    <ul class="submenu">
+                        <li><a href="../View/masculinovenda.html">MASCULINO</a></li>
+                        <li><a href="../View/femininovenda.html">FEMININO</a></li>
+                        <li><a href="../View/enxovalvenda.html">ENXOVAL</a></li>
+                        <li><a href="../View/unisexvenda.html">UNISSEX</a></li>
+                    </ul>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button"><a href="../View/pontos.html">PONTOS</a></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button"><a href="../View/Estudos.html">ESTUDOS</a></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button"><a href="../View/Sobre.html">SOBRE</a></div>
+                </div>
+            </div>
+            <div class="menu-bottom">
+                <div><a href="../View/Sobre.html">SOBRE</a></div>
+                <div><a href="../View/Política de Privacidade.html">POLÍTICA DE PRIVACIDADE</a></div>
+                <div><a href="../View/Termos e Condições.html">TERMOS E CONDIÇÕES</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Conteúdo Principal (continua conforme seu código) -->
+    <div class="banner-container">
+        <img src="../View/Media/Fundo montanha.jpg" alt="Imagem de Banner" class="banner">
+        <div class="overlay-text">CATEGORIAS</div>
+    </div>
+
+    <div class="grid-container">
+        <div class="item1"><img src="../View/Media/unisex.png" alt="Imagem 1"></div>
+        <div class="item2"><img src="../View/Media/enxoval.png" alt="Imagem 2"></div>
+        <div class="item3"><img src="../View/Media/feminina.png" alt="Imagem 3"></div>
+        <div class="item4"><img src="../View/Media/masculina.png" alt="Imagem 4"></div>
+    </div>
+
+    <!-- Caixa de texto 1 -->
+    <div class="text-box">
+        <img src="../View/Media/money.png" alt="Imagem decorativa">
+        <h1>GANHE PONTOS E TROQUE POR DIVERSOS BENEFÍCIOS</h1>
+        <p><a href="../View/Manutenção.html">CLIQUE AQUI</a></p> <!-- Substitua 'pagina_destino.html' pelo link desejado -->
+
+    </div>
+
+    <!-- Espaço entre as caixas de texto e a imagem -->
+    <div class="espaco-caixas-imagem"></div>
+
+    <div class="imagem-rodape">
+        <div>
+            <img src="../View/Media/roupa lixo.png" alt="Imagem Descrição">
+        </div>
+        <div class="sobrepor">
+            <button> CLIQUE AQUI <span></span></button>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="../View/Sobre.html">SOBRE</a>
+            <a href="../View/Termos e Condições.html">TERMOS E CONDIÇÕES</a>
+            <a href="../View/Política de Privacidade.html">POLÍTICA DE PRIVACIDADE</a>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com" target="_blank" class="social-icon"><i class="fab fa-x"></i></a>
+            <a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        </div>
+    </footer>
+
+    <!-- Script para o Menu Lateral -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            const glassEffect = document.getElementById("glass-effect");
+
+            if (menu.classList.contains("active")) {
+                menu.classList.remove("active");
+                glassEffect.classList.remove("active");
+            } else {
+                menu.classList.add("active");
+                glassEffect.classList.add("active");
+            }
+        }
+
+        window.addEventListener("click", (event) => {
+            const menu = document.getElementById("menu");
+            const glassEffect = document.getElementById("glass-effect");
+            const menuIcon = document.querySelector(".menu img");
+
+            if (menu.classList.contains("active") && !menu.contains(event.target) && !menuIcon.contains(event.target)) {
+                menu.classList.remove("active");
+                glassEffect.classList.remove("active");
+            }
+        });
+    </script>
+</body>
+</html>
