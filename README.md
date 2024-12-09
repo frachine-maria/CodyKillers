@@ -20,7 +20,6 @@ Nossa licença é a do MIT.
 
 ## Tecnologias Utilizadas
 
-- Listar as tecnologias e frameworks utilizados no projeto, por exemplo:
   - **Linguagem de Marcação:** HTML e CSS
   - **Linguagem de Programação:** Um pouco de JavaScript.
   - **Frameworks:** Nenhum até o momento...
