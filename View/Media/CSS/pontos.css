@@ -59,6 +59,15 @@ body {
     padding: 10px;
 }
 
+.banner-container img {
+    width: 100%; /* Garante que a imagem ocupe toda a largura */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaço extra causado por comportamento inline */
+    margin: 0; /* Remove margens adicionais */
+    padding: 0; /* Remove espaçamentos adicionais */
+    box-sizing: border-box; /* Garante que padding e bordas não aumentem o tamanho */
+}
+
 /* Estilo para a imagem principal e texto sobreposto */
 .image-container {
     position: relative;
