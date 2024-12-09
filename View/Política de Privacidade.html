@@ -6,15 +6,75 @@
     <title>Política de Privacidade - Rewear</title>
     <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./Media/CSS/Política de Privacidade.css">
+    <link rel="stylesheet" href="../View/Media/CSS/Menususpenso.css">
 </head>
 <body>
     <header class="header">
         <div class="header-container">
-            <img src="../View/Media/menu.png" alt="Ícone do menu" class="menu-icon">
-            <img src="../View/Media/Logo.PNG" alt="Logo Rewear" class="logo">
-            <img src="../View/Media/login-icon.png" alt="Ícone de Login" class="profile-icon">
+            <nav class="navbar">
+                <ul>
+                    <li class="menu">
+                        <a href="javascript:void(0);" onclick="toggleMenu()">
+                            <img src="../View/Media/menu-aberto.png" alt="Ícone de Menu">
+                        </a>
+                    </li>
+                    <li class="logo">
+                        <img src="../View/Media/Logo.PNG" alt="Logo Rewear">
+                    </li>
+                    <li class="login-icon">
+                        <img src="../View/Media/login-icon.png" alt="Ícone de Login">
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
+
+    <div id="glass-effect"></div>
+
+    <div id="menu" class="menu-overlay">
+        <div class="menu-content">
+            <div class="menu-top">
+                <div class="menu-item logo-footer">
+                    <img src="../View/Media/Logo.PNG" alt="Logo" class="logo-img">
+                </div>
+            </div>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-button">DOAÇÕES</div>
+                    <ul class="submenu">
+                        <li><a href="../View/masculinodoador.html">MASCULINO</a></li>
+                        <li><a href="../View/doadorfeminino.html">FEMININO</a></li>
+                        <li><a href="../View/enxovaldoador.html">ENXOVAL</a></li>
+                        <li><a href="../View/unisexdoador.html">UNISSEX</a></li>
+                    </ul>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button">COMPRE</div>
+                    <ul class="submenu">
+                        <li><a href="../View/masculinovenda.html">MASCULINO</a></li>
+                        <li><a href="../View/femininovenda.html">FEMININO</a></li>
+                        <li><a href="../View/enxovalvenda.html">ENXOVAL</a></li>
+                        <li><a href="../View/unisexvenda.html">UNISSEX</a></li>
+                    </ul>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button"><a href="../View/pontos.html">PONTOS</a></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button"><a href="../View/Estudos.html">ESTUDOS</a></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button"><a href="../View/Sobre.html">SOBRE</a></div>
+                </div>
+            </div>
+            <div class="menu-bottom">
+                <div><a href="../View/Sobre.html">SOBRE</a></div>
+                <div><a href="../View/Política de Privacidade.html">POLÍTICA DE PRIVACIDADE</a></div>
+                <div><a href="../View/Termos e Condições.html">TERMOS E CONDIÇÕES</a></div>
+            </div>
+        </div>
+    </div>
+
     <main class="privacy-policy">
         <h1>POLÍTICA DE PRIVACIDADE</h1>
         <section class="policy-text">
@@ -24,16 +84,17 @@
             <p>Não compartilhamos informações de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei.</p>
             <p>O nosso site pode ter links para sites externos que não são geridos por nós. Esteja ciente de que não temos controle sobre o conteúdo e práticas desses sites e não podemos aceitar responsabilidade por suas respectivas políticas de privacidade.</p>
             <p>Você é livre para recusar a nossa solicitação de informações pessoais, entendendo que talvez não possamos fornecer alguns dos serviços desejados.</p>
-            <p>O uso continuado de nosso site será considerado como aceitação de nossas práticas em torno de privacidade e informações pessoais. Se tiver alguma dúvida sobre como lidamos com dados do usuário e informações pessoais, entre em contacto conosco.</p>
+            <p>O uso continuado de nosso site será considerado como aceitação de nossas práticas em torno de privacidade e informações pessoais. Se tiver alguma dúvida sobre como lidamos com dados do usuário e informações pessoais, entre em contato conosco.</p>
             <ul>
                 <li>Não se envolver em atividades que sejam ilegais ou contrárias à boa-fé e à ordem pública;</li>
-                <li>Não difundir propaganda ou conteúdo de natureza racista, xenofóbica, Bet Nacional ou azar, qualquer tipo de pornografia ilegal, de apologia ao terrorismo ou contra os direitos humanos;</li>
+                <li>Não difundir propaganda ou conteúdo de natureza racista, xenofóbica, de apologia ao terrorismo ou contra os direitos humanos;</li>
                 <li>Não causar danos aos sistemas físicos (hardware) e lógicos (software) do Rewear, de seus fornecedores ou terceiros, para introduzir ou disseminar vírus informáticos ou quaisquer outros sistemas de hardware ou software que sejam capazes de causar danos anteriormente mencionados.</li>
             </ul>
             <p>Esperemos que esteja esclarecido e, como mencionado anteriormente, se houver algo que você não tenha certeza se precisa ou não, geralmente é mais seguro deixar os cookies ativados, caso interaja com um dos recursos que você usa em nosso site.</p>
             <p>Esta política é efetiva a partir do dia 4 de Novembro de 2024.</p>
         </section>
     </main>
+
     <footer class="footer">
         <nav class="footer-nav">
             <a href="../View/Sobre.html">SOBRE</a>
@@ -44,5 +105,40 @@
             <img src="../View/Media/Logo.PNG" alt="Logo Rewear Footer">
         </div>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            const glassEffect = document.getElementById("glass-effect");
+            const body = document.body;  // Referência ao elemento body
+    
+            // Verifica se o menu está aberto
+            if (menu.classList.contains("active")) {
+                menu.classList.remove("active");
+                glassEffect.classList.remove("active");
+                body.classList.remove("menu-open");  // Remove a classe menu-open do body
+            } else {
+                menu.classList.add("active");
+                glassEffect.classList.add("active");
+                body.classList.add("menu-open");  // Adiciona a classe menu-open ao body
+            }
+        }
+    
+        // Fecha o menu se o clique for fora do menu e do ícone
+        window.addEventListener("click", (event) => {
+            const menu = document.getElementById("menu");
+            const glassEffect = document.getElementById("glass-effect");
+            const menuIcon = document.querySelector(".menu a");
+    
+            // Se o menu estiver aberto e o clique for fora do menu ou do ícone
+            if (menu.classList.contains("active") && 
+                !menu.contains(event.target) && 
+                !menuIcon.contains(event.target)) {
+                menu.classList.remove("active");
+                glassEffect.classList.remove("active");
+                document.body.classList.remove("menu-open");
+            }
+        });
+    </script>
 </body>
 </html>
