@@ -25,6 +25,51 @@ Nossa licença é a do MIT.
   - **Frameworks:** Nenhum até o momento...
   - **Banco de Dados:** MySQL
 
+
+<h2 id="colab">🤝 Colaboradores</h2>
+
+Um grande agradecimento para todas as pessoas que contribuíram para este projeto.
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/142106079?v=4" width="100px;" alt="Nome do Amigo 1"/><br>
+        <sub>
+          <b>Jimmy Castilho</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/159174262?v=4" width="100px;" alt="Nome do Amigo 2"/><br>
+        <sub>
+          <b>Victor Queiroz</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/173831469?v=4" width="100px;" alt="Nome do Amigo 3"/><br>
+        <sub>
+          <b>Maria Eduarda</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/173831208?v=4" width="100px;" alt="Nome do Amigo 4"/><br>
+        <sub>
+          <b>Geovana Clemente</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
+
+
+
 ## Instalação
 
 Instruções sobre como acessar e utilizar o nosso site
