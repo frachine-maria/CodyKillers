@@ -15,11 +15,6 @@ h1 {
   background-color: #ffffff; 
 }  
 
-body.menu-open {
-  overflow: hidden;  /* Impede a rolagem da página quando o menu estiver aberto */
-  background-color: #435922;  /* Altera a cor de fundo da página */
-}
-
 body.menu-open .content {
   padding-right: 250px; /* Ajuste conforme a largura do seu menu */
 }

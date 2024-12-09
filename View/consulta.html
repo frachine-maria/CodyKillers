@@ -1,183 +1,253 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Controle de Usuário - Rewear</title>
-  <link rel="stylesheet" href="../View/Media/CSS/consulta.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Usuário - Rewear</title>
+    <link rel="stylesheet" href="../View/Media/CSS/consulta.css">
+    <link rel="stylesheet" href="../View/Media/CSS/Menususpenso.css">
+  </head>
+  <body>
     <nav class="navbar">
-        <ul>
+      <ul>
+        <li class="menu">
+          <a href="javascript:void(0);" onclick="toggleMenu()">
+            <img src="../View/Media/menu-aberto.png" alt="Ícone de Menu">
+          </a>
+        </li>
+        <li class="logo">
+          <img src="../View/Media/Logo.PNG" alt="Logo">
+        </li>
+        <li class="login-icon">
+          <img src="../View/Media/login-icon.png" alt="Ícone de Login">
+        </li>
+      </ul>
+    </nav> 
+    
+    <div id="glass-effect"></div>
 
-            <li class="menu">
-                    <img src="Media/menu-aberto.png"; alt="Ícone de Menu"> 
-                </a>
-            </li>
-
-            <li class="logo">
-                <img src="Media/Logo.PNG" alt="Logo">
-            </li>
-
-            <li class="login-icon">
-                    <img src="Media/login-icon.png" alt="Ícone de Login">
-                </a>
-            </li>
-        </ul>
-    </nav>
-
-  <main class="main">
-    <h1>Controle de usuário</h1>
-<<<<<<< HEAD
-    <div class="barra_pesquisa">
-=======
-    <div class="pesquisa">
->>>>>>> 240f7d463bc7daada04e15169879435a2729dc56
-      <input type="text" placeholder="Digite o nome do usuário">
-      <button>
-        <img src="Media/lupa2.png" alt="Pesquisa de usuários"> 
-      </button>
-    </div>
-<<<<<<< HEAD
-    <section class="user-list">
-=======
-    <section class="usuários">
->>>>>>> 240f7d463bc7daada04e15169879435a2729dc56
-      <div class="user-card">
-        <div class="user-perfil">
-            <img src="Media/perfil2.png" alt="Perfil"> 
-        </div>
-        <div class="user-info">
-          <p>Nome do usuário: Yara Nascimento</p>
-          <p>Membro desde: xx/xx/xxxx</p>
-          <p>Vendedor: | Cliente: | Doador:x </p>
-        </div>
-        <div class="user-actions">
-            <button>
-                <img src="Media/ferramenta-lapis2.png" alt="Editar usuário"> 
-              </button>
-            <button>
-                <img src="Media/poeira2.png" alt="Excluir usuário"> 
-            </button>
+        <!-- Menu Overlay -->
+    <div id="menu" class="menu-overlay">
+      <div class="menu-content">
+          <div class="menu-top">
+              <div class="menu-item logo-footer">
+                  <img src="../View/Media/Logo.PNG" alt="Logo" class="logo-img">
+              </div>
+          </div>
+          <div class="menu-items">
+              <div class="menu-item">
+                  <div class="menu-button">DOAÇÕES</div>
+                  <ul class="submenu">
+                      <li><a href="../View/masculinodoador.html">MASCULINO</a></li>
+                      <li><a href="../View/doadorfeminino.html">FEMININO</a></li>
+                      <li><a href="../View/enxovaldoador.html">ENXOVAL</a></li>
+                      <li><a href="../View/unisexdoador.html">UNISSEX</a></li>
+                  </ul>
+              </div>
+              <div class="menu-item">
+                  <div class="menu-button">COMPRE</div>
+                  <ul class="submenu">
+                      <li><a href="../View/masculinovenda.html">MASCULINO</a></li>
+                      <li><a href="../View/femininovenda.html">FEMININO</a></li>
+                      <li><a href="../View/enxovalvenda.html">ENXOVAL</a></li>
+                      <li><a href="../View/unisexvenda.html">UNISSEX</a></li>
+                  </ul>
+              </div>
+              <div class="menu-item">
+                  <div class="menu-button"><a href="../View/pontos.html">PONTOS</a></div>
+              </div>
+              <div class="menu-item">
+                  <div class="menu-button"><a href="../View/Estudos.html">ESTUDOS</a></div>
+              </div>
+              <div class="menu-item">
+                  <div class="menu-button"><a href="../View/Sobre.html">SOBRE</a></div>
+              </div>
+          </div>
+          <div class="menu-bottom">
+              <div><a href="../View/Sobre.html">SOBRE</a></div>
+              <div><a href="../View/Política de Privacidade.html">POLÍTICA DE PRIVACIDADE</a></div>
+              <div><a href="../View/Termos e Condições.html">TERMOS E CONDIÇÕES</a></div>
           </div>
       </div>
+  </div>
 
-      <div class="user-card">
-        <div class="user-perfil">
-            <img src="Media/perfil2.png" alt="Perfil"> 
-        </div>
-        <div class="user-info">
-          <p>Nome do usuário:Igor Pereira</p>
-          <p>Membro desde: xx/xx/xxxx</p>
-          <p>Vendedor: X | Cliente: | Doador: </p>
-        </div>
-        <div class="user-actions">
-          <button>
-            <img src="Media/ferramenta-lapis2.png" alt="Editar usuário"> 
-          </button>
-          <button>
-            <img src="Media/poeira2.png" alt="Excluir usuário"> 
-          </button>
-        </div>
+    <main class="main">
+      <h1>Controle de usuário</h1>
+      <div class="pesquisa">
+        <input type="text" placeholder="Digite o nome do usuário">
+        <button>
+          <img src="Media/lupa2.png" alt="Pesquisa de usuários"> 
+        </button>
       </div>
-      
-      <div class="user-card">
-        <div class="user-perfil">
+      <section class="usuários">
+        <div class="user-card">
+          <div class="user-perfil">
             <img src="Media/perfil2.png" alt="Perfil"> 
+          </div>
+          <div class="user-info">
+            <p>Nome do usuário: Yara Nascimento</p>
+            <p>Membro desde: xx/xx/xxxx</p>
+            <p>Vendedor: | Cliente: | Doador:x </p>
+          </div>
+          <div class="user-actions">
+            <button>
+              <img src="Media/ferramenta-lapis2.png" alt="Editar usuário"> 
+            </button>
+            <button>
+              <img src="Media/poeira2.png" alt="Excluir usuário"> 
+            </button>
+          </div>
         </div>
-        <div class="user-info">
-          <p>Nome do usuário:Beatriz da Cunha</p>
-          <p>Membro desde: xx/xx/xxxx</p>
-          <p>Vendedor: | Cliente: X | Doador: </p>
-        </div>
-    
-        <div class="user-actions">
-          <button>
-            <img src="Media/ferramenta-lapis2.png" alt="Editar usuário"> 
 
-          </button>
-          <button>
-            <img src="Media/poeira2.png" alt="Excluir usuário"> 
-          </button>
-        </div>
-      </div>
-      <div class="user-card">
-        <div class="user-perfil">
+        <div class="user-card">
+          <div class="user-perfil">
             <img src="Media/perfil2.png" alt="Perfil"> 
+          </div>
+          <div class="user-info">
+            <p>Nome do usuário: Igor Pereira</p>
+            <p>Membro desde: xx/xx/xxxx</p>
+            <p>Vendedor: X | Cliente: | Doador: </p>
+          </div>
+          <div class="user-actions">
+            <button>
+              <img src="Media/ferramenta-lapis2.png" alt="Editar usuário"> 
+            </button>
+            <button>
+              <img src="Media/poeira2.png" alt="Excluir usuário"> 
+            </button>
+          </div>
         </div>
-        <div class="user-info">
-          <p>Nome do usuário:Pietra Leblanc</p>
-          <p>Membro desde: xx/xx/xxxx</p>
-          <p>Vendedor:  | Cliente: | Doador:X </p>
-        </div>
-    
-        <div class="user-actions">
-          <button>
-            <img src="Media/ferramenta-lapis2.png" alt="Editar usuário"> 
-          </button>
-          <button>
-            <img src="Media/poeira2.png" alt="Excluir usuário"> 
-          </button>
-        </div>
-      </div>
-      <div class="user-card">
-        <div class="user-perfil">
+        
+        <div class="user-card">
+          <div class="user-perfil">
             <img src="Media/perfil2.png" alt="Perfil"> 
+          </div>
+          <div class="user-info">
+            <p>Nome do usuário: Beatriz da Cunha</p>
+            <p>Membro desde: xx/xx/xxxx</p>
+            <p>Vendedor: | Cliente: X | Doador: </p>
+          </div>
+          <div class="user-actions">
+            <button>
+              <img src="Media/ferramenta-lapis2.png" alt="Editar usuário"> 
+            </button>
+            <button>
+              <img src="Media/poeira2.png" alt="Excluir usuário"> 
+            </button>
+          </div>
         </div>
-        <div class="user-info">
-          <p>Nome do usuário:Theodoro Martins</p>
-          <p>Membro desde: xx/xx/xxxx</p>
-          <p>Vendedor: X | Cliente: | Doador: </p>
-        </div>
-    
-        <div class="user-actions">
-          <button>
-            <img src="Media/ferramenta-lapis2.png" alt="Editar usuário"> 
-          </button>
-          <button>
-            <img src="Media/poeira2.png" alt="Excluir usuário"> 
-          </button>
-        </div>
-      </div>
-      <div class="user-card">
-        <div class="user-perfil">
-            <img src="Media/perfil2.png" alt="Perfil"> 
-        </div>
-        <div class="user-info">
-          <p>Nome do usuário:Laura Oliveira</p>
-          <p>Membro desde: xx/xx/xxxx</p>
-          <p>Vendedor:  | Cliente: | Doador:X </p>
-        </div>
-            <div class="user-actions">
-                <button>
-                    <img src="Media/ferramenta-lapis2.png" alt="Editar usuário"> 
-                </button>
-                <button>
-                    <img src="Media/poeira2.png" alt="Excluir usuário"> 
-                </button>
-              </div>
-            </div>
 
-      <div class="user-card">
-        <div class="user-perfil">
+        <div class="user-card">
+          <div class="user-perfil">
             <img src="Media/perfil2.png" alt="Perfil"> 
+          </div>
+          <div class="user-info">
+            <p>Nome do usuário: Pietra Leblanc</p>
+            <p>Membro desde: xx/xx/xxxx</p>
+            <p>Vendedor: | Cliente: | Doador: X </p>
+          </div>
+          <div class="user-actions">
+            <button>
+              <img src="Media/ferramenta-lapis2.png" alt="Editar usuário"> 
+            </button>
+            <button>
+              <img src="Media/poeira2.png" alt="Excluir usuário"> 
+            </button>
+          </div>
         </div>
-        <div class="user-info">
-          <p>Nome do usuário:Felipe do Santos</p>
-          <p>Membro desde: xx/xx/xxxx</p>
-          <p>Vendedor:  | Cliente:X | Doador: </p>
+
+        <div class="user-card">
+          <div class="user-perfil">
+            <img src="Media/perfil2.png" alt="Perfil"> 
+          </div>
+          <div class="user-info">
+            <p>Nome do usuário: Theodoro Martins</p>
+            <p>Membro desde: xx/xx/xxxx</p>
+            <p>Vendedor: X | Cliente: | Doador: </p>
+          </div>
+          <div class="user-actions">
+            <button>
+              <img src="Media/ferramenta-lapis2.png" alt="Editar usuário"> 
+            </button>
+            <button>
+              <img src="Media/poeira2.png" alt="Excluir usuário"> 
+            </button>
+          </div>
         </div>
-    
-        <div class="user-actions">
-          <button>
-            <img src="Media/ferramenta-lapis2.png" alt="Editar usuário"> 
-          </button>
-          <button>
-            <img src="Media/poeira2.png" alt="Excluir usuário"> 
-          </button>
+
+        <div class="user-card">
+          <div class="user-perfil">
+            <img src="Media/perfil2.png" alt="Perfil"> 
+          </div>
+          <div class="user-info">
+            <p>Nome do usuário: Laura Oliveira</p>
+            <p>Membro desde: xx/xx/xxxx</p>
+            <p>Vendedor: | Cliente: | Doador: X </p>
+          </div>
+          <div class="user-actions">
+            <button>
+              <img src="Media/ferramenta-lapis2.png" alt="Editar usuário"> 
+            </button>
+            <button>
+              <img src="Media/poeira2.png" alt="Excluir usuário"> 
+            </button>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
-</body>
+
+        <div class="user-card">
+          <div class="user-perfil">
+            <img src="Media/perfil2.png" alt="Perfil"> 
+          </div>
+          <div class="user-info">
+            <p>Nome do usuário: Felipe dos Santos</p>
+            <p>Membro desde: xx/xx/xxxx</p>
+            <p>Vendedor: | Cliente: X | Doador: </p>
+          </div>
+          <div class="user-actions">
+            <button>
+              <img src="Media/ferramenta-lapis2.png" alt="Editar usuário"> 
+            </button>
+            <button>
+              <img src="Media/poeira2.png" alt="Excluir usuário"> 
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      function toggleMenu() {
+          const menu = document.getElementById("menu");
+          const glassEffect = document.getElementById("glass-effect");
+          const body = document.body;  // Referência ao elemento body
+  
+          // Verifica se o menu está aberto
+          if (menu.classList.contains("active")) {
+              menu.classList.remove("active");
+              glassEffect.classList.remove("active");
+              body.classList.remove("menu-open");  // Remove a classe menu-open do body
+          } else {
+              menu.classList.add("active");
+              glassEffect.classList.add("active");
+              body.classList.add("menu-open");  // Adiciona a classe menu-open ao body
+          }
+      }
+  
+      // Fecha o menu se o clique for fora do menu e do ícone
+      window.addEventListener("click", (event) => {
+          const menu = document.getElementById("menu");
+          const glassEffect = document.getElementById("glass-effect");
+          const menuIcon = document.querySelector(".menu a");
+  
+          // Se o menu estiver aberto e o clique for fora do menu ou do ícone
+          if (menu.classList.contains("active") && 
+              !menu.contains(event.target) && 
+              !menuIcon.contains(event.target)) {
+              menu.classList.remove("active");
+              glassEffect.classList.remove("active");
+              document.body.classList.remove("menu-open");
+          }
+      });
+  </script>
+  </body>
 </html>

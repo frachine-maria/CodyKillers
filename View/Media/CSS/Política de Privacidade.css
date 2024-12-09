@@ -16,28 +16,59 @@ body {
     color: white;
     padding: 10px 20px;
     display: flex;
+    justify-content: center; /* Centraliza a navbar */
     align-items: center;
-    justify-content: space-between;
 }
 
-.header-container {
+.navbar {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
+    justify-content: space-between; /* Coloca os itens nas extremidades */
+    align-items: center;
+    width: 100%; /* Faz a navbar ocupar toda a largura */
+    position: relative;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    gap: 15px;
     align-items: center;
 }
 
-.menu-icon,
-.profile-icon {
-    font-size: 1.5rem;
-    background: none;
-    border: none;
+.navbar li {
+    display: inline;
+}
+
+.navbar li a {
     color: white;
-    cursor: pointer;
+    text-decoration: none;
+}
+
+.menu img,
+.logo img,
+.login-icon img {
+    height: 40px;  /* Tamanho dos ícones */
+}
+
+.menu a:hover,
+.logo a:hover,
+.login-icon a:hover {
+    opacity: 0.8;
+}
+
+.menu {
+    margin-left: 10px; /* Distância do ícone de menu da borda esquerda */
 }
 
 .logo {
-    max-height: 100px;
+    display: flex;
+    justify-content: center; /* Centraliza a logo dentro da navbar */
+    flex-grow: 1; /* Faz a logo se expandir e ocupar o espaço restante */
+    justify-self: center;
+}
+
+.login-icon {
+    margin-right: 15px; /* Distância do ícone de login da borda direita */
 }
 
 .privacy-policy {
@@ -96,4 +127,24 @@ body {
 
 .footer-logo img {
     max-height: 40px;
+}
+
+/* Responsividade para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu img, .logo img, .login-icon img {
+        height: 30px; /* Ajuste para dispositivos menores */
+    }
+
+    .footer-nav {
+        flex-direction: column;
+    }
+
+    .footer-nav a {
+        margin-bottom: 5px;
+    }
 }

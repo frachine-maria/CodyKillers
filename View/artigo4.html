@@ -7,21 +7,71 @@
     <link rel="stylesheet" href="../View/Media/CSS/artigo4.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Lalezar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../View/Media/CSS/Menususpenso.css">
 </head>
 <body>
     <nav class="navbar">
         <ul>
             <li class="menu">
-                <img src="../View/Media/menu-aberto.png" alt="Ícone de Menu"> 
+                <a href="javascript:void(0);" onclick="toggleMenu()">
+                    <img src="../View/Media/menu-aberto.png" alt="Ícone de Menu">
+                </a>
             </li>
             <li class="logo">
                 <img src="../View/Media/Logo.PNG" alt="Logo">
             </li>
             <li class="login-icon">
-                <img src="../View/Media/login-icon.png" alt="Ícone de Login"> 
+                <img src="../View/Media/login-icon.png" alt="Ícone de Login">
             </li>
         </ul>
     </nav>
+
+    <div id="glass-effect" class="glass-effect"></div>
+
+    <!-- Menu Lateral -->
+    <div id="menu" class="menu-overlay">
+        <div class="menu-content">
+            <div class="menu-top">
+                <div class="menu-item logo-footer">
+                    <img src="../View/Media/Logo.PNG" alt="Logo" class="logo-img">
+                </div>
+            </div>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-button">DOAÇÕES</div>
+                    <ul class="submenu">
+                        <li><a href="../View/masculinodoador.html">MASCULINO</a></li>
+                        <li><a href="../View/doadorfeminino.html">FEMININO</a></li>
+                        <li><a href="../View/enxovaldoador.html">ENXOVAL</a></li>
+                        <li><a href="../View/unisexdoador.html">UNISSEX</a></li>
+                    </ul>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button">COMPRE</div>
+                    <ul class="submenu">
+                        <li><a href="../View/masculinovenda.html">MASCULINO</a></li>
+                        <li><a href="../View/femininovenda.html">FEMININO</a></li>
+                        <li><a href="../View/enxovalvenda.html">ENXOVAL</a></li>
+                        <li><a href="../View/unisexvenda.html">UNISSEX</a></li>
+                    </ul>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button"><a href="../View/pontos.html">PONTOS</a></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button"><a href="../View/Estudos.html">ESTUDOS</a></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button"><a href="../View/Sobre.html">SOBRE</a></div>
+                </div>
+            </div>
+            <div class="menu-bottom">
+                <div><a href="../View/Sobre.html">SOBRE</a></div>
+                <div><a href="../View/Política de Privacidade.html">POLÍTICA DE PRIVACIDADE</a></div>
+                <div><a href="../View/Termos e Condições.html">TERMOS E CONDIÇÕES</a></div>
+            </div>
+        </div>
+    </div>
 
     <h1>Moda sustentável: desconstruindo padrões</h1>
 
@@ -71,17 +121,47 @@
     </footer>
 
     <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            const glassEffect = document.getElementById("glass-effect");
+            const body = document.body;  // Referência ao elemento body
+    
+            // Verifica se o menu está aberto
+            if (menu.classList.contains("active")) {
+                menu.classList.remove("active");
+                glassEffect.classList.remove("active");
+                body.classList.remove("menu-open");  // Remove a classe menu-open do body
+            } else {
+                menu.classList.add("active");
+                glassEffect.classList.add("active");
+                body.classList.add("menu-open");  // Adiciona a classe menu-open ao body
+            }
+        }
+    
+        window.addEventListener("click", (event) => {
+            const menu = document.getElementById("menu");
+            const glassEffect = document.getElementById("glass-effect");
+            const menuIcon = document.querySelector(".menu img");
+    
+            // Fecha o menu se o clique for fora do menu e do ícone
+            if (menu.classList.contains("active") && !menu.contains(event.target) && !menuIcon.contains(event.target)) {
+                menu.classList.remove("active");
+                glassEffect.classList.remove("active");
+                document.body.classList.remove("menu-open");  // Remove a classe menu-open quando fechar o menu
+            }
+        });
+    
         // Função para enviar e exibir o comentário
         function submitComment() {
             var commentInput = document.getElementById('comment-input');
             var commentList = document.getElementById('comment-list');
-            
+    
             if (commentInput.value.trim() !== "") {
                 var newComment = document.createElement('div');
                 newComment.classList.add('comment');
                 newComment.innerHTML = "<p><strong>Você:</strong> " + commentInput.value + "</p>";
                 commentList.appendChild(newComment);
-                
+    
                 // Limpar o campo de comentário
                 commentInput.value = "";
             } else {

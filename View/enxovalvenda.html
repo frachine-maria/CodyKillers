@@ -3,89 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enxoval Venda</title>
-    <link rel="stylesheet" href="../View/Media/CSS/enxovaldoador.css">
-    
-    <!-- Link para o Font Awesome -->
+    <title>Venda Enxoval</title>
+    <link rel="stylesheet" href="../View/Media/CSS/femininodoador.css">
+    <link rel="stylesheet" href="../View/Media/CSS/Menususpenso.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body style="background-color: #E2D8C7;">
     <!-- Navegação -->
     <nav class="navbar">
         <ul>
-            <!-- Ícone de Menu à Esquerda -->
             <li class="menu">
-                <a href="javascript:void(0);">
-                    <img src="../media/menu.png" alt="Ícone de Menu"> <!-- Substitua pelo seu ícone -->
+                <a href="javascript:void(0);" onclick="toggleMenu()">
+                    <img src="../View/Media/menu-aberto.png" alt="Ícone de Menu">
                 </a>
             </li>
-
-            <!-- Imagem centralizada na navbar -->
-            <li class="logo"> 
-                <img src="../media/Screenshot_3.png" alt="Logo">
+            <li class="logo">
+                <img src="../View/Media/Logo.PNG" alt="Logo">
             </li>
-
-            <!-- Ícone de Login à Direita -->
             <li class="login-icon">
-                <a href="login.html">
-                    <img src="media/login-icon.png" alt="Ícone de Login"> <!-- Substitua pelo seu ícone -->
-                </a>
+                <img src="../View/Media/login-icon.png" alt="Ícone de Login">
             </li>
         </ul>
-    </nav>
+    </nav> 
 
+    <div id="glass-effect"></div>
 
- <!-- Imagem abaixo da navbar -->
- <div class="banner-container">
-    <img src="../media/enxovalbig.png" alt="Imagem de Banner" class="banner">
+    <!-- Menu Overlay -->
+    <div id="menu" class="menu-overlay">
+        <div class="menu-content">
+            <div class="menu-top">
+                <div class="menu-item logo-footer">
+                    <img src="../View/Media/Logo.PNG" alt="Logo" class="logo-img">
+                </div>
+            </div>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-button">DOAÇÕES</div>
+                    <ul class="submenu">
+                        <li><a href="../View/masculinodoador.html">MASCULINO</a></li>
+                        <li><a href="../View/doadorfeminino.html">FEMININO</a></li>
+                        <li><a href="../View/enxovaldoador.html">ENXOVAL</a></li>
+                        <li><a href="../View/unisexdoador.html">UNISSEX</a></li>
+                    </ul>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button">COMPRE</div>
+                    <ul class="submenu">
+                        <li><a href="../View/masculinovenda.html">MASCULINO</a></li>
+                        <li><a href="../View/femininovenda.html">FEMININO</a></li>
+                        <li><a href="../View/enxovalvenda.html">ENXOVAL</a></li>
+                        <li><a href="../View/unisexvenda.html">UNISSEX</a></li>
+                    </ul>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button"><a href="../View/pontos.html">PONTOS</a></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button"><a href="../View/Estudos.html">ESTUDOS</a></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button"><a href="../View/Sobre.html">SOBRE</a></div>
+                </div>
+            </div>
+            <div class="menu-bottom">
+                <div><a href="../View/Sobre.html">SOBRE</a></div>
+                <div><a href="../View/Política de Privacidade.html">POLÍTICA DE PRIVACIDADE</a></div>
+                <div><a href="../View/Termos e Condições.html">TERMOS E CONDIÇÕES</a></div>
+            </div>
+        </div>
+    </div>
 
-</div>
+    <!-- Imagem abaixo da navbar -->
+    <div class="banner-container">
+        <img src="../View/Media/enxovalbig.png" alt="Imagem de Banner" class="banner">
+    </div>
 
+    <div class="container">
+        <div class="image-container">
+            <a href="../View/pagina1.html">
+                <img src="../View/Media/1imageenxovalvenda.png" alt="Produto 1">
+            </a>
+        </div>
+        <div class="image-container">
+            <a href="../View/pagina2.html">
+                <img src="../View/Media/2imageenxovalvenda.png" alt="Produto 2">
+            </a>
+        </div>
+        <div class="image-container">
+            <a href="../View/pagina3.html">
+                <img src="../View/Media/3imageenxovalvenda.png" alt="Produto 3">
+            </a>
+        </div>
+        <div class="image-container">
+            <a href="../View/pagina4.html">
+                <img src="../View/Media/4imageenxovalvenda.png" alt="Produto 4">
+            </a>
+        </div>
+    </div>
 
-<div class="container">
-    <div class="image-container">
-        <img src="../media/1imageenxovalvenda.png " alt="Produto 1">
-    </div>
-    <div class="image-container">
-        <img src="../media/2imageenxovalvenda.png" alt="Produto 2">
-    </div>
-    <div class="image-container">
-        <img src="../media/3imageenxovalvenda.png" alt="Produto 3">
-    </div>
-    <div class="image-container">
-        <img src="../media/4imageenxovalvenda.png" alt="Produto 4">
-    </div>
-    </div>
     <div class="button-container">
-        <button class="ver-mais">Ver mais</button>
+        <a href="../View/Manutenção.html" class="ver-mais">VER MAIS</a>
     </div>
 
     <div class="muitos-br"></div>
 
+    <!-- Rodapé -->
+    <footer class="footer">
+        <!-- Links de navegação no rodapé -->
+        <div class="footer-links">
+            <a href="../View/Sobre.html">SOBRE</a>
+            <a href="../View/Termos e Condições.html">TERMOS E CONDIÇÕES</a>
+            <a href="../View/Política de Privacidade.html">POLÍTICA DE PRIVACIDADE</a>
+        </div>
 
-<footer class="footer">
-    <!-- Links de navegação no rodapé -->
-    <div class="footer-links">
-        <a href="#sobre">Sobre</a>
-        <a href="#termos">Termos e Condições</a>
-        <a href="#politica">Política de Privacidade</a>
-    </div>
+        <!-- Ícones das redes sociais -->
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://x.com" target="_blank" class="social-icon">
+                <i class="fab fa-x"></i> <!-- Ícone correto para X (anteriormente Twitter) -->
+            </a>
+            <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+        <br>
+    </footer>
 
-    <!-- Ícones das redes sociais -->
-    <div class="social-icons">
-        <a href="https://www.instagram.com" target="_blank" class="social-icon">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://x.com" target="_blank" class="social-icon">
-            <i class="fab fa-x"></i> <!-- Ícone correto para X (anteriormente Twitter) -->
-        </a>
-        <a href="https://www.facebook.com" target="_blank" class="social-icon">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-    </div>
-    <br>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            const glassEffect = document.getElementById("glass-effect");
+            const body = document.body;  // Referência ao elemento body
 
-</footer>
+            // Verifica se o menu está aberto
+            if (menu.classList.contains("active")) {
+                menu.classList.remove("active");
+                glassEffect.classList.remove("active");
+                body.classList.remove("menu-open");  // Remove a classe menu-open do body
+            } else {
+                menu.classList.add("active");
+                glassEffect.classList.add("active");
+                body.classList.add("menu-open");  // Adiciona a classe menu-open ao body
+            }
+        }
 
+        // Fecha o menu se o clique for fora do menu e do ícone
+        window.addEventListener("click", (event) => {
+            const menu = document.getElementById("menu");
+            const glassEffect = document.getElementById("glass-effect");
+            const menuIcon = document.querySelector(".menu a");
+
+            // Se o menu estiver aberto e o clique for fora do menu ou do ícone
+            if (menu.classList.contains("active") && 
+                !menu.contains(event.target) && 
+                !menuIcon.contains(event.target)) {
+                menu.classList.remove("active");
+                glassEffect.classList.remove("active");
+                document.body.classList.remove("menu-open");
+            }
+        });
+    </script>
 </body>
 </html>
