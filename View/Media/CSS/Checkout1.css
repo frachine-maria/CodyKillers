@@ -1,0 +1,100 @@
+/* Configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4a5c3e;
+    color: white;
+}
+
+header .logo img {
+    height: 40px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Lalezar', cursive; /* Aplicando a fonte Lalezar */
+    font-size: 18px; /* Tamanho da fonte */
+}
+
+main {
+    padding: 20px;
+}
+
+.checkout {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    gap: 20px;
+}
+
+.account-section, .summary-section, .thank-you-section {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.account-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.account-section .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.account-section .navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.summary-section .item {
+    display: flex;
+    flex-direction: column; /* Alinha a imagem acima do texto */
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.summary-section .item img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+.summary-section .item .image-wrapper img {
+    width: 500px; /* Define uma largura fixa */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Ajusta a imagem para preencher sem distorcer */
+    border-radius: 4px; /* Suaviza os cantos da imagem */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.summary-section .details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
