@@ -6,9 +6,9 @@ O projeto ReWear é uma iniciativa da organização CodeKillers que visa incenti
 ## Índice
 
 - [Sobre](#sobre)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Utilização](#utilizacao)
 - [Licença](#licença)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Instalação](#instalação)
 
 ## Sobre
 
