@@ -1,7 +1,7 @@
 # ReWear
 ![logo2](https://github.com/user-attachments/assets/3ce46018-b69e-4e42-8e7e-e9105bef3ae6)
 
-O projeto CodyKillers é uma iniciativa que visa incentivar as pessoas a serem mais aliadas ao meio ambiente. O projeto não fornece muitos detalhes sobre suas funcionalidades específicas, mas seu objetivo geral é promover a conscientização ambiental.
+O projeto ReWear é uma iniciativa da organização CodeKillers que visa incentivar as pessoas a serem mais aliadas ao meio ambiente. O projeto não fornece muitos detalhes sobre suas funcionalidades específicas, mas seu objetivo geral é promover a conscientização ambiental.
 
 ## Índice
 
