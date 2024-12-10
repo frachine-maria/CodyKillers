@@ -193,11 +193,11 @@ body {
 /* Botão imagem 2 */
 .sobrepor {
     position: absolute;
-    bottom: -1600px; /* Mantém o valor ajustado para mover o botão para cima */
+    bottom: -1800px; /* Mantém o valor ajustado para mover o botão para cima */
     justify-content: right;
     align-items: end;
     width: 100%;
-    right: -1400px; /* Valor ajustado para mover o botão mais para a direita */
+    right: -1150px; /* Valor ajustado para mover o botão mais para a direita */
 }
 
 button { 
