@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Rewear</title>
+    <!-- Link para a fonte Lalezar do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../View/Media/CSS/Checkout1.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../View/Media/logo2.png" alt="Logo Rewear">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../View/Sobre.html">SOBRE</a></li>
+                <li><a href="../View/Termos e Condições.html">TERMOS E CONDIÇÕES</a></li>
+                <li><a href="../View/Política de Privacidade.html">POLÍTICA DE PRIVACIDADE</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="checkout">
+            <!-- Sessão de detalhes da conta -->
+            <div class="account-section">
+                <h2>Detalhes da Conta</h2>
+                <form>
+                    <label for="email">Endereço de E-mail</label>
+                    <input type="email" id="email" placeholder="exemplo@email.com" required>
+                    
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="********" required>
+                    
+                    <div class="buttons">
+                        <a href="../View/Cadastro.html">
+                            <button type="button">Fazer cadastro</button>
+                        </a>
+                        <a href="../View/Login.html">
+                            <button type="submit" class="styled-button login">Login</button>
+                        </a>
+                    </div>
+                    <div class="navigation-buttons">
+                        <a href="javascript:void(0)" onclick="window.history.back();">
+                            <button type="button">Cancelar pedido</button>
+                        </a>
+                        <a href="../View/Checkout2.html">
+                            <button type="button" class="styled-button advance">Avançar</button>
+                        </a>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Sessão de resumo da compra -->
+            <div class="summary-section">
+                <h3>Resumo da compra</h3>
+                <div class="item">
+                    <div class="image-wrapper">
+                        <img src="../View/Media/Camisabranca.png" alt="Camisa masculina branca">
+                    </div>
+                    <div class="details">
+                        <p>Camisa masculina branca</p>
+                        <p>R$ 19,99</p>
+                        <div class="quantity">
+                            <button>-</button>
+                            <input type="text" value="1">
+                            <button>+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="total">
+                    <p>Frete: <span>Grátis</span></p>
+                    <p>Total: <span>R$ 19,99</span></p>
+                </div>
+            </div>
+
+            <!-- Imagem retangular ao lado do resumo -->
+            <div class="extra-image">
+                <img src="../View/Media/Agradecimentos 1.png" alt="Imagem adicional">
+            </div>
+        </section>
+    </main>
+</body>
+</html>

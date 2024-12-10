@@ -1,0 +1,153 @@
+/* Configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4a5c3e;
+    color: white;
+}
+
+header .logo img {
+    height: 40px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Lalezar', cursive; /* Aplicando a fonte Lalezar */
+    font-size: 18px; /* Tamanho da fonte */
+}
+
+main {
+    padding: 20px;
+}
+
+.checkout {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr; /* Ajusta para ter a imagem ao lado */
+    gap: 20px;
+}
+
+.account-section, .summary-section, .thank-you-section {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.account-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.account-section .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.account-section .navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.summary-section .item {
+    display: flex;
+    flex-direction: column; /* Alinha a imagem acima do texto */
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.summary-section .item img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+.summary-section .item .image-wrapper img {
+    width: 500px; /* Define uma largura fixa */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Ajusta a imagem para preencher sem distorcer */
+    border-radius: 4px; /* Suaviza os cantos da imagem */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.summary-section .details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.summary-section h3 {
+    margin-bottom: 20px; /* Adiciona um espaço abaixo do título */
+}
+
+/* Estilização dos botões estilizados */
+.styled-button {
+    background-color: #435922; /* Cor do fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Remove bordas padrão */
+    padding: 10px 20px; /* Ajusta o preenchimento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho do texto */
+    font-family: Arial, sans-serif; /* Fonte */
+    cursor: pointer; /* Mostra um cursor ao passar o mouse */
+    transition: background-color 0.3s; /* Efeito suave ao passar o mouse */
+}
+
+.styled-button:hover {
+    background-color: #3b501c; /* Cor do fundo ao passar o mouse */
+}
+
+/* Estilização para os botões não estilizados */
+button {
+    background: none; /* Remove o fundo */
+    color: #333; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 0; /* Sem preenchimento */
+    font-size: 16px; /* Mantém tamanho consistente */
+    cursor: pointer; /* Cursor padrão de botão */
+}
+
+button:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Estilização dos inputs */
+input[type="email"], input[type="password"], input[type="text"] {
+    background-color: #E2E8F0; /* Cor de fundo */
+    border: 1px solid #ccc; /* Borda padrão */
+    padding: 10px; /* Preenchimento */
+    border-radius: 8px; /* Bordas arredondadas */
+    width: 100%; /* Ocupa toda a largura disponível */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Imagem retangular ao lado do resumo da compra */
+.extra-image img {
+    width: 100%; /* Largura da imagem */
+    height: auto; /* Mantém a proporção */
+    border-radius: 8px; /* Bordas arredondadas */
+    object-fit: cover; /* Cobre o espaço sem distorcer */
+}

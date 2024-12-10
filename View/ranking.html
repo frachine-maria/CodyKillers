@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sua Página</title>
-    <link rel="stylesheet" href="../View/Media/CSS/Homepage2.css"> <!-- CSS do layout -->
+    <title>Ranking</title>
+    <link rel="stylesheet" href="../View/Media/CSS/ranking.css"> <!-- CSS do layout -->
     <link rel="stylesheet" href="../View/Media/CSS/Menususpenso.css"> <!-- CSS do menu -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -37,10 +37,9 @@
         </ul>
     </nav>
 
-    <!-- Efeito de vidro -->
+    <!-- Efeito gfdgsde vidro -->
     <div id="glass-effect" class="glass-effect"></div>
 
-    <!-- Menu lateral -->
     <div id="menu" class="menu-overlay">
         <div class="menu-content">
             <div class="menu-top">
@@ -52,62 +51,71 @@
                 <div class="menu-item">
                     <div class="menu-button">DOAÇÕES</div>
                     <ul class="submenu">
-                        <li><a href="#masculino">MASCULINO</a></li>
-                        <li><a href="#feminino">FEMININO</a></li>
-                        <li><a href="#enxoval">ENXOVAL</a></li>
-                        <li><a href="#unissex">UNISSEX</a></li>
+                        <li><a href="../View/masculinodoador.html">MASCULINO</a></li>
+                        <li><a href="../View/doadorfeminino.html">FEMININO</a></li>
+                        <li><a href="../View/enxovaldoador.html">ENXOVAL</a></li>
+                        <li><a href="../View/unisexdoador.html">UNISSEX</a></li>
                     </ul>
                 </div>
                 <div class="menu-item">
                     <div class="menu-button">COMPRE</div>
                     <ul class="submenu">
-                        <li><a href="#masculino-compra">MASCULINO</a></li>
-                        <li><a href="#feminino-compra">FEMININO</a></li>
-                        <li><a href="#enxoval-compra">ENXOVAL</a></li>
-                        <li><a href="#unissex-compra">UNISSEX</a></li>
+                        <li><a href="../View/masculinovenda.html">MASCULINO</a></li>
+                        <li><a href="../View/femininovenda.html">FEMININO</a></li>
+                        <li><a href="../View/enxovalvenda.html">ENXOVAL</a></li>
+                        <li><a href="../View/unisexvenda.html">UNISSEX</a></li>
                     </ul>
                 </div>
                 <div class="menu-item">
-                    <div class="menu-button"><a href="#pontos">PONTOS</a></div>
+                    <div class="menu-button"><a href="../View/pontos.html">PONTOS</a></div>
                 </div>
                 <div class="menu-item">
-                    <div class="menu-button"><a href="#estudos">ESTUDOS</a></div>
+                    <div class="menu-button"><a href="../View/Estudos.html">ESTUDOS</a></div>
                 </div>
                 <div class="menu-item">
-                    <div class="menu-button"><a href="#sobre">SOBRE</a></div>
+                    <div class="menu-button"><a href="../View/Sobre.html">SOBRE</a></div>
                 </div>
             </div>
             <div class="menu-bottom">
-                <div><a href="#sobre">SOBRE</a></div>
-                <div><a href="#politica">POLÍTICA DE PRIVACIDADE</a></div>
-                <div><a href="#termos">TERMOS E CONDIÇÕES</a></div>
+                <div><a href="../View/Sobre.html">SOBRE</a></div>
+                <div><a href="../View/Política de Privacidade.html">POLÍTICA DE PRIVACIDADE</a></div>
+                <div><a href="../View/Termos e Condições.html">TERMOS E CONDIÇÕES</a></div>
             </div>
         </div>
     </div>
 
     <!-- Conteúdo Principal -->
     <div class="main-content">
-        <!-- Banner com o título "CATEGORIAS" -->
         <div class="banner-container">
-            <img src="../View/Media/Fundo montanha.jpg" alt="Imagem de Banner" class="banner">
-            <div class="overlay-text">CATEGORIAS</div>
-        </div>
+            <img src="../media/imagerank.png" alt="Imagem de Banner" class="banner">
+        </div> 
 
-        <!-- Grid de categorias -->
-        <div class="grid-container">
-            <div class="item unissex">
-                <img src="../View/Media/unisex.png" alt="Unissex">
+  
+        <div class="ranking-container">
+            <div class="ranking-item">
+              <img src="../View/Media/top1.png" alt="Trophy 1" class="ranking-icon">
+              <div class="ranking-text">User name - 40.000.000</div>
             </div>
-            <div class="item enxoval">
-                <img src="../View/Media/enxoval.png" alt="Enxoval Infantil">
+            <div class="ranking-item">
+              <img src="../View/Media/top2.png" alt="Trophy 2" class="ranking-icon">
+              <div class="ranking-text">User name - 37.000.000</div>
             </div>
-            <div class="item feminina">
-                <img src="../View/Media/feminina.png" alt="Feminina">
+            <div class="ranking-item">
+              <img src="../View/Media/top3.png" alt="Trophy 3" class="ranking-icon">
+              <div class="ranking-text">User name - 32.000.000</div>
             </div>
-            <div class="item masculino">
-                <img src="../View/Media/masculina.png" alt="Masculino">
+            <div class="ranking-item">
+              <img src="../View/Media/top4.png" alt="Trophy 4" class="ranking-icon">
+              <div class="ranking-text">User name - 28.000.000</div>
             </div>
-        </div>
+            <div class="ranking-item">
+              <img src="../View/Media/top5.png" alt="Trophy 5" class="ranking-icon">
+              <div class="ranking-text">User name - 24.000.000</div>
+            </div>
+          </div>
+          
+        
+
 
         <!-- Caixa de Benefícios -->
         <div class="text-box">
@@ -119,18 +127,14 @@
         </div>
     </div>
 
-    <!-- Seção da área doador acima do rodapé -->
-    <div class="imagem-rodape">
-        <img src="../View/Media/facasuadoacao.png" alt="Imagem da Área do Doador" class="area-doador-img">
-        <a href="../View/Manutenção.html" class="botao-doador">DOE AGORA</a>
-    </div>
+
 
     <!-- Rodapé -->
     <footer class="footer">
         <div class="footer-links">
-            <a href="#sobre">SOBRE</a>
-            <a href="#termos">TERMOS E CONDIÇÕES</a>
-            <a href="#politica">POLÍTICA DE PRIVACIDADE</a>
+            <a href="../View/Sobre.html">SOBRE</a>
+            <a href="../View/Termos e Condições.html">TERMOS E CONDIÇÕES</a>
+            <a href="../View/Política de Privacidade.html">POLÍTICA DE PRIVACIDADE</a>
         </div>
 
         <div class="social-icons">

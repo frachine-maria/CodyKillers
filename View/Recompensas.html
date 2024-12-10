@@ -7,28 +7,78 @@
   <title>Recompensas - ReWear</title>
   <link rel="stylesheet" href="Media/CSS/Recompensas.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../View/Media/CSS/Menususpenso.css">
 
 </head>
 <body>
     <nav class="navbar">
         <ul>
+            <!-- Ícone de Menu à Esquerda -->
             <li class="menu">
-                <a href="pagina-do-menu.html"> 
-                    <img src="Media/menu-aberto.png" alt="Ícone de Menu">
+                <a href="javascript:void(0);" onclick="toggleMenu()">
+                    <img src="../View/Media/menu.png" alt="Ícone de Menu">
                 </a>
             </li>
 
+            <!-- Imagem centralizada na navbar -->
             <li class="logo">
-                <img src="Media/Logo.PNG" alt="Logo">
+                <img src="../View/Media/logo2.png" alt="Logo">
             </li>
 
+            <!-- Ícone de Login à Direita -->
             <li class="login-icon">
-                <a href="pagina-do-menu.html"> 
-                    <img src="Media/login-icon.png" alt="Ícone de Login">
+                <a href="../View/">
+                    <img src="../View/Media/login-icon.png" alt="Ícone de Login">
                 </a>
             </li>
         </ul>
     </nav>
+
+    <div id="glass-effect" class="glass-effect"></div>
+
+    <div id="menu" class="menu-overlay">
+        <div class="menu-content">
+            <div class="menu-top">
+                <div class="menu-item logo-footer">
+                    <img src="../View/Media/Logo.PNG" alt="Logo" class="logo-img">
+                </div>
+            </div>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-button">DOAÇÕES</div>
+                    <ul class="submenu">
+                        <li><a href="../View/masculinodoador.html">MASCULINO</a></li>
+                        <li><a href="../View/doadorfeminino.html">FEMININO</a></li>
+                        <li><a href="../View/enxovaldoador.html">ENXOVAL</a></li>
+                        <li><a href="../View/unisexdoador.html">UNISSEX</a></li>
+                    </ul>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button">COMPRE</div>
+                    <ul class="submenu">
+                        <li><a href="../View/masculinovenda.html">MASCULINO</a></li>
+                        <li><a href="../View/femininovenda.html">FEMININO</a></li>
+                        <li><a href="../View/enxovalvenda.html">ENXOVAL</a></li>
+                        <li><a href="../View/unisexvenda.html">UNISSEX</a></li>
+                    </ul>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button"><a href="../View/pontos.html">PONTOS</a></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button"><a href="../View/Estudos.html">ESTUDOS</a></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button"><a href="../View/Sobre.html">SOBRE</a></div>
+                </div>
+            </div>
+            <div class="menu-bottom">
+                <div><a href="../View/Sobre.html">SOBRE</a></div>
+                <div><a href="../View/Política de Privacidade.html">POLÍTICA DE PRIVACIDADE</a></div>
+                <div><a href="../View/Termos e Condições.html">TERMOS E CONDIÇÕES</a></div>
+            </div>
+        </div>
+    </div>
 
     <section class="moeda">
         <div class="container">
@@ -38,7 +88,7 @@
                 </div>
                 <div class="col-md-6">
                     <h3 class="ReWearGold">ReWear Gold</h3>
-                    <img class="moedaimg" src="Media/moeda.png" alt="Moeda">
+                    <img class="moedaimg" src="../View/Media/moeda.png" alt="Moeda">
                 </div>
                 <div class="col-md-6">
                     <p class="valor">R$0,00</p>
@@ -54,14 +104,14 @@
       <div class="grid-item">Cupom Casas Bahia oferece até 20%.</div>
       <div class="grid-item">15% de desconto em produtos OBoticário</div>
       <div class="grid-item">
-        <img src="Media/GooglePlay.png" alt="Gift Card Google Play">
+        <img src="../View/Media/GooglePlay.png" alt="Gift Card Google Play">
     </div>
     <div class="grid-item">
-        <img src="Media/Ifood.png" alt="Gift Card iFood">
+        <img src="../View/Media/Ifood.png" alt="Gift Card iFood">
     </div>
 
     <div class="grid-item">
-        <img src="Media/uber.png" alt="Gift Card Uber">
+        <img src="../View/Media/uber.png" alt="Gift Card Uber">
     </div>
     <div class="grid-item">Recarga de celular. Operadora TIM - R$40.</div>
     <div class="grid-item">Recarga de celular. Operadora Claro - R$40</div>
@@ -102,5 +152,36 @@
         </div>
     </footer>
     
+        <!-- Script para o menu -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            const glassEffect = document.getElementById("glass-effect");
+
+            if (menu.classList.contains("active")) {
+                menu.classList.remove("active");
+                glassEffect.classList.remove("active");
+            } else {
+                menu.classList.add("active");
+                glassEffect.classList.add("active");
+            }
+        }
+
+        // Fecha o menu ao clicar fora dele
+        window.addEventListener("click", (event) => {
+            const menu = document.getElementById("menu");
+            const glassEffect = document.getElementById("glass-effect");
+            const menuIcon = document.querySelector(".menu img");
+
+            if (
+                menu.classList.contains("active") &&
+                !menu.contains(event.target) &&
+                !menuIcon.contains(event.target)
+            ) {
+                menu.classList.remove("active");
+                glassEffect.classList.remove("active");
+            }
+        });
+    </script>
 </body>
 </html>

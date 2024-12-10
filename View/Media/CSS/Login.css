@@ -195,6 +195,7 @@
     text-align: center;
     position: relative;
     z-index: 4;
+    text-decoration: none;
   }
 
   .submit-btn:hover {
@@ -224,7 +225,9 @@
     margin-top: 20px;
     width: 90%;
     font-size: 0.8em;
-  }
+    position: relative;  /* Certifique-se de que o link está no fluxo correto */
+    z-index: 4; /* Garanta que o link esteja acima de outros elementos */
+}
 
   .social-icon-img {
     width: 30px;

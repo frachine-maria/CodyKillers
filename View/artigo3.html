@@ -1,40 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artigo 3 - ReWear</title> 
-    <link rel="stylesheet" href="../View/Media/CSS/artigo2.css">
+    <title>Artigo 3 - ReWear</title>
+    <link rel="stylesheet" href="../View/Media/CSS/artigo3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Lalezar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../View/Media/CSS/Menususpenso.css">
 </head>
 <body>
     <nav class="navbar">
         <ul>
             <li class="menu">
-                <img src="../View/Media/menu-aberto.png" alt="Ícone de Menu"> 
+                <a href="javascript:void(0);" onclick="toggleMenu()">
+                    <img src="../View/Media/menu-aberto.png" alt="Ícone de Menu">
+                </a>
             </li>
             <li class="logo">
                 <img src="../View/Media/Logo.PNG" alt="Logo">
             </li>
             <li class="login-icon">
-                <img src="../View/Media/login-icon.png" alt="Ícone de Login"> 
+                <img src="../View/Media/login-icon.png" alt="Ícone de Login">
             </li>
         </ul>
     </nav>
+
+    <div id="glass-effect" class="glass-effect"></div>
+
+    <!-- Menu Lateral -->
+    <div id="menu" class="menu-overlay">
+        <div class="menu-content">
+            <div class="menu-top">
+                <div class="menu-item logo-footer">
+                    <img src="../View/Media/Logo.PNG" alt="Logo" class="logo-img">
+                </div>
+            </div>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-button">DOAÇÕES</div>
+                    <ul class="submenu">
+                        <li><a href="../View/masculinodoador.html">MASCULINO</a></li>
+                        <li><a href="../View/doadorfeminino.html">FEMININO</a></li>
+                        <li><a href="../View/enxovaldoador.html">ENXOVAL</a></li>
+                        <li><a href="../View/unisexdoador.html">UNISSEX</a></li>
+                    </ul>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button">COMPRE</div>
+                    <ul class="submenu">
+                        <li><a href="../View/masculinovenda.html">MASCULINO</a></li>
+                        <li><a href="../View/femininovenda.html">FEMININO</a></li>
+                        <li><a href="../View/enxovalvenda.html">ENXOVAL</a></li>
+                        <li><a href="../View/unisexvenda.html">UNISSEX</a></li>
+                    </ul>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button"><a href="../View/pontos.html">PONTOS</a></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button"><a href="../View/Estudos.html">ESTUDOS</a></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button"><a href="../View/Sobre.html">SOBRE</a></div>
+                </div>
+            </div>
+            <div class="menu-bottom">
+                <div><a href="../View/Sobre.html">SOBRE</a></div>
+                <div><a href="../View/Política de Privacidade.html">POLÍTICA DE PRIVACIDADE</a></div>
+                <div><a href="../View/Termos e Condições.html">TERMOS E CONDIÇÕES</a></div>
+            </div>
+        </div>
+    </div>
 
     <h1>Consumo consciente de moda e a percepção do consumidor</h1>
 
     <div class="content">
         <img src="../View/Media/ImagemRoupa5.jpeg" alt="roupas" class="image">
         <p class="text">
-            O aumento da consciência sobre consumo sustentável tem levado os consumidores a demandar produtos e serviços que respeitem questões socioambientais. Apesar da crescente preocupação com a sustentabilidade, estudos indicam que há uma lacuna entre a consciência socioambiental e as ações efetivas de compra, sugerindo que apenas ter consciência não garante um comportamento de consumo sustentável. 
-            Fatores como a preferência por produtos verdes, a percepção das ações de responsabilidade social das empresas e a sensibilidade ao preço influenciam as decisões de compra. Este estudo investiga como esses fatores afetam o consumo consciente no setor de moda, que é uma das indústrias mais poluentes. 
-            A pesquisa quantitativa, realizada por meio de questionários online, revela que a compra de produtos verdes impacta a sensibilidade a preços, enquanto a percepção de responsabilidade social influencia positivamente o consumo consciente. No entanto, a relação entre a compra de produtos verdes e o consumo consciente foi negativa, desafiando expectativas. Além disso, a sensibilidade ao preço não mostrou uma relação significativa com o consumo consciente. 
-            O estudo destaca a complexidade das decisões de consumo, enfatizando a importância das ações sociais e ambientais das empresas e sugerindo que, embora os consumidores reconheçam essas questões, elas se refletem de maneira diferente em seu comportamento de compra.     </div>
+            O aumento da consciência sobre consumo sustentável tem levado os consumidores a demandar produtos e serviços que respeitem questões socioambientais. Apesar da crescente preocupação com a sustentabilidade, estudos indicam que há uma lacuna entre a consciência socioambiental e as ações efetivas de compra, sugerindo que apenas ter consciência não garante um comportamento de consumo sustentável.
+            Fatores como a preferência por produtos verdes, a percepção das ações de responsabilidade social das empresas e a sensibilidade ao preço influenciam as decisões de compra. Este estudo investiga como esses fatores afetam o consumo consciente no setor de moda, que é uma das indústrias mais poluentes.
+            A pesquisa quantitativa, realizada por meio de questionários online, revela que a compra de produtos verdes impacta a sensibilidade a preços, enquanto a percepção de responsabilidade social influencia positivamente o consumo consciente. No entanto, a relação entre a compra de produtos verdes e o consumo consciente foi negativa, desafiando expectativas. Além disso, a sensibilidade ao preço não mostrou uma relação significativa com o consumo consciente.
+            O estudo destaca a complexidade das decisões de consumo, enfatizando a importância das ações sociais e ambientais das empresas e sugerindo que, embora os consumidores reconheçam essas questões, elas se refletem de maneira diferente em seu comportamento de compra.
+        </p>
+    </div>
 
     <div class="link-container">
-        <a href="https://www.ecycle.com.br/consumo-consciente-de-roupas/" target="_blank" rel="external">CLIQUE AQUI PARA TER ACESSO A ÍNTEGRA DO ARTIGO -></a>
+        <a href="https://www.ecycle.com.br/consumo-consciente-de-roupas/" target="_blank" rel="external">
+            CLIQUE AQUI PARA TER ACESSO A ÍNTEGRA DO ARTIGO ->
+        </a>
     </div>
 
     <div class="comments-section">
@@ -46,7 +100,6 @@
         <div class="comment-list" id="comment-list">
             <!-- Comentários serão adicionados aqui -->
         </div>
-        <!-- Botão de Ver Mais Artigos -->
         <a href="../View/Manutenção.html" class="more-articles">VER MAIS ARTIGOS</a>
     </div>
 
@@ -56,7 +109,6 @@
             <a href="../View/Termos e Condições.html">TERMOS E CONDIÇÕES</a>
             <a href="../View/Política de Privacidade.html">POLÍTICA DE PRIVACIDADE</a>
         </div>
-
         <div class="social-icons">
             <a href="https://www.instagram.com" target="_blank" class="social-icon">
                 <i class="fab fa-instagram"></i>
@@ -71,17 +123,47 @@
     </footer>
 
     <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            const glassEffect = document.getElementById("glass-effect");
+            const body = document.body;  // Referência ao elemento body
+    
+            // Verifica se o menu está aberto
+            if (menu.classList.contains("active")) {
+                menu.classList.remove("active");
+                glassEffect.classList.remove("active");
+                body.classList.remove("menu-open");  // Remove a classe menu-open do body
+            } else {
+                menu.classList.add("active");
+                glassEffect.classList.add("active");
+                body.classList.add("menu-open");  // Adiciona a classe menu-open ao body
+            }
+        }
+    
+        window.addEventListener("click", (event) => {
+            const menu = document.getElementById("menu");
+            const glassEffect = document.getElementById("glass-effect");
+            const menuIcon = document.querySelector(".menu img");
+    
+            // Fecha o menu se o clique for fora do menu e do ícone
+            if (menu.classList.contains("active") && !menu.contains(event.target) && !menuIcon.contains(event.target)) {
+                menu.classList.remove("active");
+                glassEffect.classList.remove("active");
+                document.body.classList.remove("menu-open");  // Remove a classe menu-open quando fechar o menu
+            }
+        });
+    
         // Função para enviar e exibir o comentário
         function submitComment() {
             var commentInput = document.getElementById('comment-input');
             var commentList = document.getElementById('comment-list');
-            
+    
             if (commentInput.value.trim() !== "") {
                 var newComment = document.createElement('div');
                 newComment.classList.add('comment');
                 newComment.innerHTML = "<p><strong>Você:</strong> " + commentInput.value + "</p>";
                 commentList.appendChild(newComment);
-                
+    
                 // Limpar o campo de comentário
                 commentInput.value = "";
             } else {

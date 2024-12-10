@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Doador/Vendedor - Rewear</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../View/Media/CSS/Cadastrodoadorvendedor.css">
+    <link rel="stylesheet" href="../View/Media/CSS/Menususpenso.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li class="menu">
+                <a href="javascript:void(0);" onclick="toggleMenu()">
+                    <img src="../View/Media/menu-aberto.png" alt="Ícone de Menu">
+                </a>
+            </li>
+            <li class="logo">
+                <img src="../View/Media/Logo.PNG" alt="Logo">
+            </li>
+            <li class="login-icon">
+                <img src="../View/Media/login-icon.png" alt="Ícone de Login">
+            </li>
+        </ul>
+    </nav>    
+
+    <!-- Efeito glass -->
+    <div id="glass-effect"></div>
+
+    <!-- Menu Overlay -->
+    <div id="menu" class="menu-overlay">
+        <div class="menu-content">
+            <div class="menu-top">
+                <div class="menu-item logo-footer">
+                    <img src="../View/Media/Logo.PNG" alt="Logo" class="logo-img">
+                </div>
+            </div>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-button">DOAÇÕES</div>
+                    <ul class="submenu">
+                        <li><a href="../View/masculinodoador.html">MASCULINO</a></li>
+                        <li><a href="../View/doadorfeminino.html">FEMININO</a></li>
+                        <li><a href="../View/enxovaldoador.html">ENXOVAL</a></li>
+                        <li><a href="../View/unisexdoador.html">UNISSEX</a></li>
+                    </ul>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button">COMPRE</div>
+                    <ul class="submenu">
+                        <li><a href="../View/masculinovenda.html">MASCULINO</a></li>
+                        <li><a href="../View/femininovenda.html">FEMININO</a></li>
+                        <li><a href="../View/enxovalvenda.html">ENXOVAL</a></li>
+                        <li><a href="../View/unisexvenda.html">UNISSEX</a></li>
+                    </ul>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button"><a href="../View/pontos.html">PONTOS</a></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button"><a href="../View/Estudos.html">ESTUDOS</a></div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-button"><a href="../View/Sobre.html">SOBRE</a></div>
+                </div>
+            </div>
+            <div class="menu-bottom">
+                <div><a href="../View/Sobre.html">SOBRE</a></div>
+                <div><a href="../View/Política de Privacidade.html">POLÍTICA DE PRIVACIDADE</a></div>
+                <div><a href="../View/Termos e Condições.html">TERMOS E CONDIÇÕES</a></div>
+            </div>
+        </div>
+    </div>
+
+    <main class="form-container">
+        <h1>CADASTRO DO</h1>
+        <h2>DOADOR/VENDEDOR</h2>
+        <form class="form" action="#" method="POST">
+            <fieldset>
+                <legend>Dados Pessoais:</legend>
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="data-nascimento">Data de Nascimento:</label>
+                <input type="date" id="data-nascimento" name="data-nascimento" required>
+                
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="+55 XX XXXXX-XXXX" required>
+                
+                <label for="email">Email ou CPF:</label>
+                <input type="text" id="email" name="email" required>
+                
+                <label for="pais">País:</label>
+                <select id="pais" name="pais">
+                    <option value="">Selecionar idioma</option>
+                    <option value="brasil">Brasil</option>
+                    <option value="outro">Outro</option>
+                </select>
+                
+                <label for="rg">RG:</label>
+                <input type="text" id="rg" name="rg" required>
+            </fieldset>
+            <button class="submit-btn" onclick="window.location.href='../View/Homepage3Vendedor.html'">
+                CRIAR CONTA
+            </button>             
+    </main>
+
+    <footer class="footer">
+        <nav class="footer-nav">
+            <a href="../View/Sobre.html">SOBRE</a>
+            <a href="../View/Termos e Condições.html">TERMOS E CONDIÇÕES</a>
+            <a href="../View/Política de Privacidade.html">POLÍTICA DE PRIVACIDADE</a>
+        </nav>
+        <div class="footer-logo">
+            <img src="../View/Media/Logo.PNG" alt="Logo Rewear Footer">
+        </div>
+        <div class="social-media">
+            <a href="https://www.facebook.com/?locale=pt_BR"><img src="../View/Media/facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com"><img src="../View/Media/instagram.png" alt="Instagram"></a>
+            <a href="https://x.com/home"><img src="../View/Media/twitter.png" alt="Twitter"></a>
+        </div>
+    </footer>
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById("menu");
+        const glassEffect = document.getElementById("glass-effect");
+        const body = document.body;  // Referência ao elemento body
+
+        // Verifica se o menu está aberto
+        if (menu.classList.contains("active")) {
+            menu.classList.remove("active");
+            glassEffect.classList.remove("active");
+            body.classList.remove("menu-open");  // Remove a classe menu-open do body
+        } else {
+            menu.classList.add("active");
+            glassEffect.classList.add("active");
+            body.classList.add("menu-open");  // Adiciona a classe menu-open ao body
+        }
+    }
+
+    // Fecha o menu se o clique for fora do menu e do ícone
+    window.addEventListener("click", (event) => {
+        const menu = document.getElementById("menu");
+        const glassEffect = document.getElementById("glass-effect");
+        const menuIcon = document.querySelector(".menu a");
+
+        // Se o menu estiver aberto e o clique for fora do menu ou do ícone
+        if (menu.classList.contains("active") && 
+            !menu.contains(event.target) && 
+            !menuIcon.contains(event.target)) {
+            menu.classList.remove("active");
+            glassEffect.classList.remove("active");
+            document.body.classList.remove("menu-open");
+        }
+    });
+</script>
+
+</body>
+</html>

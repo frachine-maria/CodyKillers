@@ -6,13 +6,13 @@
     width: 100%;          /* Faz a navbar ocupar toda a largura da tela */
     z-index: 1000;        /* Garante que a navbar fique acima de outros elementos */
     background-color: #435922; /* Cor de fundo da navbar */
-    padding: 10px 0;      /* Ajuste de padding conforme necessário */
+    padding: 5px 0;      /* Reduzido para diminuir a altura */
 }
 
 /* Garantir que o conteúdo abaixo da navbar não fique escondido */
 body {
     margin: 0;
-    padding-top: 60px; /* Adiciona um padding superior para compensar a altura da navbar */
+    padding-top: 50px; /* Ajuste para compensar a altura reduzida da navbar */
     overflow-x: hidden; /* Evita barra de rolagem horizontal */
 }
 
@@ -32,32 +32,36 @@ body {
 .navbar a {
     color: white;
     text-decoration: none;
-    padding: 10px;
+    padding: 8px 10px;  /* Ajustado para um tamanho menor */
 }
 
 /* Ícone de Menu à Esquerda */
 .navbar .menu {
     display: inline-flex;  /* Exibe o ícone como flex */
     align-items: center;   /* Alinha o ícone verticalmente */
-    margin-top: 10px;      /* Move o ícone para baixo - ajuste o valor conforme necessário */
+    margin-top: 5px;      /* Ajuste para um valor menor */
 }
 
 /* Ícone de Login à Direita */
 .navbar .login-icon {
     display: inline-flex;  
     align-items: center;   
-    margin-top: 10px;      
+    margin-top: 5px;      
 }
 
+.navbar .logo img {
+    width: 500px;  /* Ajuste o valor para diminuir ou aumentar o tamanho da logo */
+    height: auto;  /* Mantém a proporção da imagem */
+}
 .navbar .menu img {
-    width: 70px;    /* Ajuste o tamanho do ícone conforme necessário */
+    width: 50px;    /* Ajuste o tamanho do ícone */
     height: auto;   /* Mantém a proporção da imagem */
 }
 
 /* Banner abaixo da navbar */
 .banner-container {
-    margin-top: 90px; /* Espaço equivalente à altura do menu fixo */
-    position: relative; /* Mantém a estrutura do container */
+    margin-top: 60px; /* Ajustado para a altura reduzida da navbar */
+    position: relative;
 }
 
 .banner-container img {
@@ -72,16 +76,16 @@ body {
 
 /* Contêiner principal */
 .container {
-    display: grid; /* Usando Grid Layout */
-    grid-template-columns: repeat(2, 1fr); /* Duas colunas */
-    grid-template-rows: repeat(2, 450px); /* Duas linhas com altura ajustada */
-    gap: 15px; /* Espaçamento entre os itens */
-    justify-items: center; /* Centraliza os itens horizontalmente */
-    align-items: center; /* Centraliza verticalmente os itens */
-    width: 740px; /* Ajustado para acomodar as novas larguras */
-    margin: 0 auto; /* Centraliza o contêiner na tela */
-    margin-top: 100px; /* Espaçamento superior */
-    position: relative; /* Necessário para o posicionamento absoluto do botão */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 450px);
+    gap: 15px;
+    justify-items: center;
+    align-items: center;
+    width: 740px;
+    margin: 0 auto;
+    margin-top: 100px;
+    position: relative;
 }
 
 /* Caixa de cada imagem */
@@ -101,10 +105,10 @@ body {
 
 /* Novo contêiner para o botão fora da grid */
 .button-container {
-    position: absolute; /* Posicionamento absoluto em relação ao contêiner */
-    bottom: -1342px; /* Ajuste para a posição vertical do botão */
-    left: 690px; /* Ajuste a posição do botão em px */
-    top: auto; /* Inicialmente 'auto' para não influenciar o movimento vertical */
+    position: absolute;
+    bottom: 150px; /* Coloca o botão um pouco acima do rodapé */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta o botão para centralizar */
 }
 
 /* Estilo do botão */
