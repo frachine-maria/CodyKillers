@@ -81,7 +81,7 @@
     margin: 205px;
     margin-top: 50px; 
 }
-
+/*Criação do segundo grid*/
 .container2{
     display: grid; 
     gap: 15px; 
