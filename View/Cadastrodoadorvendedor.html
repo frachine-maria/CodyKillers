@@ -25,10 +25,8 @@
         </ul>
     </nav>    
 
-    <!-- Efeito glass -->
     <div id="glass-effect"></div>
 
-    <!-- Menu Overlay -->
     <div id="menu" class="menu-overlay">
         <div class="menu-content">
             <div class="menu-top">
@@ -126,27 +124,26 @@
     function toggleMenu() {
         const menu = document.getElementById("menu");
         const glassEffect = document.getElementById("glass-effect");
-        const body = document.body;  // Referência ao elemento body
+        const body = document.body;
 
-        // Verifica se o menu está aberto
+        // Aqui é pra ver se o menu realmente está aberto
         if (menu.classList.contains("active")) {
             menu.classList.remove("active");
             glassEffect.classList.remove("active");
-            body.classList.remove("menu-open");  // Remove a classe menu-open do body
+            body.classList.remove("menu-open");
         } else {
             menu.classList.add("active");
             glassEffect.classList.add("active");
-            body.classList.add("menu-open");  // Adiciona a classe menu-open ao body
+            body.classList.add("menu-open");
         }
     }
 
-    // Fecha o menu se o clique for fora do menu e do ícone
     window.addEventListener("click", (event) => {
         const menu = document.getElementById("menu");
         const glassEffect = document.getElementById("glass-effect");
         const menuIcon = document.querySelector(".menu a");
 
-        // Se o menu estiver aberto e o clique for fora do menu ou do ícone
+        // Aqui é pra abrir o menu quando clicar nele, e quando clicar fora dele, ele fecha
         if (menu.classList.contains("active") && 
             !menu.contains(event.target) && 
             !menuIcon.contains(event.target)) {
